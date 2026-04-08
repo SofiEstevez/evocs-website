@@ -726,6 +726,7 @@
     .faq-chevron { flex-shrink: 0; width: 22px; height: 22px; border-radius: 50%; border: 1.5px solid #e2e8f0; display: flex; align-items: center; justify-content: center; color: #64748b; font-size: 16px; line-height: 1; transition: transform .2s, background .2s; }
     .faq-item[open] .faq-chevron { transform: rotate(45deg); background: #fff0f3; border-color: #ff456b; color: #ff456b; }
     .faq-a { font-size: 16px; color: #64748b; line-height: 1.6; padding-bottom: 22px; }
+    details.faq-item .faq-a { display: block; }
 
     /* Product page CTA */
     .product-cta { background: #271719; padding: 96px 32px; text-align: center; }
