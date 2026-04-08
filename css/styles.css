@@ -623,29 +623,68 @@
     .pd-section.alt { background: #fff8f7; }
     .pd-section.gray { background: #f8fafc; }
 
+    /* FAQ */
+    .faq-item { border-bottom: 1px solid #f1f5f9; }
+    .faq-q { width: 100%; display: flex; justify-content: space-between; align-items: center; padding: 20px 0; font-size: 17px; font-weight: 700; color: #191c1e; background: none; border: none; cursor: pointer; text-align: left; gap: 16px; }
+    .faq-icon { font-size: 22px; font-weight: 300; color: #ff456b; flex-shrink: 0; transition: transform .2s; }
+    .faq-item.open .faq-icon { transform: rotate(45deg); }
+    .faq-a { display: none; padding-bottom: 20px; }
+    .faq-item.open .faq-a { display: block; }
+    .faq-a p { font-size: 15px; line-height: 1.7; color: #64748b; }
+
+    /* Halo benefit grid */
+    .halo-benefit-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; margin-top: 48px; }
+    .halo-benefit img { width: 100%; border-radius: 12px; margin-bottom: 16px; }
+    .halo-benefit-label { font-size: 11px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; color: #ff456b; margin-bottom: 8px; }
+    .halo-benefit h3 { font-size: 18px; font-weight: 700; color: #191c1e; margin-bottom: 10px; }
+    .halo-benefit p { font-size: 15px; line-height: 1.6; color: #64748b; }
+
     /* Halo tab group */
     .halo-tab-group {
       display: inline-flex;
-      border: 2px solid #ff456b;
+      border: 1.5px solid #e2e8f0;
       border-radius: 10px;
       overflow: hidden;
       margin-bottom: 20px;
+      background: #f8fafc;
     }
     .halo-tab-btn {
       background: transparent;
       border: none;
-      border-right: 1px solid #ff456b;
+      border-right: 1.5px solid #e2e8f0;
       padding: 10px 28px;
       font-size: 14px;
       font-weight: 600;
-      color: #ff456b;
+      color: #64748b;
       cursor: pointer;
       transition: background 0.15s, color 0.15s;
       outline: none;
     }
     .halo-tab-btn:last-child { border-right: none; }
-    .halo-tab-btn:hover { background: #fff0f3; }
-    .halo-tab-btn.active { background: #ff456b; color: #fff; }
+    .halo-tab-btn:hover { background: #f1f5f9; color: #0f172a; }
+    .halo-tab-btn.active { background: #0f172a; color: #fff; }
+
+    /* Halo platform panels */
+    .halo-panel { display: none; }
+    .halo-panel.active { display: block; }
+    .halo-panel-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+    }
+    .halo-panel-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; color: #ff456b; margin-bottom: 12px; }
+    .halo-panel-title { font-size: 22px; font-weight: 700; color: #191c1e; margin-bottom: 14px; line-height: 1.3; }
+    .halo-panel-desc { font-size: 15px; line-height: 1.7; color: #64748b; margin-bottom: 20px; }
+    .halo-panel-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; }
+    .halo-panel-list li { font-size: 14px; color: #475569; padding-left: 20px; position: relative; line-height: 1.5; }
+    .halo-panel-list li::before { content: "→"; position: absolute; left: 0; color: #ff456b; font-weight: 700; }
+    .halo-panel-diagram { border-radius: 16px; overflow: hidden; background: #fff9fa; border: 1px solid #fde8ec; }
+    .halo-panel-diagram svg { display: block; width: 100%; height: auto; }
+    @media (max-width: 768px) {
+      .halo-panel-inner { grid-template-columns: 1fr; }
+      .halo-panel-diagram { order: -1; }
+    }
 
     /* Challenge cards */
     .challenges-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
