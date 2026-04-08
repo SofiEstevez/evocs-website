@@ -686,6 +686,23 @@
       .halo-panel-diagram { order: -1; }
     }
 
+    /* Helix pipeline flow */
+    .helix-flow { display: flex; align-items: flex-start; gap: 0; margin-top: 48px; }
+    .helix-step { display: flex; flex-direction: column; align-items: center; flex: 1; min-width: 0; }
+    .helix-step-connector { flex: 0 0 24px; display: flex; align-items: center; justify-content: center; margin-top: 20px; }
+    .helix-step-connector svg { display: block; }
+    .helix-step-num {
+      width: 40px; height: 40px; border-radius: 50%;
+      background: #fff; border: 2px solid #e2e8f0;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 13px; font-weight: 700; color: #0f172a;
+      margin-bottom: 12px; position: relative; z-index: 1;
+    }
+    .helix-step:first-child .helix-step-num,
+    .helix-step:last-child .helix-step-num { background: #0f172a; border-color: #0f172a; color: #fff; }
+    .helix-step-label { font-size: 12px; font-weight: 700; color: #0f172a; margin-bottom: 6px; text-align: center; letter-spacing: 0.3px; }
+    .helix-step-desc { font-size: 11px; color: #64748b; text-align: center; line-height: 1.5; padding: 0 4px; }
+
     /* Challenge cards */
     .challenges-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
     .challenge-card { background: #fff; border-radius: 12px; padding: 28px; border: 1px solid #f1f5f9; }
