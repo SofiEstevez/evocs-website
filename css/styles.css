@@ -62,7 +62,7 @@
       font-size: 36px; font-weight: 700; letter-spacing: -0.9px;
       color: #0f172a; line-height: 1.1; margin-bottom: 16px;
     }
-    .lead { font-size: 18px; line-height: 1.6; color: #64748b; max-width: 720px; margin-bottom: 64px; }
+    .lead { font-size: 18px; line-height: 1.6; color: #64748b; max-width: 1100px; margin-bottom: 64px; }
 
     /* ── SHARED FOOTER ── */
     .footer { background: #271719; border-top: 1px solid rgba(255,255,255,0.1); padding: 48px 32px; }
@@ -595,11 +595,11 @@
        PAGES: PRODUCT DETAIL (shared)
     ════════════════════════════════ */
     .product-page { background: #fff; }
-    .product-hero { padding: 96px 32px 64px; max-width: 1280px; margin: 0 auto; }
+    .product-hero { padding: 96px 32px 64px; max-width: 1100px; margin: 0 auto; }
     .product-eyebrow { font-size: 12px; font-weight: 700; letter-spacing: 2.4px; text-transform: uppercase; color: #ff456b; margin-bottom: 24px; }
     .product-title { font-size: 72px; font-weight: 700; line-height: 1; letter-spacing: -3px; color: #0f172a; margin-bottom: 4px; }
     .product-subtitle { font-size: 48px; font-weight: 700; line-height: 1.1; letter-spacing: -2px; color: #0f172a; margin-bottom: 32px; }
-    .product-desc { font-size: 20px; line-height: 1.625; color: #64748b; max-width: 900px; margin-bottom: 48px; }
+    .product-desc { font-size: 20px; line-height: 1.625; color: #64748b; max-width: 1100px; margin-bottom: 48px; }
     .product-highlights { display: flex; gap: 48px; flex-wrap: wrap; margin-bottom: 64px; justify-content: center; }
     .hl-label { font-size: 16px; font-weight: 700; color: #0f172a; display: block; margin-bottom: 4px; }
     .hl-sub { font-size: 14px; color: #64748b; }
@@ -608,7 +608,7 @@
     .browser-wrap {
       background: #fff; border: 1px solid #f1f5f9; border-radius: 12px;
       box-shadow: 0 25px 50px -12px rgba(0,0,0,0.18); overflow: hidden;
-      max-width: 1232px; margin: 0 32px 96px;
+      max-width: 1100px; margin: 0 auto 96px;
     }
     .browser-bar { background: #fff; border-bottom: 1px solid #f1f5f9; padding: 8px 16px; display: flex; align-items: center; gap: 8px; }
     .browser-dots { display: flex; gap: 6px; }
@@ -619,7 +619,7 @@
 
     /* Product sections */
     .pd-section { padding: 96px 32px; }
-    .pd-section-inner { max-width: 1280px; margin: 0 auto; }
+    .pd-section-inner { max-width: 1100px; margin: 0 auto; }
     .pd-section.alt { background: #fff8f7; }
     .pd-section.gray { background: #f8fafc; }
 
@@ -660,8 +660,8 @@
     .workstream h3 { font-size: 26px; font-weight: 700; letter-spacing: -0.5px; color: #0f172a; line-height: 1.2; margin-bottom: 16px; }
     .workstream p { font-size: 16px; line-height: 1.6; color: #64748b; margin-bottom: 24px; }
     .bullet-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
-    .bullet-list li { font-size: 15px; color: #475569; line-height: 1.5; padding-left: 20px; position: relative; }
-    .bullet-list li::before { content: "—"; position: absolute; left: 0; color: #ff456b; font-weight: 700; }
+    .bullet-list li { font-size: 15px; color: #64748b; line-height: 1.5; padding-left: 20px; position: relative; }
+    .bullet-list li::before { content: "—"; position: absolute; left: 0; color: #64748b; font-weight: 700; }
     .workstream-img { border-radius: 12px; overflow: hidden; box-shadow: 0 4px 24px rgba(0,0,0,0.08); }
     .workstream-img img { display: block; width: 100%; }
 
