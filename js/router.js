@@ -22,7 +22,7 @@ function showPage(id) {
   // Handle hash on load
   (function() {
     var hash = window.location.hash.replace('#', '');
-    var validPages = ['home', 'products', 'bari', 'piro', 'osimo', 'halo'];
+    var validPages = ['home', 'products', 'bari', 'piro', 'osimo', 'halo', 'helix', 'merlin'];
     if (hash && validPages.indexOf(hash) !== -1) {
       showPage(hash);
     }
