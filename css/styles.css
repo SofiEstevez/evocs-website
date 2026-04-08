@@ -623,6 +623,30 @@
     .pd-section.alt { background: #fff8f7; }
     .pd-section.gray { background: #f8fafc; }
 
+    /* Halo tab group */
+    .halo-tab-group {
+      display: inline-flex;
+      border: 2px solid #ff456b;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 20px;
+    }
+    .halo-tab-btn {
+      background: transparent;
+      border: none;
+      border-right: 1px solid #ff456b;
+      padding: 10px 28px;
+      font-size: 14px;
+      font-weight: 600;
+      color: #ff456b;
+      cursor: pointer;
+      transition: background 0.15s, color 0.15s;
+      outline: none;
+    }
+    .halo-tab-btn:last-child { border-right: none; }
+    .halo-tab-btn:hover { background: #fff0f3; }
+    .halo-tab-btn.active { background: #ff456b; color: #fff; }
+
     /* Challenge cards */
     .challenges-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
     .challenge-card { background: #fff; border-radius: 12px; padding: 28px; border: 1px solid #f1f5f9; }
