@@ -365,200 +365,37 @@
 
     <div class="product-grid">
       <div class="product-card" onclick="showPage('bari')">
-        <div class="card-image" style="background:#0f172a;display:flex;align-items:center;justify-content:center;">
-          <svg viewBox="0 0 340 260" style="width:90%;height:auto;" xmlns="http://www.w3.org/2000/svg">
-            <!-- Left → center dashed lines (pink) -->
-            <line x1="82" y1="55" x2="136" y2="116" stroke="rgba(255,69,107,.4)" stroke-width="1.5" stroke-dasharray="5 3"/>
-            <line x1="82" y1="130" x2="134" y2="130" stroke="rgba(255,69,107,.4)" stroke-width="1.5" stroke-dasharray="5 3"/>
-            <line x1="82" y1="205" x2="136" y2="144" stroke="rgba(255,69,107,.4)" stroke-width="1.5" stroke-dasharray="5 3"/>
-            <!-- Center → right dashed lines (white) -->
-            <line x1="206" y1="116" x2="258" y2="55" stroke="rgba(255,255,255,.15)" stroke-width="1.5" stroke-dasharray="5 3"/>
-            <line x1="206" y1="130" x2="258" y2="130" stroke="rgba(255,255,255,.15)" stroke-width="1.5" stroke-dasharray="5 3"/>
-            <line x1="206" y1="144" x2="258" y2="205" stroke="rgba(255,255,255,.15)" stroke-width="1.5" stroke-dasharray="5 3"/>
-            <!-- Center: BARI -->
-            <circle cx="170" cy="130" r="36" fill="rgba(255,69,107,.12)" stroke="rgba(255,69,107,.5)" stroke-width="1.5"/>
-            <text x="170" y="126" text-anchor="middle" font-size="11" font-weight="700" fill="#f1f5f9">BARI</text>
-            <text x="170" y="139" text-anchor="middle" font-size="7" font-weight="700" fill="#ff456b" letter-spacing=".08em">JML ENGINE</text>
-            <!-- Left nodes: Joiner, Mover, Leaver -->
-            <circle cx="62" cy="55" r="20" fill="#1e293b" stroke="#334155" stroke-width="1.5"/><text x="62" y="60" text-anchor="middle" font-size="13">👤</text>
-            <text x="62" y="83" text-anchor="middle" font-size="7" fill="#94a3b8">JOIN</text>
-            <circle cx="62" cy="130" r="20" fill="#1e293b" stroke="#334155" stroke-width="1.5"/><text x="62" y="135" text-anchor="middle" font-size="13">🔄</text>
-            <text x="62" y="158" text-anchor="middle" font-size="7" fill="#94a3b8">MOVE</text>
-            <circle cx="62" cy="205" r="20" fill="#1e293b" stroke="#334155" stroke-width="1.5"/><text x="62" y="210" text-anchor="middle" font-size="13">🚪</text>
-            <text x="62" y="233" text-anchor="middle" font-size="7" fill="#94a3b8">LEAVE</text>
-            <!-- Right nodes: Access, Licence, Assets -->
-            <circle cx="278" cy="55" r="20" fill="#1e293b" stroke="#334155" stroke-width="1.5"/><text x="278" y="60" text-anchor="middle" font-size="13">🔑</text>
-            <text x="278" y="83" text-anchor="middle" font-size="7" fill="#94a3b8">ACCESS</text>
-            <circle cx="278" cy="130" r="20" fill="#1e293b" stroke="#334155" stroke-width="1.5"/><text x="278" y="135" text-anchor="middle" font-size="13">📋</text>
-            <text x="278" y="158" text-anchor="middle" font-size="7" fill="#94a3b8">LICENCE</text>
-            <circle cx="278" cy="205" r="20" fill="#1e293b" stroke="#334155" stroke-width="1.5"/><text x="278" y="210" text-anchor="middle" font-size="13">💻</text>
-            <text x="278" y="233" text-anchor="middle" font-size="7" fill="#94a3b8">ASSETS</text>
-          </svg>
-        </div>
+        <div class="card-image"><img src="img/BARI.png" alt="Bari"></div>
         <h3 class="card-title">Bari</h3>
         <p class="card-desc"><strong style="color: #ff456b;">Identity &amp; Access Management:</strong> fully automated Joiner-Mover-Leaver engine, licence optimizer, and asset management platform.</p>
         <span class="card-link">Learn more <svg class="arrow" width="14" height="10" viewBox="0 0 14 10" fill="none"><path d="M1 5H13M9 1L13 5L9 9" stroke="#ff456b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
       </div>
       <div class="product-card" onclick="showPage('piro')">
-        <div class="card-image" style="background:#0f172a;display:flex;align-items:center;justify-content:center;">
-          <svg viewBox="0 0 340 240" style="width:90%;height:auto;" xmlns="http://www.w3.org/2000/svg">
-            <!-- Input panel -->
-            <rect x="18" y="28" width="118" height="184" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1"/>
-            <text x="77" y="50" text-anchor="middle" font-size="7" font-weight="700" fill="#94a3b8" letter-spacing=".1em">EHS INPUT</text>
-            <!-- 4 incident rows -->
-            <rect x="28" y="58" width="98" height="26" rx="4" fill="#0f172a"/>
-            <circle cx="40" cy="71" r="5" fill="#ef4444"/>
-            <text x="52" y="75" font-size="8" fill="#f1f5f9">Equipment failure</text>
-            <rect x="28" y="90" width="98" height="26" rx="4" fill="#0f172a"/>
-            <circle cx="40" cy="103" r="5" fill="#f59e0b"/>
-            <text x="52" y="107" font-size="8" fill="#f1f5f9">Near miss – Line 3</text>
-            <rect x="28" y="122" width="98" height="26" rx="4" fill="#0f172a"/>
-            <circle cx="40" cy="135" r="5" fill="#f59e0b"/>
-            <text x="52" y="139" font-size="8" fill="#f1f5f9">Chemical exposure</text>
-            <rect x="28" y="154" width="98" height="26" rx="4" fill="#0f172a"/>
-            <circle cx="40" cy="167" r="5" fill="#22c55e"/>
-            <text x="52" y="171" font-size="8" fill="#f1f5f9">Inspection cleared</text>
-            <!-- Arrow to PIRO -->
-            <line x1="146" y1="120" x2="168" y2="120" stroke="rgba(255,69,107,.6)" stroke-width="1.5" stroke-dasharray="4 3"/>
-            <polygon points="168,116 176,120 168,124" fill="rgba(255,69,107,.6)"/>
-            <!-- Center: PIRO -->
-            <circle cx="200" cy="120" r="30" fill="rgba(255,69,107,.12)" stroke="rgba(255,69,107,.5)" stroke-width="1.5"/>
-            <text x="200" y="116" text-anchor="middle" font-size="10" font-weight="700" fill="#f1f5f9">PIRO</text>
-            <text x="200" y="129" text-anchor="middle" font-size="6" font-weight="700" fill="#ff456b" letter-spacing=".08em">ML ENGINE</text>
-            <!-- Arrows to output -->
-            <line x1="230" y1="108" x2="250" y2="88" stroke="rgba(255,255,255,.2)" stroke-width="1.5" stroke-dasharray="4 3"/>
-            <line x1="230" y1="132" x2="250" y2="152" stroke="rgba(255,255,255,.2)" stroke-width="1.5" stroke-dasharray="4 3"/>
-            <!-- Output: Risk score -->
-            <rect x="252" y="62" width="76" height="46" rx="6" fill="#1e293b" stroke="#334155"/>
-            <text x="290" y="82" text-anchor="middle" font-size="7" fill="#94a3b8">Risk Score</text>
-            <text x="290" y="100" text-anchor="middle" font-size="18" font-weight="700" fill="#ef4444">8.2</text>
-            <!-- Output: Actions -->
-            <rect x="252" y="132" width="76" height="46" rx="6" fill="#1e293b" stroke="#334155"/>
-            <text x="290" y="152" text-anchor="middle" font-size="7" fill="#94a3b8">Corrective Actions</text>
-            <text x="290" y="170" text-anchor="middle" font-size="11" font-weight="700" fill="#ff456b">3 Ranked</text>
-          </svg>
-        </div>
+        <div class="card-image"><img src="img/PIRO.png" alt="Piro"></div>
         <h3 class="card-title">Piro</h3>
         <p class="card-desc"><strong style="color: #ff456b;">Safety Intelligence Platform:</strong> ML platform that transforms EHS data into risk predictions and ranked corrective actions.</p>
         <span class="card-link">Learn more <svg class="arrow" width="14" height="10" viewBox="0 0 14 10" fill="none"><path d="M1 5H13M9 1L13 5L9 9" stroke="#ff456b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
       </div>
       <div class="product-card" onclick="showPage('osimo')">
-        <div class="card-image" style="background:#0f172a;display:flex;align-items:center;justify-content:center;">
-          <svg viewBox="0 0 340 240" style="width:90%;height:auto;" xmlns="http://www.w3.org/2000/svg">
-            <!-- Panel background -->
-            <rect x="20" y="18" width="300" height="204" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1"/>
-            <!-- Header -->
-            <text x="40" y="42" font-size="7" font-weight="700" fill="#94a3b8" letter-spacing=".1em">OSIMO — ACCESS REVIEW</text>
-            <line x1="20" y1="52" x2="320" y2="52" stroke="#334155" stroke-width="1"/>
-            <!-- Column headers -->
-            <text x="50" y="67" font-size="7" fill="#475569">USER</text>
-            <text x="158" y="67" font-size="7" fill="#475569">ROLE</text>
-            <text x="248" y="67" font-size="7" fill="#475569">STATUS</text>
-            <line x1="20" y1="73" x2="320" y2="73" stroke="#0f172a" stroke-width="1"/>
-            <!-- Row 1 -->
-            <circle cx="40" cy="91" r="9" fill="#2d3f55"/><text x="40" y="95" text-anchor="middle" font-size="7" fill="#94a3b8">JD</text>
-            <text x="58" y="95" font-size="8" fill="#f1f5f9">J. Davis</text>
-            <text x="158" y="95" font-size="8" fill="#94a3b8">IT Admin</text>
-            <rect x="243" y="82" width="64" height="18" rx="9" fill="rgba(34,197,94,.15)"/>
-            <text x="275" y="94" text-anchor="middle" font-size="7" fill="#22c55e">✓ Approved</text>
-            <!-- Row 2 -->
-            <circle cx="40" cy="119" r="9" fill="#2d3f55"/><text x="40" y="123" text-anchor="middle" font-size="7" fill="#94a3b8">MS</text>
-            <text x="58" y="123" font-size="8" fill="#f1f5f9">M. Smith</text>
-            <text x="158" y="123" font-size="8" fill="#94a3b8">Finance</text>
-            <rect x="243" y="110" width="64" height="18" rx="9" fill="rgba(239,68,68,.15)"/>
-            <text x="275" y="122" text-anchor="middle" font-size="7" fill="#ef4444">✗ Revoked</text>
-            <!-- Row 3 -->
-            <circle cx="40" cy="147" r="9" fill="#2d3f55"/><text x="40" y="151" text-anchor="middle" font-size="7" fill="#94a3b8">AL</text>
-            <text x="58" y="151" font-size="8" fill="#f1f5f9">A. Lopez</text>
-            <text x="158" y="151" font-size="8" fill="#94a3b8">Ops Lead</text>
-            <rect x="243" y="138" width="64" height="18" rx="9" fill="rgba(34,197,94,.15)"/>
-            <text x="275" y="150" text-anchor="middle" font-size="7" fill="#22c55e">✓ Approved</text>
-            <!-- Row 4 -->
-            <circle cx="40" cy="175" r="9" fill="#2d3f55"/><text x="40" y="179" text-anchor="middle" font-size="7" fill="#94a3b8">RK</text>
-            <text x="58" y="179" font-size="8" fill="#f1f5f9">R. Kim</text>
-            <text x="158" y="179" font-size="8" fill="#94a3b8">Dev</text>
-            <rect x="243" y="166" width="64" height="18" rx="9" fill="rgba(245,158,11,.15)"/>
-            <text x="275" y="178" text-anchor="middle" font-size="7" fill="#f59e0b">⏳ Pending</text>
-            <!-- Footer -->
-            <line x1="20" y1="192" x2="320" y2="192" stroke="#334155" stroke-width="1"/>
-            <text x="40" y="210" font-size="7" fill="#475569">4 of 4 users reviewed</text>
-            <rect x="242" y="200" width="74" height="16" rx="4" fill="rgba(255,69,107,.2)" stroke="rgba(255,69,107,.4)" stroke-width="1"/>
-            <text x="279" y="211" text-anchor="middle" font-size="7" font-weight="700" fill="#ff456b">Export Report</text>
-          </svg>
-        </div>
+        <div class="card-image"><img src="img/OSIMO.png" alt="Osimo"></div>
         <h3 class="card-title">Osimo</h3>
         <p class="card-desc"><strong style="color: #ff456b;">Automated User Access Review:</strong> centralised platform replacing spreadsheets with real-time compliance visibility.</p>
         <span class="card-link">Learn more <svg class="arrow" width="14" height="10" viewBox="0 0 14 10" fill="none"><path d="M1 5H13M9 1L13 5L9 9" stroke="#ff456b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
       </div>
       <div class="product-card" onclick="showPage('halo')">
-        <div class="card-image" style="background:#0f172a;display:flex;align-items:center;justify-content:center;">
-          <svg viewBox="0 0 340 240" style="width:90%;height:auto;" xmlns="http://www.w3.org/2000/svg">
-            <line x1="56" y1="55" x2="170" y2="118" stroke="rgba(255,69,107,.4)" stroke-width="1.5" stroke-dasharray="5 3"/>
-            <line x1="127" y1="38" x2="170" y2="118" stroke="rgba(255,69,107,.4)" stroke-width="1.5" stroke-dasharray="5 3"/>
-            <line x1="213" y1="38" x2="170" y2="118" stroke="rgba(255,69,107,.4)" stroke-width="1.5" stroke-dasharray="5 3"/>
-            <line x1="284" y1="55" x2="170" y2="118" stroke="rgba(255,69,107,.4)" stroke-width="1.5" stroke-dasharray="5 3"/>
-            <line x1="170" y1="118" x2="90" y2="200" stroke="rgba(255,255,255,.15)" stroke-width="1.5" stroke-dasharray="5 3"/>
-            <line x1="170" y1="118" x2="170" y2="206" stroke="rgba(255,255,255,.15)" stroke-width="1.5" stroke-dasharray="5 3"/>
-            <line x1="170" y1="118" x2="250" y2="200" stroke="rgba(255,255,255,.15)" stroke-width="1.5" stroke-dasharray="5 3"/>
-            <circle cx="56" cy="55" r="20" fill="#1e293b" stroke="#334155" stroke-width="1.5"/><text x="56" y="60" text-anchor="middle" font-size="12">🗂️</text>
-            <circle cx="127" cy="38" r="20" fill="#1e293b" stroke="#334155" stroke-width="1.5"/><text x="127" y="43" text-anchor="middle" font-size="12">📄</text>
-            <circle cx="213" cy="38" r="20" fill="#1e293b" stroke="#334155" stroke-width="1.5"/><text x="213" y="43" text-anchor="middle" font-size="12">🔌</text>
-            <circle cx="284" cy="55" r="20" fill="#1e293b" stroke="#334155" stroke-width="1.5"/><text x="284" y="60" text-anchor="middle" font-size="12">📡</text>
-            <circle cx="170" cy="118" r="34" fill="rgba(255,69,107,.12)" stroke="rgba(255,69,107,.5)" stroke-width="1.5"/>
-            <text x="170" y="114" text-anchor="middle" font-size="11" font-weight="700" fill="#f1f5f9">HALO</text>
-            <text x="170" y="127" text-anchor="middle" font-size="7" font-weight="700" fill="#ff456b" letter-spacing=".08em">SOVEREIGN AI</text>
-            <circle cx="90" cy="200" r="22" fill="#1e293b" stroke="#334155" stroke-width="1.5"/><text x="90" y="205" text-anchor="middle" font-size="13">💬</text>
-            <circle cx="170" cy="206" r="22" fill="#1e293b" stroke="#334155" stroke-width="1.5"/><text x="170" y="211" text-anchor="middle" font-size="13">📊</text>
-            <circle cx="250" cy="200" r="22" fill="#1e293b" stroke="#334155" stroke-width="1.5"/><text x="250" y="205" text-anchor="middle" font-size="13">⚡</text>
-          </svg>
-        </div>
+        <div class="card-image"><img src="img/ALBA.png" alt="Alba"></div>
         <h3 class="card-title">Alba</h3>
         <p class="card-desc"><strong style="color: #ff456b;">Sovereign Enterprise AI Platform:</strong> governed AI infrastructure deployed inside your Azure environment, owned and controlled by you.</p>
         <span class="card-link">Learn more <svg class="arrow" width="14" height="10" viewBox="0 0 14 10" fill="none"><path d="M1 5H13M9 1L13 5L9 9" stroke="#ff456b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
       </div>
       <div class="product-card" onclick="showPage('helix')">
-        <div class="card-image" style="background:#0f172a;display:flex;align-items:center;justify-content:center;">
-          <svg viewBox="0 0 340 240" style="width:90%;height:auto;" xmlns="http://www.w3.org/2000/svg">
-            <rect x="40" y="30" width="260" height="36" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
-            <text x="170" y="53" text-anchor="middle" font-size="11" font-weight="700" fill="#f1f5f9">💬  "I want to automate invoice processing..."</text>
-            <rect x="60" y="90" width="60" height="40" rx="6" fill="rgba(255,69,107,.15)" stroke="rgba(255,69,107,.4)" stroke-width="1.5"/>
-            <text x="90" y="107" text-anchor="middle" font-size="8" font-weight="700" fill="#ff456b">SUBMIT</text>
-            <text x="90" y="120" text-anchor="middle" font-size="7" fill="#94a3b8">Idea in</text>
-            <line x1="120" y1="110" x2="140" y2="110" stroke="#334155" stroke-width="1.5" stroke-dasharray="4 2"/>
-            <rect x="140" y="90" width="60" height="40" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
-            <text x="170" y="107" text-anchor="middle" font-size="8" font-weight="700" fill="#f1f5f9">EVALUATE</text>
-            <text x="170" y="120" text-anchor="middle" font-size="7" fill="#94a3b8">10-dim score</text>
-            <line x1="200" y1="110" x2="220" y2="110" stroke="#334155" stroke-width="1.5" stroke-dasharray="4 2"/>
-            <rect x="220" y="90" width="60" height="40" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
-            <text x="250" y="107" text-anchor="middle" font-size="8" font-weight="700" fill="#f1f5f9">ROUTE</text>
-            <text x="250" y="120" text-anchor="middle" font-size="7" fill="#94a3b8">Build / Defer</text>
-            <line x1="250" y1="130" x2="250" y2="150" stroke="#334155" stroke-width="1.5" stroke-dasharray="4 2"/>
-            <rect x="100" y="155" width="160" height="36" rx="6" fill="#1e293b" stroke="rgba(255,69,107,.4)" stroke-width="1.5"/>
-            <text x="180" y="169" text-anchor="middle" font-size="8" font-weight="700" fill="#ff456b">✓ HANDOFF</text>
-            <text x="180" y="182" text-anchor="middle" font-size="7" fill="#94a3b8">ClickUp task + stakeholder notify</text>
-          </svg>
-        </div>
+        <div class="card-image"><img src="img/HELIX.png" alt="Helix"></div>
         <h3 class="card-title">Helix</h3>
         <p class="card-desc"><strong style="color: #ff456b;">AI Use Case Intake &amp; Governance:</strong> conversational platform that turns scattered AI ideas into structured, decision-ready business cases.</p>
         <span class="card-link">Learn more <svg class="arrow" width="14" height="10" viewBox="0 0 14 10" fill="none"><path d="M1 5H13M9 1L13 5L9 9" stroke="#ff456b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
       </div>
       <div class="product-card" onclick="showPage('merlin')">
-        <div class="card-image" style="background:#0f172a;display:flex;align-items:center;justify-content:center;">
-          <svg viewBox="0 0 340 240" style="width:90%;height:auto;" xmlns="http://www.w3.org/2000/svg">
-            <rect x="30" y="30" width="280" height="38" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
-            <text x="48" y="54" font-size="11" fill="#f1f5f9">"Which hyperscalers are expanding in EMEA?"</text>
-            <rect x="30" y="82" width="280" height="56" rx="8" fill="rgba(255,69,107,.1)" stroke="rgba(255,69,107,.3)" stroke-width="1.5"/>
-            <text x="48" y="100" font-size="9" fill="#ff456b" font-weight="700">Merlin</text>
-            <text x="48" y="115" font-size="10" fill="#cbd5e1">Microsoft leads with 3 confirmed sites. Google</text>
-            <text x="48" y="129" font-size="10" fill="#cbd5e1">signals imminent. [Source: EMEA Intel Q1 2026]</text>
-            <circle cx="54" cy="166" r="6" fill="rgba(255,69,107,.3)" stroke="rgba(255,69,107,.6)" stroke-width="1"/>
-            <text x="68" y="170" font-size="9" fill="#64748b">EMEA Intel Tracker</text>
-            <circle cx="54" cy="186" r="6" fill="rgba(255,69,107,.3)" stroke="rgba(255,69,107,.6)" stroke-width="1"/>
-            <text x="68" y="190" font-size="9" fill="#64748b">3rd Party Research · Gartner 2026</text>
-            <circle cx="54" cy="206" r="6" fill="rgba(255,69,107,.3)" stroke="rgba(255,69,107,.6)" stroke-width="1"/>
-            <text x="68" y="210" font-size="9" fill="#64748b">NA Pricing Tracker · Q4 2025</text>
-          </svg>
-        </div>
+        <div class="card-image"><img src="img/MERLIN.png" alt="Merlin"></div>
         <h3 class="card-title">Merlin</h3>
         <p class="card-desc"><strong style="color: #ff456b;">Private Market Intelligence Copilot:</strong> synthesizes proprietary data into executive-grade insights delivered through natural language queries.</p>
         <span class="card-link">Learn more <svg class="arrow" width="14" height="10" viewBox="0 0 14 10" fill="none"><path d="M1 5H13M9 1L13 5L9 9" stroke="#ff456b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
@@ -829,14 +666,38 @@
       <div class="eyebrow">Frequently asked questions</div>
       <h2 class="h2">Everything you need to evaluate this program.</h2>
       <div class="faq-list">
-        <details class="faq-item"><summary><span class="faq-q">How long does implementation take?</span><span class="faq-chevron">+</span></summary><div class="faq-a">Phased across three workstreams. Timeline depends on platform count and policy complexity.</div></details>
-        <details class="faq-item"><summary><span class="faq-q">Which platforms and systems are supported?</span><span class="faq-chevron">+</span></summary><div class="faq-a">Up to 20 SaaS platforms via API. Core integrations: Microsoft Entra ID, Active Directory, Workday, and ServiceNow.</div></details>
-        <details class="faq-item"><summary><span class="faq-q">What happens to our existing license data?</span><span class="faq-chevron">+</span></summary><div class="faq-a">Validated and imported as a verified baseline. Existing records are linked to identity data before automation goes live.</div></details>
-        <details class="faq-item"><summary><span class="faq-q">How are contractors and non-standard worker types handled?</span><span class="faq-chevron">+</span></summary><div class="faq-a">Contractors follow distinct workflow paths automatically based on worker type derived from Workday attributes.</div></details>
-        <details class="faq-item"><summary><span class="faq-q">What does a recertification campaign look like for a manager?</span><span class="faq-chevron">+</span></summary><div class="faq-a">A structured list of direct reports and their current licenses. One decision per combination: Accept or Decline. Tracked in real time with deadline reminders.</div></details>
-        <details class="faq-item"><summary><span class="faq-q">How is the program handed over after delivery?</span><span class="faq-chevron">+</span></summary><div class="faq-a">Full documentation, runbooks, and connector configurations are delivered. The platform runs independently after handoff.</div></details>
-        <details class="faq-item"><summary><span class="faq-q">Is the audit trail truly tamper-resistant?</span><span class="faq-chevron">+</span></summary><div class="faq-a">Yes. No user role can edit or delete audit records. Every change carries a correlation ID traceable to its Workday event.</div></details>
-        <details class="faq-item"><summary><span class="faq-q">Does this replace our service desk or ITSM tool?</span><span class="faq-chevron">+</span></summary><div class="faq-a">It works alongside ServiceNow. Failed provisioning steps automatically create routed tickets and close them when resolved.</div></details>
+        <div class="faq-item">
+          <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">How long does implementation take?<span class="faq-icon">+</span></button>
+          <div class="faq-a"><p>Phased across three workstreams. Timeline depends on platform count and policy complexity.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">Which platforms and systems are supported?<span class="faq-icon">+</span></button>
+          <div class="faq-a"><p>Up to 20 SaaS platforms via API. Core integrations: Microsoft Entra ID, Active Directory, Workday, and ServiceNow.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">What happens to our existing license data?<span class="faq-icon">+</span></button>
+          <div class="faq-a"><p>Validated and imported as a verified baseline. Existing records are linked to identity data before automation goes live.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">How are contractors and non-standard worker types handled?<span class="faq-icon">+</span></button>
+          <div class="faq-a"><p>Contractors follow distinct workflow paths automatically based on worker type derived from Workday attributes.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">What does a recertification campaign look like for a manager?<span class="faq-icon">+</span></button>
+          <div class="faq-a"><p>A structured list of direct reports and their current licenses. One decision per combination: Accept or Decline. Tracked in real time with deadline reminders.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">How is the program handed over after delivery?<span class="faq-icon">+</span></button>
+          <div class="faq-a"><p>Full documentation, runbooks, and connector configurations are delivered. The platform runs independently after handoff.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">Is the audit trail truly tamper-resistant?<span class="faq-icon">+</span></button>
+          <div class="faq-a"><p>Yes. No user role can edit or delete audit records. Every change carries a correlation ID traceable to its Workday event.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">Does this replace our service desk or ITSM tool?<span class="faq-icon">+</span></button>
+          <div class="faq-a"><p>It works alongside ServiceNow. Failed provisioning steps automatically create routed tickets and close them when resolved.</p></div>
+        </div>
       </div>
     </div>
   </div>
@@ -1289,14 +1150,38 @@
       <div class="eyebrow">Frequently asked questions</div>
       <h2 class="h2">Everything you need to evaluate this program.</h2>
       <div class="faq-list">
-        <details class="faq-item"><summary><span class="faq-q">How long does implementation take?</span><span class="faq-chevron">+</span></summary><div class="faq-a">A typical deployment runs 15 weeks, covering project initiation, system design, integration, testing, and training. Timeline varies with the number of in-scope systems.</div></details>
-        <details class="faq-item"><summary><span class="faq-q">Which platforms and systems does the UAR tool integrate with?</span><span class="faq-chevron">+</span></summary><div class="faq-a">Native connectors for Active Directory, Azure AD, Workday, Salesforce, and ServiceNow. Supports up to 100 enterprise systems and 2,000 AD/AAD groups.</div></details>
-        <details class="faq-item"><summary><span class="faq-q">Will it disrupt our existing tools and workflows?</span><span class="faq-chevron">+</span></summary><div class="faq-a">No. The platform layers on top of existing infrastructure via non-invasive integrations. Change management support and training are included.</div></details>
-        <details class="faq-item"><summary><span class="faq-q">How is data migrated from our current review processes?</span><span class="faq-chevron">+</span></summary><div class="faq-a">EVOCS maps and validates existing data sources, then synchronizes records into the platform. Your team confirms accuracy before go-live.</div></details>
-        <details class="faq-item"><summary><span class="faq-q">Can the platform handle edge cases like contractor access or temporary permissions?</span><span class="faq-chevron">+</span></summary><div class="faq-a">Yes. Configurable review triggers support event-driven workflows for role changes, onboarding, and offboarding. Temporary access can be set to auto-expire.</div></details>
-        <details class="faq-item"><summary><span class="faq-q">What happens after deployment; is there a handover?</span><span class="faq-chevron">+</span></summary><div class="faq-a">EVOCS provides 30 days of post-go-live support, then delivers full documentation and knowledge transfer sessions for independent operation.</div></details>
-        <details class="faq-item"><summary><span class="faq-q">How does the platform address security and compliance requirements?</span><span class="faq-chevron">+</span></summary><div class="faq-a">Full audit trails for every review action, anomaly detection, and alignment with ISO 27001 and NIST. Security is validated during a dedicated testing phase.</div></details>
-        <details class="faq-item"><summary><span class="faq-q">How does reporting work?</span><span class="faq-chevron">+</span></summary><div class="faq-a">Pre-built KPI dashboards and Power BI integration. Real-time views of completion rates, anomalies, and compliance posture. Audit templates generated automatically.</div></details>
+        <div class="faq-item">
+          <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">How long does implementation take?<span class="faq-icon">+</span></button>
+          <div class="faq-a"><p>A typical deployment runs 15 weeks, covering project initiation, system design, integration, testing, and training. Timeline varies with the number of in-scope systems.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">Which platforms and systems does the UAR tool integrate with?<span class="faq-icon">+</span></button>
+          <div class="faq-a"><p>Native connectors for Active Directory, Azure AD, Workday, Salesforce, and ServiceNow. Supports up to 100 enterprise systems and 2,000 AD/AAD groups.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">Will it disrupt our existing tools and workflows?<span class="faq-icon">+</span></button>
+          <div class="faq-a"><p>No. The platform layers on top of existing infrastructure via non-invasive integrations. Change management support and training are included.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">How is data migrated from our current review processes?<span class="faq-icon">+</span></button>
+          <div class="faq-a"><p>EVOCS maps and validates existing data sources, then synchronizes records into the platform. Your team confirms accuracy before go-live.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">Can the platform handle edge cases like contractor access or temporary permissions?<span class="faq-icon">+</span></button>
+          <div class="faq-a"><p>Yes. Configurable review triggers support event-driven workflows for role changes, onboarding, and offboarding. Temporary access can be set to auto-expire.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">What happens after deployment; is there a handover?<span class="faq-icon">+</span></button>
+          <div class="faq-a"><p>EVOCS provides 30 days of post-go-live support, then delivers full documentation and knowledge transfer sessions for independent operation.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">How does the platform address security and compliance requirements?<span class="faq-icon">+</span></button>
+          <div class="faq-a"><p>Full audit trails for every review action, anomaly detection, and alignment with ISO 27001 and NIST. Security is validated during a dedicated testing phase.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">How does reporting work?<span class="faq-icon">+</span></button>
+          <div class="faq-a"><p>Pre-built KPI dashboards and Power BI integration. Real-time views of completion rates, anomalies, and compliance posture. Audit templates generated automatically.</p></div>
+        </div>
       </div>
     </div>
   </div>
