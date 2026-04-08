@@ -566,9 +566,9 @@
     .product-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 32px 32px; row-gap: 64px; }
     .product-card { display: flex; flex-direction: column; cursor: pointer; transition: transform .2s; }
     .product-card:hover { transform: translateY(-2px); }
-    .card-image { width: 100%; aspect-ratio: 4/3; background: #0f172a; border-radius: 8px; overflow: hidden; position: relative; margin-bottom: 24px; }
-    .card-image img { width: 100%; height: 100%; object-fit: cover; object-position: center 15%; display: block; }
-    .card-image::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 28%; background: linear-gradient(to bottom, transparent 0%, #0f172a 80%); pointer-events: none; }
+    .card-image { width: 100%; aspect-ratio: 16/9; background: #0f172a; border-radius: 8px; overflow: hidden; position: relative; margin-bottom: 24px; }
+    .card-image img { width: 100%; height: 100%; object-fit: contain; object-position: center; display: block; }
+    .card-image::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to bottom, transparent 75%, #0a0f1e 100%); pointer-events: none; }
     .card-title { font-size: 24px; font-weight: 700; letter-spacing: -0.6px; color: #191c1e; line-height: 1.33; margin-bottom: 8px; }
     .card-desc { font-size: 16px; line-height: 1.5; color: #464554; margin-bottom: 16px; flex: 1; }
     .card-link { display: inline-flex; align-items: center; gap: 6px; font-size: 16px; font-weight: 700; color: #ff456b; transition: opacity .15s; cursor: pointer; }
