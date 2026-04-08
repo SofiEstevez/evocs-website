@@ -137,7 +137,7 @@
           <div class="agari-actions">
             <div class="left">
               <button type="button" class="btn btn-secondary" id="agariPrevBtn">Back</button>
-              <button type="reset" class="btn btn-secondary" id="agariResetBtn">Reset</button>
+              <button type="reset" class="btn btn-secondary" id="agariResetBtn" style="visibility:hidden">Reset</button>
             </div>
             <div class="right">
               <button type="button" class="btn btn-primary" id="agariCalculateBtn" style="display:none;">See my result</button>
@@ -428,16 +428,51 @@
         <p class="card-desc">Sovereign Enterprise AI Platform — governed AI infrastructure deployed inside your Azure environment, owned and controlled by you.</p>
         <span class="card-link">Learn more <svg class="arrow" width="14" height="10" viewBox="0 0 14 10" fill="none"><path d="M1 5H13M9 1L13 5L9 9" stroke="#ff456b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
       </div>
-      <div class="product-card">
-        <div class="card-image"><img src="https://www.figma.com/api/mcp/asset/fa46825e-d9d0-49fa-bcc2-cdb940a460c1" alt="Product 5" /></div>
-        <h3 class="card-title">Coming soon</h3>
-        <p class="card-desc">Short Description</p>
+      <div class="product-card" onclick="showPage('helix')">
+        <div class="card-image" style="background:#0f172a;display:flex;align-items:center;justify-content:center;">
+          <svg viewBox="0 0 340 240" style="width:90%;height:auto;" xmlns="http://www.w3.org/2000/svg">
+            <rect x="40" y="30" width="260" height="36" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
+            <text x="170" y="53" text-anchor="middle" font-size="11" font-weight="700" fill="#f1f5f9">💬  "I want to automate invoice processing..."</text>
+            <rect x="60" y="90" width="60" height="40" rx="6" fill="rgba(255,69,107,.15)" stroke="rgba(255,69,107,.4)" stroke-width="1.5"/>
+            <text x="90" y="107" text-anchor="middle" font-size="8" font-weight="700" fill="#ff456b">SUBMIT</text>
+            <text x="90" y="120" text-anchor="middle" font-size="7" fill="#94a3b8">Idea in</text>
+            <line x1="120" y1="110" x2="140" y2="110" stroke="#334155" stroke-width="1.5" stroke-dasharray="4 2"/>
+            <rect x="140" y="90" width="60" height="40" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
+            <text x="170" y="107" text-anchor="middle" font-size="8" font-weight="700" fill="#f1f5f9">EVALUATE</text>
+            <text x="170" y="120" text-anchor="middle" font-size="7" fill="#94a3b8">10-dim score</text>
+            <line x1="200" y1="110" x2="220" y2="110" stroke="#334155" stroke-width="1.5" stroke-dasharray="4 2"/>
+            <rect x="220" y="90" width="60" height="40" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
+            <text x="250" y="107" text-anchor="middle" font-size="8" font-weight="700" fill="#f1f5f9">ROUTE</text>
+            <text x="250" y="120" text-anchor="middle" font-size="7" fill="#94a3b8">Build / Defer</text>
+            <line x1="250" y1="130" x2="250" y2="150" stroke="#334155" stroke-width="1.5" stroke-dasharray="4 2"/>
+            <rect x="100" y="155" width="160" height="36" rx="6" fill="#1e293b" stroke="rgba(255,69,107,.4)" stroke-width="1.5"/>
+            <text x="180" y="169" text-anchor="middle" font-size="8" font-weight="700" fill="#ff456b">✓ HANDOFF</text>
+            <text x="180" y="182" text-anchor="middle" font-size="7" fill="#94a3b8">ClickUp task + stakeholder notify</text>
+          </svg>
+        </div>
+        <h3 class="card-title">Helix</h3>
+        <p class="card-desc">AI Use Case Intake &amp; Governance — conversational platform that turns scattered AI ideas into structured, decision-ready business cases.</p>
         <span class="card-link">Learn more <svg class="arrow" width="14" height="10" viewBox="0 0 14 10" fill="none"><path d="M1 5H13M9 1L13 5L9 9" stroke="#ff456b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
       </div>
-      <div class="product-card">
-        <div class="card-image"><img src="https://www.figma.com/api/mcp/asset/e8f82f84-8aa2-472a-9d6b-6ae34c113b22" alt="Product 6" /></div>
-        <h3 class="card-title">Coming soon</h3>
-        <p class="card-desc">Short Description</p>
+      <div class="product-card" onclick="showPage('merlin')">
+        <div class="card-image" style="background:#0f172a;display:flex;align-items:center;justify-content:center;">
+          <svg viewBox="0 0 340 240" style="width:90%;height:auto;" xmlns="http://www.w3.org/2000/svg">
+            <rect x="30" y="30" width="280" height="38" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
+            <text x="48" y="54" font-size="11" fill="#f1f5f9">"Which hyperscalers are expanding in EMEA?"</text>
+            <rect x="30" y="82" width="280" height="56" rx="8" fill="rgba(255,69,107,.1)" stroke="rgba(255,69,107,.3)" stroke-width="1.5"/>
+            <text x="48" y="100" font-size="9" fill="#ff456b" font-weight="700">Merlin</text>
+            <text x="48" y="115" font-size="10" fill="#cbd5e1">Microsoft leads with 3 confirmed sites. Google</text>
+            <text x="48" y="129" font-size="10" fill="#cbd5e1">signals imminent. [Source: EMEA Intel Q1 2026]</text>
+            <circle cx="54" cy="166" r="6" fill="rgba(255,69,107,.3)" stroke="rgba(255,69,107,.6)" stroke-width="1"/>
+            <text x="68" y="170" font-size="9" fill="#64748b">EMEA Intel Tracker</text>
+            <circle cx="54" cy="186" r="6" fill="rgba(255,69,107,.3)" stroke="rgba(255,69,107,.6)" stroke-width="1"/>
+            <text x="68" y="190" font-size="9" fill="#64748b">3rd Party Research · Gartner 2026</text>
+            <circle cx="54" cy="206" r="6" fill="rgba(255,69,107,.3)" stroke="rgba(255,69,107,.6)" stroke-width="1"/>
+            <text x="68" y="210" font-size="9" fill="#64748b">NA Pricing Tracker · Q4 2025</text>
+          </svg>
+        </div>
+        <h3 class="card-title">Merlin</h3>
+        <p class="card-desc">Private Market Intelligence Copilot — synthesizes proprietary data into executive-grade insights delivered through natural language queries.</p>
         <span class="card-link">Learn more <svg class="arrow" width="14" height="10" viewBox="0 0 14 10" fill="none"><path d="M1 5H13M9 1L13 5L9 9" stroke="#ff456b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
       </div>
     </div>
@@ -1395,12 +1430,6 @@
     <div class="product-title">HALO</div>
     <div class="product-subtitle">The AI platform your enterprise owns.</div>
     <p class="product-desc">Running AI everywhere — governing it nowhere. Halo is the sovereign infrastructure layer that puts every model, interaction, and cost under your control.</p>
-    <div class="product-highlights">
-      <div><span class="hl-label">11k+ Models accessible</span><span class="hl-sub">Frontier, open, and fine-tuned models</span></div>
-      <div><span class="hl-label">7-yr Audit retention</span><span class="hl-sub">Tamper-resistant interaction logs</span></div>
-      <div><span class="hl-label">99.9% Uptime SLA</span><span class="hl-sub">Enterprise-grade reliability</span></div>
-      <div><span class="hl-label">&lt;50ms Gateway latency</span><span class="hl-sub">Every AI interaction routed instantly</span></div>
-    </div>
   </div>
 
   <div class="browser-wrap">
@@ -1463,7 +1492,6 @@
     <div class="pd-section-inner">
       <div class="eyebrow">The Platform</div>
       <h2 class="h2">One foundation.<br>Every AI capability.</h2>
-      <p class="lead">Not a SaaS subscription. EVOCS builds and deploys Halo inside your Azure environment — owned by you, governed by your policies.</p>
       <div style="margin-top:40px;">
         <div class="halo-tab-group">
           <button class="halo-tab-btn active" data-tab="develop" onclick="haloSetTab('develop')">Develop</button>
@@ -1517,6 +1545,383 @@
   </footer>
 
   
+</div>
+
+<!-- ════════════════════════════════
+     PAGE: MERLIN
+════════════════════════════════ -->
+<div id="page-merlin" class="page product-page">
+  <header class="nav">
+    <div class="nav__inner">
+      <div class="nav__logo" onclick="showPage('home')">
+        <img src="https://www.figma.com/api/mcp/asset/1314965e-d8b7-40d9-be2b-91c43f0e0b75" alt="EVOCS" />
+      </div>
+      <nav class="nav__links">
+        <a href="#merlin-overview" onclick="scrollToId('merlin-overview', event)">Overview</a>
+        <a href="#merlin-problem" onclick="scrollToId('merlin-problem', event)">Problem</a>
+        <a href="#merlin-solution" onclick="scrollToId('merlin-solution', event)">Solution</a>
+      </nav>
+      <button class="btn-primary" onclick="showPage('products')">More Products</button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <div id="merlin-overview" class="product-hero">
+    <div class="product-eyebrow">INTRODUCING</div>
+    <div class="product-title">MERLIN</div>
+    <div class="product-subtitle">Private Market Intelligence Copilot.</div>
+    <p class="product-desc">Critical market signals — customer demand, competitor moves, pricing shifts — remain buried across dozens of disconnected systems. Merlin is a secure, Azure-native copilot that synthesizes your proprietary intelligence into sourced, cited answers in under 30 seconds.</p>
+  </div>
+
+  <!-- BROWSER MOCKUP -->
+  <div class="browser-wrap">
+    <div class="browser-bar">
+      <div class="browser-dots"><div class="browser-dot"></div><div class="browser-dot"></div><div class="browser-dot"></div></div>
+      <div class="browser-url"><span>merlin.evocs.io/query</span></div>
+    </div>
+    <div style="background:#0f172a;padding:48px 32px;display:flex;justify-content:center;">
+      <svg viewBox="0 0 560 280" style="width:100%;max-width:640px;" xmlns="http://www.w3.org/2000/svg">
+        <!-- Query input -->
+        <rect x="20" y="20" width="400" height="44" rx="10" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
+        <text x="38" y="39" font-size="9" fill="#475569">Ask Merlin</text>
+        <text x="38" y="55" font-size="11" fill="#f1f5f9">"Which hyperscalers are expanding in EMEA right now?"</text>
+        <rect x="430" y="28" width="110" height="28" rx="8" fill="#ff456b"/>
+        <text x="485" y="46" text-anchor="middle" font-size="10" font-weight="700" fill="#fff">Ask →</text>
+
+        <!-- Answer card -->
+        <rect x="20" y="82" width="520" height="110" rx="10" fill="rgba(255,69,107,.08)" stroke="rgba(255,69,107,.25)" stroke-width="1.5"/>
+        <text x="38" y="102" font-size="9" font-weight="700" fill="#ff456b">MERLIN  ·  answered in 22s</text>
+        <text x="38" y="120" font-size="11" fill="#f1f5f9">Microsoft leads EMEA expansion with 3 confirmed sites in Dublin, Amsterdam,</text>
+        <text x="38" y="136" font-size="11" fill="#f1f5f9">and Frankfurt. Google signals an imminent announcement in Madrid. Equinix</text>
+        <text x="38" y="152" font-size="11" fill="#f1f5f9">is showing reduced activity in the UK following Q4 pricing pressure.</text>
+        <text x="38" y="172" font-size="9" fill="#64748b">[Source: EMEA Intel Tracker Q1 2026]  [Source: 3rd Party Research · Gartner Feb 2026]</text>
+
+        <!-- Sources -->
+        <text x="20" y="215" font-size="9" font-weight="700" fill="#475569">Sources indexed</text>
+        <rect x="20" y="222" width="110" height="26" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+        <text x="75" y="239" text-anchor="middle" font-size="8" fill="#94a3b8">EMEA Intel Tracker</text>
+        <rect x="140" y="222" width="110" height="26" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+        <text x="195" y="239" text-anchor="middle" font-size="8" fill="#94a3b8">APAC Intel Tracker</text>
+        <rect x="260" y="222" width="110" height="26" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+        <text x="315" y="239" text-anchor="middle" font-size="8" fill="#94a3b8">3rd Party Research</text>
+        <rect x="380" y="222" width="110" height="26" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+        <text x="435" y="239" text-anchor="middle" font-size="8" fill="#94a3b8">NA Pricing Tracker</text>
+        <rect x="500" y="222" width="40" height="26" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+        <text x="520" y="239" text-anchor="middle" font-size="8" fill="#64748b">+2</text>
+      </svg>
+    </div>
+  </div>
+
+  <!-- THE PROBLEM -->
+  <div id="merlin-problem" class="pd-section alt">
+    <div class="pd-section-inner">
+      <div class="eyebrow">The problem</div>
+      <h2 class="h2">Intelligence exists. Access doesn't.</h2>
+      <p class="lead">Your organization generates and consumes large volumes of proprietary market intelligence every day — but it stays buried, siloed, and out of reach when decisions need to be made.</p>
+      <div class="challenges-grid">
+        <div class="challenge-card">
+          <h3>Data fragmentation</h3>
+          <p>Intelligence is scattered across SharePoint sites, email systems, and regional teams with no unified access point. Executives cannot get a cross-regional view without manually aggregating from multiple sources.</p>
+        </div>
+        <div class="challenge-card">
+          <h3>Manual synthesis</h3>
+          <p>Executives spend significant time manually searching, reading, and collating insights from disparate documents before any analysis can begin — time that should be spent on decisions.</p>
+        </div>
+        <div class="challenge-card">
+          <h3>Delayed decisions</h3>
+          <p>Time-sensitive competitive intelligence becomes stale before it can be effectively analyzed. By the time insights are assembled, the market opportunity may have passed.</p>
+        </div>
+        <div class="challenge-card">
+          <h3>Knowledge silos</h3>
+          <p>Regional insights remain isolated, preventing cross-regional pattern recognition. APAC trends that predict EMEA movement go undetected.</p>
+        </div>
+        <div class="challenge-card">
+          <h3>No source traceability</h3>
+          <p>Informal channels and memory replace documented evidence. Executives cannot trace a claim back to its source, reducing confidence and increasing decision risk.</p>
+        </div>
+        <div class="challenge-card">
+          <h3>Research burden on teams</h3>
+          <p>Market strategy and regional teams spend significant time fielding executive requests and manually assembling briefing materials instead of producing new intelligence.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- THE SOLUTION -->
+  <div id="merlin-solution" class="pd-section">
+    <div class="pd-section-inner">
+      <div class="eyebrow">The solution</div>
+      <h2 class="h2">Ask in plain English. Get cited answers in 30 seconds.</h2>
+      <p class="lead">Merlin is a private, Azure-native copilot that synthesizes your proprietary intelligence corpus — SharePoint trackers, research reports, pricing data — into executive-grade insights with mandatory source citations.</p>
+
+      <div class="workstream">
+        <div>
+          <h3 style="font-size:22px;font-weight:700;margin-bottom:16px;color:#191c1e;">Natural language queries. No dashboards to learn.</h3>
+          <p style="font-size:16px;line-height:1.7;color:#64748b;margin-bottom:24px;">Any authorized executive types a question in plain English. Merlin retrieves evidence across all indexed sources — APAC, EMEA, and NA intel trackers, third-party research, and pricing documents — and synthesizes a coherent, structured answer.</p>
+          <h3 style="font-size:22px;font-weight:700;margin-bottom:16px;color:#191c1e;">Every claim. Every source. Cited.</h3>
+          <p style="font-size:16px;line-height:1.7;color:#64748b;margin-bottom:24px;">Merlin's system prompt enforces citation on every factual claim. Every insight is traceable to its source document — eliminating the reliance on memory and informal channels that undermines executive confidence.</p>
+          <h3 style="font-size:22px;font-weight:700;margin-bottom:16px;color:#191c1e;">Fully private. Zero training exposure.</h3>
+          <p style="font-size:16px;line-height:1.7;color:#64748b;">Merlin runs inside your Azure environment on Azure OpenAI. Your proprietary intelligence is never sent to external model training pipelines. Access is restricted via Microsoft Entra ID SSO and role-based controls.</p>
+        </div>
+        <div style="padding:32px;">
+          <svg viewBox="0 0 320 340" style="width:100%;max-width:360px;display:block;margin:0 auto;" xmlns="http://www.w3.org/2000/svg">
+            <!-- Pipeline stages -->
+            <!-- Authenticate -->
+            <rect x="10" y="10" width="300" height="44" rx="8" fill="#fff" stroke="#e2e8f0" stroke-width="1.5"/>
+            <text x="26" y="28" font-size="9" font-weight="700" fill="#64748b">① AUTHENTICATE</text>
+            <text x="26" y="44" font-size="10" fill="#191c1e">Microsoft Entra ID SSO · Role-gated access</text>
+            <!-- arrow -->
+            <line x1="160" y1="54" x2="160" y2="68" stroke="#e2e8f0" stroke-width="1.5" stroke-dasharray="4 2"/>
+            <!-- Query -->
+            <rect x="10" y="68" width="300" height="44" rx="8" fill="#fff" stroke="#e2e8f0" stroke-width="1.5"/>
+            <text x="26" y="86" font-size="9" font-weight="700" fill="#64748b">② QUERY</text>
+            <text x="26" y="102" font-size="10" fill="#191c1e">Plain English question — no templates, no forms</text>
+            <!-- arrow -->
+            <line x1="160" y1="112" x2="160" y2="126" stroke="#e2e8f0" stroke-width="1.5" stroke-dasharray="4 2"/>
+            <!-- Retrieve -->
+            <rect x="10" y="126" width="300" height="44" rx="8" fill="#fff" stroke="#e2e8f0" stroke-width="1.5"/>
+            <text x="26" y="144" font-size="9" font-weight="700" fill="#64748b">③ RETRIEVE</text>
+            <text x="26" y="160" font-size="10" fill="#191c1e">Hybrid search across all indexed intel sources</text>
+            <!-- arrow -->
+            <line x1="160" y1="170" x2="160" y2="184" stroke="#e2e8f0" stroke-width="1.5" stroke-dasharray="4 2"/>
+            <!-- Synthesize -->
+            <rect x="10" y="184" width="300" height="44" rx="8" fill="rgba(255,69,107,.06)" stroke="rgba(255,69,107,.25)" stroke-width="1.5"/>
+            <text x="26" y="202" font-size="9" font-weight="700" fill="#ff456b">④ SYNTHESIZE</text>
+            <text x="26" y="218" font-size="10" fill="#191c1e">Azure OpenAI · Citations enforced on every claim</text>
+            <!-- arrow -->
+            <line x1="160" y1="228" x2="160" y2="242" stroke="#e2e8f0" stroke-width="1.5" stroke-dasharray="4 2"/>
+            <!-- Deliver -->
+            <rect x="10" y="242" width="300" height="44" rx="8" fill="rgba(255,69,107,.06)" stroke="rgba(255,69,107,.25)" stroke-width="1.5"/>
+            <text x="26" y="260" font-size="9" font-weight="700" fill="#ff456b">⑤ DELIVER</text>
+            <text x="26" y="276" font-size="10" fill="#191c1e">Sourced answer · Export as brief · Follow-up ready</text>
+            <!-- time badge -->
+            <rect x="218" y="252" width="84" height="24" rx="6" fill="#ff456b"/>
+            <text x="260" y="268" text-anchor="middle" font-size="9" font-weight="700" fill="#fff">{"<"} 30 seconds</text>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand-group"><span class="footer__brand">EVOCS</span><span class="footer__copy">© 2024 EVOCS. All rights reserved.</span></div>
+      <nav class="footer__links">
+        <span class="footer__link">Privacy Policy</span>
+        <span class="footer__link">Terms of Service</span>
+        <span class="footer__link">Cookies</span>
+        <span class="footer__link">LinkedIn</span>
+      </nav>
+    </div>
+  </footer>
+</div>
+
+<!-- ════════════════════════════════
+     PAGE: HELIX
+════════════════════════════════ -->
+<div id="page-helix" class="page product-page">
+  <header class="nav">
+    <div class="nav__inner">
+      <div class="nav__logo" onclick="showPage('home')">
+        <img src="https://www.figma.com/api/mcp/asset/1314965e-d8b7-40d9-be2b-91c43f0e0b75" alt="EVOCS" />
+      </div>
+      <nav class="nav__links">
+        <a href="#helix-overview" onclick="scrollToId('helix-overview', event)">Overview</a>
+        <a href="#helix-problem" onclick="scrollToId('helix-problem', event)">Problem</a>
+        <a href="#helix-solution" onclick="scrollToId('helix-solution', event)">Solution</a>
+      </nav>
+      <button class="btn-primary" onclick="showPage('products')">More Products</button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <div id="helix-overview" class="product-hero">
+    <div class="product-eyebrow">INTRODUCING</div>
+    <div class="product-title">HELIX</div>
+    <div class="product-subtitle">AI Use Case Intake &amp; Governance Platform.</div>
+    <p class="product-desc">AI demand consistently outpaces governance capacity. Helix is the single governed front door for all AI opportunity submissions — a conversational platform that turns scattered ideas into structured, decision-ready business cases.</p>
+  </div>
+
+  <!-- BROWSER MOCKUP / DIAGRAM -->
+  <div class="browser-wrap">
+    <div class="browser-bar">
+      <div class="browser-dots"><div class="browser-dot"></div><div class="browser-dot"></div><div class="browser-dot"></div></div>
+      <div class="browser-url"><span>helix.evocs.io/intake</span></div>
+    </div>
+    <div style="background:#0f172a;padding:48px 32px;display:flex;justify-content:center;">
+      <svg viewBox="0 0 560 300" style="width:100%;max-width:640px;" xmlns="http://www.w3.org/2000/svg">
+        <!-- Chat bubble -->
+        <rect x="20" y="20" width="340" height="48" rx="10" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
+        <text x="36" y="40" font-size="10" fill="#94a3b8" font-family="monospace">User</text>
+        <text x="36" y="57" font-size="11" fill="#f1f5f9">"I want to automate our invoice approval workflow."</text>
+        <!-- Helix reply -->
+        <rect x="20" y="82" width="340" height="48" rx="10" fill="rgba(255,69,107,.1)" stroke="rgba(255,69,107,.3)" stroke-width="1.5"/>
+        <text x="36" y="102" font-size="10" fill="#ff456b" font-family="monospace">Helix</text>
+        <text x="36" y="119" font-size="11" fill="#f1f5f9">Got it. Which teams are affected, and how often does this run?</text>
+
+        <!-- Stage pipeline -->
+        <!-- Submit -->
+        <rect x="20" y="160" width="72" height="52" rx="8" fill="rgba(255,69,107,.15)" stroke="rgba(255,69,107,.5)" stroke-width="1.5"/>
+        <text x="56" y="181" text-anchor="middle" font-size="9" font-weight="700" fill="#ff456b">SUBMIT</text>
+        <text x="56" y="196" text-anchor="middle" font-size="8" fill="#64748b">Plain language</text>
+        <text x="56" y="207" text-anchor="middle" font-size="8" fill="#64748b">idea</text>
+        <!-- arrow -->
+        <line x1="92" y1="186" x2="104" y2="186" stroke="#334155" stroke-width="1.5" stroke-dasharray="4 2"/>
+        <!-- Clarify -->
+        <rect x="104" y="160" width="72" height="52" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
+        <text x="140" y="181" text-anchor="middle" font-size="9" font-weight="700" fill="#f1f5f9">CLARIFY</text>
+        <text x="140" y="196" text-anchor="middle" font-size="8" fill="#64748b">Guided</text>
+        <text x="140" y="207" text-anchor="middle" font-size="8" fill="#64748b">follow-up</text>
+        <!-- arrow -->
+        <line x1="176" y1="186" x2="188" y2="186" stroke="#334155" stroke-width="1.5" stroke-dasharray="4 2"/>
+        <!-- Enrich -->
+        <rect x="188" y="160" width="72" height="52" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
+        <text x="224" y="181" text-anchor="middle" font-size="9" font-weight="700" fill="#f1f5f9">ENRICH</text>
+        <text x="224" y="196" text-anchor="middle" font-size="8" fill="#64748b">Doc upload</text>
+        <text x="224" y="207" text-anchor="middle" font-size="8" fill="#64748b">+ RAG</text>
+        <!-- arrow -->
+        <line x1="260" y1="186" x2="272" y2="186" stroke="#334155" stroke-width="1.5" stroke-dasharray="4 2"/>
+        <!-- Evaluate -->
+        <rect x="272" y="160" width="72" height="52" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
+        <text x="308" y="181" text-anchor="middle" font-size="9" font-weight="700" fill="#f1f5f9">EVALUATE</text>
+        <text x="308" y="196" text-anchor="middle" font-size="8" fill="#64748b">10-dim score</text>
+        <text x="308" y="207" text-anchor="middle" font-size="8" fill="#64748b">+ ROI class.</text>
+        <!-- arrow -->
+        <line x1="344" y1="186" x2="356" y2="186" stroke="#334155" stroke-width="1.5" stroke-dasharray="4 2"/>
+        <!-- Route -->
+        <rect x="356" y="160" width="72" height="52" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
+        <text x="392" y="181" text-anchor="middle" font-size="9" font-weight="700" fill="#f1f5f9">ROUTE</text>
+        <text x="392" y="196" text-anchor="middle" font-size="8" fill="#64748b">Build / Partner</text>
+        <text x="392" y="207" text-anchor="middle" font-size="8" fill="#64748b">/ Defer</text>
+        <!-- arrow -->
+        <line x1="428" y1="186" x2="440" y2="186" stroke="#334155" stroke-width="1.5" stroke-dasharray="4 2"/>
+        <!-- Handoff -->
+        <rect x="440" y="160" width="100" height="52" rx="8" fill="rgba(255,69,107,.15)" stroke="rgba(255,69,107,.5)" stroke-width="1.5"/>
+        <text x="490" y="181" text-anchor="middle" font-size="9" font-weight="700" fill="#ff456b">HANDOFF</text>
+        <text x="490" y="196" text-anchor="middle" font-size="8" fill="#64748b">ClickUp task</text>
+        <text x="490" y="207" text-anchor="middle" font-size="8" fill="#64748b">+ notifications</text>
+
+        <!-- Labels -->
+        <text x="280" y="145" text-anchor="middle" font-size="9" fill="#475569" font-style="italic">Six stages: idea to execution</text>
+      </svg>
+    </div>
+  </div>
+
+  <!-- THE PROBLEM -->
+  <div id="helix-problem" class="pd-section alt">
+    <div class="pd-section-inner">
+      <div class="eyebrow">The problem</div>
+      <h2 class="h2">AI demand outpaces governance.</h2>
+      <p class="lead">Ideas arrive through unstructured channels — emails, slide decks, hallway conversations — making triage slow, subjective, and opaque.</p>
+      <div class="challenges-grid">
+        <div class="challenge-card">
+          <h3>Unstructured intake</h3>
+          <p>AI opportunities arrive as emails, spreadsheets, and informal conversations. This creates inconsistency in completeness and makes comparison at scale impossible.</p>
+        </div>
+        <div class="challenge-card">
+          <h3>Slow, subjective triage</h3>
+          <p>Without a common scoring framework, teams struggle to rank opportunities by value and effort. Decisions are delayed, rework multiplies, and stakeholder confidence erodes.</p>
+        </div>
+        <div class="challenge-card">
+          <h3>Scattered evidence</h3>
+          <p>Supporting documentation lives in disconnected systems and can never be systematically incorporated into the evaluation process.</p>
+        </div>
+        <div class="challenge-card">
+          <h3>No visibility after submission</h3>
+          <p>Submitters receive no status updates. Ownership and next steps are unclear, producing frustration and duplicate submissions.</p>
+        </div>
+        <div class="challenge-card">
+          <h3>No audit trail</h3>
+          <p>Without a governed record, leadership cannot understand the AI opportunity pipeline or justify prioritization decisions to the board.</p>
+        </div>
+        <div class="challenge-card">
+          <h3>Good ideas stall in delivery</h3>
+          <p>Even approved use cases lose momentum without a clean handoff. Manual coordination between intake and execution teams delays value realization.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- THE SOLUTION -->
+  <div id="helix-solution" class="pd-section">
+    <div class="pd-section-inner">
+      <div class="eyebrow">The solution</div>
+      <h2 class="h2">One governed front door for every AI idea.</h2>
+      <p class="lead">Helix replaces ad-hoc channels with a chat-first interface that guides any business user through submitting a use case — automatically scoring, routing, and handing off to execution.</p>
+
+      <div class="workstream">
+        <div>
+          <h3 style="font-size:22px;font-weight:700;margin-bottom:16px;color:#191c1e;">Conversational intake. No forms.</h3>
+          <p style="font-size:16px;line-height:1.7;color:#64748b;margin-bottom:24px;">Any employee describes an AI or data opportunity in plain language. Helix confirms its understanding, asks targeted follow-up questions, and extracts all required fields automatically — without the submitter filling a single form field.</p>
+          <h3 style="font-size:22px;font-weight:700;margin-bottom:16px;color:#191c1e;">10-dimension scoring + ROI classification.</h3>
+          <p style="font-size:16px;line-height:1.7;color:#64748b;margin-bottom:24px;">Every submission is evaluated across Benefit, Feasibility, and Effort dimensions. Helix produces an ROI classification (High / Medium / Low) with written rationale — giving governance teams a repeatable, defensible signal to prioritize from.</p>
+          <h3 style="font-size:22px;font-weight:700;margin-bottom:16px;color:#191c1e;">Explicit routing outcomes.</h3>
+          <p style="font-size:16px;line-height:1.7;color:#64748b;">Governance users assign every submission one of four outcomes: <strong>Build</strong>, <strong>Configure / Optimize</strong>, <strong>Partner</strong>, or <strong>Defer</strong>. Helix then sends stakeholder notifications and creates a ClickUp task — so approved work starts immediately.</p>
+        </div>
+        <div style="padding:32px;">
+          <svg viewBox="0 0 320 360" style="width:100%;max-width:360px;display:block;margin:0 auto;" xmlns="http://www.w3.org/2000/svg">
+            <!-- Admin card -->
+            <rect x="10" y="10" width="300" height="70" rx="10" fill="#fff" stroke="#e2e8f0" stroke-width="1.5"/>
+            <text x="26" y="34" font-size="10" font-weight="700" fill="#ff456b">SUBMISSION #247</text>
+            <text x="26" y="52" font-size="12" font-weight="700" fill="#191c1e">Automate invoice approval workflow</text>
+            <text x="26" y="68" font-size="10" fill="#64748b">Finance · High ROI · Feasibility 4.1/5</text>
+            <rect x="220" y="22" width="76" height="24" rx="6" fill="rgba(34,197,94,.1)" stroke="rgba(34,197,94,.3)" stroke-width="1"/>
+            <text x="258" y="38" text-anchor="middle" font-size="10" font-weight="700" fill="#16a34a">✓ BUILD</text>
+
+            <!-- Score breakdown -->
+            <rect x="10" y="96" width="300" height="120" rx="10" fill="#fff" stroke="#e2e8f0" stroke-width="1.5"/>
+            <text x="26" y="116" font-size="10" font-weight="700" fill="#191c1e">Scoring Breakdown</text>
+            <!-- bars -->
+            <text x="26" y="136" font-size="9" fill="#64748b">Benefit</text>
+            <rect x="90" y="126" width="180" height="10" rx="4" fill="#f1f5f9"/>
+            <rect x="90" y="126" width="153" height="10" rx="4" fill="#ff456b" opacity=".7"/>
+            <text x="278" y="136" font-size="9" fill="#64748b">4.3</text>
+            <text x="26" y="158" font-size="9" fill="#64748b">Feasibility</text>
+            <rect x="90" y="148" width="180" height="10" rx="4" fill="#f1f5f9"/>
+            <rect x="90" y="148" width="131" height="10" rx="4" fill="#ff456b" opacity=".7"/>
+            <text x="278" y="158" font-size="9" fill="#64748b">3.7</text>
+            <text x="26" y="180" font-size="9" fill="#64748b">Effort</text>
+            <rect x="90" y="170" width="180" height="10" rx="4" fill="#f1f5f9"/>
+            <rect x="90" y="170" width="108" height="10" rx="4" fill="#ff456b" opacity=".7"/>
+            <text x="278" y="180" font-size="9" fill="#64748b">3.0</text>
+            <text x="26" y="202" font-size="9" fill="#64748b">Strategic Fit</text>
+            <rect x="90" y="192" width="180" height="10" rx="4" fill="#f1f5f9"/>
+            <rect x="90" y="192" width="162" height="10" rx="4" fill="#ff456b" opacity=".7"/>
+            <text x="278" y="202" font-size="9" fill="#64748b">4.5</text>
+
+            <!-- Routing outcomes -->
+            <rect x="10" y="232" width="300" height="56" rx="10" fill="#fff" stroke="#e2e8f0" stroke-width="1.5"/>
+            <text x="26" y="252" font-size="10" font-weight="700" fill="#191c1e">Assign Outcome</text>
+            <rect x="26" y="260" width="56" height="20" rx="5" fill="#ff456b"/>
+            <text x="54" y="274" text-anchor="middle" font-size="9" font-weight="700" fill="#fff">Build</text>
+            <rect x="90" y="260" width="68" height="20" rx="5" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="1"/>
+            <text x="124" y="274" text-anchor="middle" font-size="9" fill="#64748b">Configure</text>
+            <rect x="166" y="260" width="52" height="20" rx="5" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="1"/>
+            <text x="192" y="274" text-anchor="middle" font-size="9" fill="#64748b">Partner</text>
+            <rect x="226" y="260" width="44" height="20" rx="5" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="1"/>
+            <text x="248" y="274" text-anchor="middle" font-size="9" fill="#64748b">Defer</text>
+
+            <!-- Handoff -->
+            <rect x="10" y="304" width="300" height="46" rx="10" fill="rgba(255,69,107,.06)" stroke="rgba(255,69,107,.2)" stroke-width="1.5"/>
+            <text x="26" y="323" font-size="10" font-weight="700" fill="#ff456b">✓ ClickUp task created · Stakeholders notified</text>
+            <text x="26" y="340" font-size="9" fill="#64748b">Execution owner: AI/Data Science Team · SLA: 14 days</text>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand-group"><span class="footer__brand">EVOCS</span><span class="footer__copy">© 2024 EVOCS. All rights reserved.</span></div>
+      <nav class="footer__links">
+        <span class="footer__link">Privacy Policy</span>
+        <span class="footer__link">Terms of Service</span>
+        <span class="footer__link">Cookies</span>
+        <span class="footer__link">LinkedIn</span>
+      </nav>
+    </div>
+  </footer>
 </div>
 
 <!-- ════════════════════════════════
