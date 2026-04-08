@@ -1,0 +1,1531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EVOCS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+<!-- ════════════════════════════════
+     PAGE: HOME
+════════════════════════════════ -->
+<div id="page-home" class="page active">
+  <header class="nav">
+    <div class="nav__inner">
+      <div class="nav__logo" onclick="showPage('home')">
+        <img src="https://www.figma.com/api/mcp/asset/1314965e-d8b7-40d9-be2b-91c43f0e0b75" alt="EVOCS" />
+      </div>
+      <button class="btn-primary" onclick="showPage('products')">Explore products</button>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h1 class="hero__title">We build the software your team always needed.</h1>
+    <p class="hero__subtitle">EVOCS delivers architectural-grade technology solutions designed to streamline workflows, eliminate friction, and empower elite teams.</p>
+    <div class="hero__ctas">
+      <button class="btn-hero" onclick="scrollToId('home-fit')">AI Readiness Assessment</button>
+      <button class="btn-ghost">
+        Talk to us
+        <svg class="arrow" width="16" height="12" viewBox="0 0 16 12" fill="none"><path d="M1 6H15M10 1L15 6L10 11" stroke="#191c1e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+    </div>
+  </section>
+
+  <section class="products" id="home-fit">
+    <div class="products__inner">
+      <div class="products__header">
+        <div class="products__header-left">
+          <span class="label">AI Readiness Assessment</span>
+          <h2 class="products__heading">This short interactive check helps surface likely gaps.</h2>
+          <p class="products__desc">It is intentionally lighter than the full assessment, which validates these signals against your actual systems, workflows, and data.</p>
+        </div>
+      </div>
+
+      <div class="agari-shell">
+        <div class="agari-topbar">
+          <div class="agari-status">
+            <div class="agari-step">Question <span id="agariCurrentStep">1</span> of 6</div>
+            <div class="agari-track"><div class="agari-bar" id="agariProgressBar"></div></div>
+          </div>
+          <div class="agari-hint" id="agariHint">Start with your current governance baseline.</div>
+        </div>
+
+        <form id="agariQuizForm" class="grid" style="gap:16px;">
+          <div class="agari-panel active" data-step="1">
+            <div class="question">
+              <div class="question-title">1. Do you have a formal AI governance policy or standard today?</div>
+              <div class="options" style="display:grid;gap:10px;">
+                <label class="agari-option"><input type="radio" name="q1" value="1"><div><strong>No formal policy</strong><span>AI decisions are mostly ad hoc.</span></div></label>
+                <label class="agari-option"><input type="radio" name="q1" value="2"><div><strong>Some principles exist</strong><span>There are scattered guidelines, but not one clear standard.</span></div></label>
+                <label class="agari-option"><input type="radio" name="q1" value="3"><div><strong>A draft or partial policy exists</strong><span>Some teams use it, but it is not fully embedded.</span></div></label>
+                <label class="agari-option"><input type="radio" name="q1" value="4"><div><strong>Formal policy with active enforcement</strong><span>Governance is documented and used in real workflows.</span></div></label>
+                <label class="agari-option"><input type="radio" name="q1" value="5"><div><strong>Policy is integrated into tooling and lifecycle</strong><span>Governance is operationalized and continuously improved.</span></div></label>
+              </div>
+            </div>
+          </div>
+
+          <div class="agari-panel" data-step="2">
+            <div class="question">
+              <div class="question-title">2. How are AI use cases evaluated inside the business?</div>
+              <div class="options" style="display:grid;gap:10px;">
+                <label class="agari-option"><input type="radio" name="q2" value="1"><div><strong>No formal intake</strong><span>Ideas appear in meetings, chats, or isolated initiatives.</span></div></label>
+                <label class="agari-option"><input type="radio" name="q2" value="2"><div><strong>Manually and inconsistently</strong><span>Each team evaluates ideas differently.</span></div></label>
+                <label class="agari-option"><input type="radio" name="q2" value="3"><div><strong>Some shared criteria</strong><span>There is basic structure, but not one governed decision system.</span></div></label>
+                <label class="agari-option"><input type="radio" name="q2" value="4"><div><strong>Repeatable evaluation process</strong><span>ROI, risk, and ownership are usually reviewed.</span></div></label>
+                <label class="agari-option"><input type="radio" name="q2" value="5"><div><strong>End-to-end decisioning system</strong><span>Ideas are consistently scored, prioritized, routed, and tracked.</span></div></label>
+              </div>
+            </div>
+          </div>
+
+          <div class="agari-panel" data-step="3">
+            <div class="question">
+              <div class="question-title">3. Can employees safely query internal company knowledge with AI today?</div>
+              <div class="options" style="display:grid;gap:10px;">
+                <label class="agari-option"><input type="radio" name="q3" value="1"><div><strong>No</strong><span>There is no approved way to do this.</span></div></label>
+                <label class="agari-option"><input type="radio" name="q3" value="2"><div><strong>Only through manual research</strong><span>People still search documents, emails, and folders themselves.</span></div></label>
+                <label class="agari-option"><input type="radio" name="q3" value="3"><div><strong>Some pilots exist</strong><span>A few teams are testing AI-assisted knowledge access.</span></div></label>
+                <label class="agari-option"><input type="radio" name="q3" value="4"><div><strong>Yes, with controlled access</strong><span>There is a usable internal workflow for safe AI retrieval.</span></div></label>
+                <label class="agari-option"><input type="radio" name="q3" value="5"><div><strong>Yes, at scale</strong><span>Business users can reliably get sourced answers with guardrails.</span></div></label>
+              </div>
+            </div>
+          </div>
+
+          <div class="agari-panel" data-step="4">
+            <div class="question">
+              <div class="question-title">4. Are AI risks, approvals, and limitations documented in a repeatable way?</div>
+              <div class="options" style="display:grid;gap:10px;">
+                <label class="agari-option"><input type="radio" name="q4" value="1"><div><strong>No</strong><span>Most information lives in meetings, chats, or individual memory.</span></div></label>
+                <label class="agari-option"><input type="radio" name="q4" value="2"><div><strong>Partially</strong><span>Some teams document things, but inconsistently.</span></div></label>
+                <label class="agari-option"><input type="radio" name="q4" value="3"><div><strong>Templates exist</strong><span>There is documentation, but it is not fully required or integrated.</span></div></label>
+                <label class="agari-option"><input type="radio" name="q4" value="4"><div><strong>Yes, in a standard process</strong><span>Documentation is structured and helps auditing and collaboration.</span></div></label>
+                <label class="agari-option"><input type="radio" name="q4" value="5"><div><strong>Yes, embedded in workflows and tools</strong><span>Documentation is updated, accessible, and part of the lifecycle.</span></div></label>
+              </div>
+            </div>
+          </div>
+
+          <div class="agari-panel" data-step="5">
+            <div class="question">
+              <div class="question-title">5. When do design, product, engineering, and compliance get involved in AI initiatives?</div>
+              <div class="options" style="display:grid;gap:10px;">
+                <label class="agari-option"><input type="radio" name="q5" value="1"><div><strong>Late or not at all</strong><span>Most work starts with technical experimentation only.</span></div></label>
+                <label class="agari-option"><input type="radio" name="q5" value="2"><div><strong>After development starts</strong><span>Non-technical disciplines are brought in once things already exist.</span></div></label>
+                <label class="agari-option"><input type="radio" name="q5" value="3"><div><strong>Early, but inconsistently</strong><span>Some teams collaborate early, others still don’t.</span></div></label>
+                <label class="agari-option"><input type="radio" name="q5" value="4"><div><strong>From the beginning</strong><span>Cross-functional collaboration shapes priorities and design decisions.</span></div></label>
+                <label class="agari-option"><input type="radio" name="q5" value="5"><div><strong>Before ideas become projects</strong><span>Strategy, UX, technical, and risk perspectives shape what gets built.</span></div></label>
+              </div>
+            </div>
+          </div>
+
+          <div class="agari-panel" data-step="6">
+            <div class="question">
+              <div class="question-title">6. Are AI systems monitored after deployment for misuse, drift, privacy, or security issues?</div>
+              <div class="options" style="display:grid;gap:10px;">
+                <label class="agari-option"><input type="radio" name="q6" value="1"><div><strong>No monitoring</strong><span>Issues are usually discovered by chance or from external feedback.</span></div></label>
+                <label class="agari-option"><input type="radio" name="q6" value="2"><div><strong>Ad hoc monitoring</strong><span>Teams investigate manually when something goes wrong.</span></div></label>
+                <label class="agari-option"><input type="radio" name="q6" value="3"><div><strong>Basic monitoring exists</strong><span>Some risk checks happen, but not systematically.</span></div></label>
+                <label class="agari-option"><input type="radio" name="q6" value="4"><div><strong>Systematic monitoring</strong><span>Teams track risk, performance, and incidents with real processes.</span></div></label>
+                <label class="agari-option"><input type="radio" name="q6" value="5"><div><strong>Scalable monitoring with response plans</strong><span>Telemetry, threat modeling, and mitigation workflows are operationalized.</span></div></label>
+              </div>
+            </div>
+          </div>
+
+          <div class="agari-actions">
+            <div class="left">
+              <button type="button" class="btn btn-secondary" id="agariPrevBtn">Back</button>
+              <button type="reset" class="btn btn-secondary" id="agariResetBtn">Reset</button>
+            </div>
+            <div class="right">
+              <button type="button" class="btn btn-primary" id="agariCalculateBtn" style="display:none;">See my result</button>
+            </div>
+          </div>
+        </form>
+
+        <div id="agariResults" class="agari-results">
+          <div class="agari-result-card">
+            <div class="agari-result-layout">
+              <div class="agari-viz">
+                <h4>Maturity profile</h4>
+                <div class="agari-radar">
+                  <svg viewBox="0 0 360 360" width="100%" height="100%" aria-label="AI maturity radar chart">
+                    <g stroke="rgba(17,24,39,0.10)" fill="none" stroke-width="1.4">
+                      <polygon points="180,48 294,114 294,246 180,312 66,246 66,114" />
+                      <polygon points="180,78 268,129 268,231 180,282 92,231 92,129" />
+                      <polygon points="180,108 242,144 242,216 180,252 118,216 118,144" />
+                      <polygon points="180,138 216,159 216,201 180,222 144,201 144,159" />
+                      <polygon points="180,168 190,174 190,186 180,192 170,186 170,174" />
+                      <line x1="180" y1="180" x2="180" y2="48" />
+                      <line x1="180" y1="180" x2="294" y2="114" />
+                      <line x1="180" y1="180" x2="294" y2="246" />
+                      <line x1="180" y1="180" x2="180" y2="312" />
+                      <line x1="180" y1="180" x2="66" y2="246" />
+                      <line x1="180" y1="180" x2="66" y2="114" />
+                    </g>
+                    <polygon id="agariBaselinePolygon" fill="rgba(17,24,39,0.06)" stroke="rgba(17,24,39,0.10)" stroke-width="1.5"></polygon>
+                    <polygon id="agariResultPolygon" fill="rgba(255,69,107,0.18)" stroke="rgba(255,69,107,0.90)" stroke-width="2.5"></polygon>
+                    <g id="agariResultPoints" fill="rgba(255,69,107,1)"></g>
+                  </svg>
+                  <div class="agari-label agari-top" id="agariLabelTop">Governance</div>
+                  <div class="agari-label agari-right" id="agariLabelRight">Decisioning</div>
+                  <div class="agari-label agari-bottom-right" id="agariLabelBottomRight">Knowledge</div>
+                  <div class="agari-label agari-bottom" id="agariLabelBottom">Documentation</div>
+                  <div class="agari-label agari-bottom-left" id="agariLabelBottomLeft">Collaboration</div>
+                  <div class="agari-label agari-left" id="agariLabelLeft">Monitoring</div>
+                </div>
+                <div class="agari-score"><strong id="agariPhaseScore">3.0/5</strong> estimated maturity signal</div>
+              </div>
+
+              <div class="agari-copy">
+                <div class="agari-head">
+                  <img id="agariPhaseIcon" class="agari-phase-icon" src="" alt="Maturity phase illustration" />
+                  <div>
+                    <h3 class="agari-phase" id="agariPhaseTitle">Your result</h3>
+                    <p class="agari-summary" id="agariPhaseSummary"></p>
+                  </div>
+                </div>
+                <div class="agari-preview" id="agariPreviewCopy">
+                  <p id="agariPhaseExplanation"></p>
+                  <p id="agariSolutionCategory"></p>
+                  <p id="agariSoftProductLink"></p>
+                  <div class="agari-overlay" style="display:flex;gap:10px;justify-content:center;">
+                    <a class="btn btn-primary" id="agariFullResultsBtn" href="mailto:hello@evocs.tech?subject=Full%20Assessment">Get Full assessment</a>
+                    <a class="btn btn-secondary" id="agariSolutionsBtn" href="#related-solutions" onclick="scrollToId('related-solutions', event)">Related Solutions</a>
+                  </div>
+                </div>
+                <div class="agari-subtext">Unlock the full breakdown and recommended next steps.</div>
+              </div>
+            </div>
+
+            <div class="agari-actions" style="margin-top:22px;">
+              <div class="left">
+                <button type="button" class="btn btn-ghost" id="agariRestartBtn">Take test again</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="consulting" id="home-how-it-works">
+    <div class="consulting__inner">
+      <div class="products__header">
+        <div class="products__header-left">
+          <span class="label">How It Works</span>
+          <h2 class="products__heading">Our consulting engagement turns ambiguous demand into an implementation-ready product path.</h2>
+          <p class="products__desc">We do not start by pushing software. We start by diagnosing where your operational friction lives, then map the right EVOCS solution, the right scope, and the fastest route to value.</p>
+        </div>
+      </div>
+
+      <div class="how-timeline">
+        <div class="timeline-step">
+          <div class="timeline-content left"></div>
+          <div class="timeline-center">
+            <div class="timeline-dot-top"></div>
+            <div class="timeline-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M8 3h6l5 5v11a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"></path>
+                <path d="M14 3v5h5"></path>
+                <path d="M9 13h6"></path>
+                <path d="M9 17h4"></path>
+              </svg>
+            </div>
+          </div>
+          <div class="timeline-content right"><strong>Step 1 - Diagnostic and opportunity mapping</strong>We interview stakeholders, review the current workflow, and isolate the process creating the most operational drag, risk, or manual effort.</div>
+        </div>
+
+        <div class="timeline-step">
+          <div class="timeline-content left"><strong>Step 2 - Solution design for your operating reality</strong>We map the problem to the right EVOCS solution and define the target workflow, integrations, governance model, and rollout boundaries.</div>
+          <div class="timeline-center">
+            <div class="timeline-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 20h9"></path>
+                <path d="M16.5 3.5a2.12 2.12 0 1 1 3 3L7 19l-4 1 1-4 12.5-12.5z"></path>
+              </svg>
+            </div>
+          </div>
+          <div class="timeline-content right"></div>
+        </div>
+
+        <div class="timeline-step">
+          <div class="timeline-content left"></div>
+          <div class="timeline-center">
+            <div class="timeline-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="7" y="4" width="10" height="16" rx="2"></rect>
+                <path d="M11 8h2"></path>
+                <path d="M10 12h4"></path>
+                <path d="M11 16h2"></path>
+              </svg>
+            </div>
+          </div>
+          <div class="timeline-content right"><strong>Step 3 - Implementation and integration</strong>Our team configures the product, connects your source systems, and turns the proposed workflow into a production-ready operating model.</div>
+        </div>
+
+        <div class="timeline-step">
+          <div class="timeline-content left"><strong>Step 4 - Enablement, reporting, and optimization</strong>We hand over the system with training, reporting, and practical next steps so the solution keeps compounding value after go-live.</div>
+          <div class="timeline-center">
+            <div class="timeline-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M8 6h13"></path>
+                <path d="M8 12h13"></path>
+                <path d="M8 18h13"></path>
+                <path d="M3 6h.01"></path>
+                <path d="M3 12h.01"></path>
+                <path d="M3 18h.01"></path>
+              </svg>
+            </div>
+            <div class="timeline-dot-bottom"></div>
+          </div>
+          <div class="timeline-content right"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="related" id="related-solutions">
+    <div class="related__inner">
+      <div class="products__header">
+        <div class="products__header-left">
+          <span class="label">Related Solutions</span>
+          <h2 class="products__heading">Three products teams most often evaluate around this consulting motion.</h2>
+          <p class="products__desc">Depending on your maturity, the right starting point may be governance, identity automation, or safety intelligence.</p>
+        </div>
+      </div>
+
+      <div class="related-grid">
+        <article class="related-card">
+          <span class="related-kicker">Foundation</span>
+          <h3>Halo</h3>
+          <p>Governance, guardrails, and the operating foundation required when teams need a structured enterprise layer before scaling more specialized workflows.</p>
+          <div class="related-actions">
+            <a class="btn-secondary" href="#halo" onclick="showPage('halo'); return false;">See Halo</a>
+          </div>
+        </article>
+
+        <article class="related-card">
+          <span class="related-kicker">Identity &amp; Access</span>
+          <h3>Bari</h3>
+          <p>Best fit when your bottleneck is joiner-mover-leaver automation, licence control, and asset orchestration across enterprise identity workflows.</p>
+          <div class="related-actions">
+            <a class="btn-secondary" href="#bari" onclick="showPage('bari'); return false;">See Bari</a>
+          </div>
+        </article>
+
+        <article class="related-card">
+          <span class="related-kicker">Safety Intelligence</span>
+          <h3>Piro</h3>
+          <p>Best fit when operational teams need predictive risk visibility, explainable signals, and ranked corrective actions from safety and incident data.</p>
+          <div class="related-actions">
+            <a class="btn-secondary" href="#piro" onclick="showPage('piro'); return false;">See Piro</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="stats">
+    <div class="stats__inner">
+      <div class="stat">
+        <div class="stat__number">+10</div>
+        <div class="stat__label">Products in production</div>
+        <p class="stat__desc">Each product born from solving the same problem across multiple enterprise clients.</p>
+      </div>
+      <div class="stat">
+        <div class="stat__number">6 mo</div>
+        <div class="stat__label">Average time to production</div>
+        <p class="stat__desc">From kickoff to go-live; our structured delivery method gets teams running fast.</p>
+      </div>
+      <div class="stat">
+        <div class="stat__number">80%</div>
+        <div class="stat__label">Reduction in manual operations</div>
+        <p class="stat__desc">On average, EVOCS clients automate their most repetitive workflows within the first quarter.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer id="contact" class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand-group">
+        <span class="footer__brand">EVOCS</span>
+        <span class="footer__copy">© 2024 EVOCS. All rights reserved.</span>
+      </div>
+      <nav class="footer__links">
+        <span class="footer__link">Privacy Policy</span>
+        <span class="footer__link">Terms of Service</span>
+        <span class="footer__link">Cookies</span>
+        <span class="footer__link">LinkedIn</span>
+      </nav>
+    </div>
+  </footer>
+</div>
+
+<!-- ════════════════════════════════
+     PAGE: PRODUCTS CATALOG
+════════════════════════════════ -->
+<div id="page-products" class="page catalog-bg">
+  <header class="nav">
+    <div class="nav__inner">
+      <div class="nav__logo" onclick="showPage('home')">
+        <img src="https://www.figma.com/api/mcp/asset/064415e4-4b3d-4299-9c0c-74b5923a03c7" alt="EVOCS" />
+      </div>
+      <button class="btn-primary" onclick="showPage('products')">Explore products</button>
+    </div>
+  </header>
+
+  <main class="catalog-main">
+    <div>
+      <div class="badge"><span>Products</span></div>
+      <h1 class="catalog-title">Our Solutions</h1>
+      <p class="catalog-desc">A comprehensive ecosystem of intelligent tools designed to architect clarity within complex digital infrastructures and drive transformative business results.</p>
+    </div>
+
+    <div class="product-grid">
+      <div class="product-card" onclick="showPage('bari')">
+        <div class="card-image"><img src="https://www.figma.com/api/mcp/asset/87b6b82e-2ef5-490a-ab95-e2c11817ea53" alt="Bari" /></div>
+        <h3 class="card-title">Bari</h3>
+        <p class="card-desc">Identity &amp; Access Management — fully automated Joiner-Mover-Leaver engine, licence optimizer, and asset management platform.</p>
+        <span class="card-link">Learn more <svg class="arrow" width="14" height="10" viewBox="0 0 14 10" fill="none"><path d="M1 5H13M9 1L13 5L9 9" stroke="#ff456b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </div>
+      <div class="product-card" onclick="showPage('piro')">
+        <div class="card-image"><img src="https://www.figma.com/api/mcp/asset/d1cfebd7-0ec1-4c34-90b1-5cfd82070349" alt="Piro" /></div>
+        <h3 class="card-title">Piro</h3>
+        <p class="card-desc">Safety Intelligence Platform — ML platform that transforms EHS data into risk predictions and ranked corrective actions.</p>
+        <span class="card-link">Learn more <svg class="arrow" width="14" height="10" viewBox="0 0 14 10" fill="none"><path d="M1 5H13M9 1L13 5L9 9" stroke="#ff456b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </div>
+      <div class="product-card" onclick="showPage('osimo')">
+        <div class="card-image"><img src="https://www.figma.com/api/mcp/asset/561ea42d-e1af-4c0b-b457-a2db7d5a4482" alt="Osimo" /></div>
+        <h3 class="card-title">Osimo</h3>
+        <p class="card-desc">Automated User Access Review — centralised platform replacing spreadsheets with real-time compliance visibility.</p>
+        <span class="card-link">Learn more <svg class="arrow" width="14" height="10" viewBox="0 0 14 10" fill="none"><path d="M1 5H13M9 1L13 5L9 9" stroke="#ff456b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </div>
+      <div class="product-card" onclick="showPage('halo')">
+        <div class="card-image" style="background:#0f172a;display:flex;align-items:center;justify-content:center;">
+          <svg viewBox="0 0 340 240" style="width:90%;height:auto;" xmlns="http://www.w3.org/2000/svg">
+            <line x1="56" y1="55" x2="170" y2="118" stroke="rgba(255,69,107,.4)" stroke-width="1.5" stroke-dasharray="5 3"/>
+            <line x1="127" y1="38" x2="170" y2="118" stroke="rgba(255,69,107,.4)" stroke-width="1.5" stroke-dasharray="5 3"/>
+            <line x1="213" y1="38" x2="170" y2="118" stroke="rgba(255,69,107,.4)" stroke-width="1.5" stroke-dasharray="5 3"/>
+            <line x1="284" y1="55" x2="170" y2="118" stroke="rgba(255,69,107,.4)" stroke-width="1.5" stroke-dasharray="5 3"/>
+            <line x1="170" y1="118" x2="90" y2="200" stroke="rgba(255,255,255,.15)" stroke-width="1.5" stroke-dasharray="5 3"/>
+            <line x1="170" y1="118" x2="170" y2="206" stroke="rgba(255,255,255,.15)" stroke-width="1.5" stroke-dasharray="5 3"/>
+            <line x1="170" y1="118" x2="250" y2="200" stroke="rgba(255,255,255,.15)" stroke-width="1.5" stroke-dasharray="5 3"/>
+            <circle cx="56" cy="55" r="20" fill="#1e293b" stroke="#334155" stroke-width="1.5"/><text x="56" y="60" text-anchor="middle" font-size="12">🗂️</text>
+            <circle cx="127" cy="38" r="20" fill="#1e293b" stroke="#334155" stroke-width="1.5"/><text x="127" y="43" text-anchor="middle" font-size="12">📄</text>
+            <circle cx="213" cy="38" r="20" fill="#1e293b" stroke="#334155" stroke-width="1.5"/><text x="213" y="43" text-anchor="middle" font-size="12">🔌</text>
+            <circle cx="284" cy="55" r="20" fill="#1e293b" stroke="#334155" stroke-width="1.5"/><text x="284" y="60" text-anchor="middle" font-size="12">📡</text>
+            <circle cx="170" cy="118" r="34" fill="rgba(255,69,107,.12)" stroke="rgba(255,69,107,.5)" stroke-width="1.5"/>
+            <text x="170" y="114" text-anchor="middle" font-size="11" font-weight="700" fill="#f1f5f9">HALO</text>
+            <text x="170" y="127" text-anchor="middle" font-size="7" font-weight="700" fill="#ff456b" letter-spacing=".08em">SOVEREIGN AI</text>
+            <circle cx="90" cy="200" r="22" fill="#1e293b" stroke="#334155" stroke-width="1.5"/><text x="90" y="205" text-anchor="middle" font-size="13">💬</text>
+            <circle cx="170" cy="206" r="22" fill="#1e293b" stroke="#334155" stroke-width="1.5"/><text x="170" y="211" text-anchor="middle" font-size="13">📊</text>
+            <circle cx="250" cy="200" r="22" fill="#1e293b" stroke="#334155" stroke-width="1.5"/><text x="250" y="205" text-anchor="middle" font-size="13">⚡</text>
+          </svg>
+        </div>
+        <h3 class="card-title">Halo</h3>
+        <p class="card-desc">Sovereign Enterprise AI Platform — governed AI infrastructure deployed inside your Azure environment, owned and controlled by you.</p>
+        <span class="card-link">Learn more <svg class="arrow" width="14" height="10" viewBox="0 0 14 10" fill="none"><path d="M1 5H13M9 1L13 5L9 9" stroke="#ff456b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </div>
+      <div class="product-card">
+        <div class="card-image"><img src="https://www.figma.com/api/mcp/asset/fa46825e-d9d0-49fa-bcc2-cdb940a460c1" alt="Product 5" /></div>
+        <h3 class="card-title">Coming soon</h3>
+        <p class="card-desc">Short Description</p>
+        <span class="card-link">Learn more <svg class="arrow" width="14" height="10" viewBox="0 0 14 10" fill="none"><path d="M1 5H13M9 1L13 5L9 9" stroke="#ff456b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </div>
+      <div class="product-card">
+        <div class="card-image"><img src="https://www.figma.com/api/mcp/asset/e8f82f84-8aa2-472a-9d6b-6ae34c113b22" alt="Product 6" /></div>
+        <h3 class="card-title">Coming soon</h3>
+        <p class="card-desc">Short Description</p>
+        <span class="card-link">Learn more <svg class="arrow" width="14" height="10" viewBox="0 0 14 10" fill="none"><path d="M1 5H13M9 1L13 5L9 9" stroke="#ff456b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </div>
+    </div>
+
+    <div class="cta-strip">
+      <h2>Ready to re-architect your technical strategy?</h2>
+      <p>Our consultants are ready to help you integrate these solutions into your existing ecosystem for maximum efficiency.</p>
+      <button class="btn-cta">
+        Talk to us
+        <svg class="arrow" width="16" height="12" viewBox="0 0 16 12" fill="none"><path d="M1 6H15M10 1L15 6L10 11" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand-group">
+        <span class="footer__brand">EVOCS</span>
+        <span class="footer__copy">© 2024 EVOCS. All rights reserved.</span>
+      </div>
+      <nav class="footer__links">
+        <span class="footer__link">Privacy Policy</span>
+        <span class="footer__link">Terms of Service</span>
+        <span class="footer__link">Cookies</span>
+        <span class="footer__link">LinkedIn</span>
+      </nav>
+    </div>
+  </footer>
+</div>
+
+<!-- ════════════════════════════════
+     PAGE: BARI
+════════════════════════════════ -->
+<div id="page-bari" class="page product-page">
+  <header class="nav">
+    <div class="nav__inner">
+      <div class="nav__logo" onclick="showPage('home')">
+        <img src="https://www.figma.com/api/mcp/asset/b9a37146-8f60-4406-9f48-49ce93121121" alt="EVOCS" />
+      </div>
+      <nav class="nav__links">
+        <a href="#bari-overview" onclick="scrollToId('bari-overview', event)">Overview</a>
+        <a href="#bari-challenges" onclick="scrollToId('bari-challenges', event)">Challenges</a>
+        <a href="#bari-capabilities" onclick="scrollToId('bari-capabilities', event)">Capabilities</a>
+        <a href="#bari-implementation" onclick="scrollToId('bari-implementation', event)">Implementation</a>
+        <a href="#bari-faq" onclick="scrollToId('bari-faq', event)">FAQ</a>
+      </nav>
+      <button class="btn-primary" onclick="showPage('products')">More Products</button>
+    </div>
+  </header>
+
+  <div id="bari-overview" class="product-hero">
+    <div class="product-eyebrow">INTRODUCING</div>
+    <div class="product-title">BARI</div>
+    <div class="product-subtitle">Identity &amp; Access Management Program</div>
+    <p class="product-desc">A fully automated Joiner-Mover-Leaver engine, software licence optimizer, and asset management platform.</p>
+    <div class="product-highlights">
+      <div><span class="hl-label">Day 1 access, guaranteed</span><span class="hl-sub">New hires active before their start date</span></div>
+      <div><span class="hl-label">Zero manual deprovisioning</span><span class="hl-sub">Automatic same-day leaver offboarding</span></div>
+      <div><span class="hl-label">Licence waste eliminated</span><span class="hl-sub">Real-time reclaim and recertification</span></div>
+    </div>
+  </div>
+  <div class="browser-wrap">
+    <div class="browser-bar">
+      <div class="browser-dots"><div class="browser-dot"></div><div class="browser-dot"></div><div class="browser-dot"></div></div>
+      <div class="browser-url"><span>bari-cloud.evocs.io/dashboard</span></div>
+    </div>
+    <div class="bd">
+      <!-- Sidebar -->
+      <aside class="bd-sidebar">
+        <div class="bd-brand">
+          <div class="bd-brand-icon">B</div>
+          <div>
+            <div class="bd-brand-name" contenteditable="true">Bari</div>
+            <div class="bd-brand-sub" contenteditable="true">Workstream A · Identity lifecycle</div>
+          </div>
+        </div>
+        <div class="bd-nav-label">Overview</div>
+        <div class="bd-nav-item active"><span class="bd-nav-icon">⊞</span>Dashboard</div>
+        <div class="bd-nav-item"><span class="bd-nav-icon">⇄</span>System Flow</div>
+        <div class="bd-nav-label">Lifecycle</div>
+        <div class="bd-nav-item"><span class="bd-nav-icon">+</span>Joiners<span class="bd-badge bd-badge-teal" contenteditable="true">3</span></div>
+        <div class="bd-nav-item"><span class="bd-nav-icon">⇄</span>Movers<span class="bd-badge bd-badge-amber" contenteditable="true">2</span></div>
+        <div class="bd-nav-item"><span class="bd-nav-icon">−</span>Leavers<span class="bd-badge bd-badge-pink" contenteditable="true">1</span></div>
+        <div class="bd-nav-label">Governance</div>
+        <div class="bd-nav-item"><span class="bd-nav-icon">≡</span>Audit Trail</div>
+        <div class="bd-nav-item"><span class="bd-nav-icon">◎</span>SLA Monitor</div>
+        <div class="bd-nav-label">System</div>
+        <div class="bd-nav-item"><span class="bd-nav-icon">◇</span>Policy Rules</div>
+      </aside>
+      <!-- Main -->
+      <div class="bd-main">
+        <div class="bd-topbar">
+          <div>
+            <div class="bd-topbar-title" contenteditable="true">Operations Dashboard</div>
+            <div class="bd-topbar-sub" contenteditable="true">Real-time JML lifecycle overview</div>
+          </div>
+          <div class="bd-topbar-right">
+            <button class="bd-hub-btn">← Hub</button>
+            <div class="bd-live"><div class="bd-live-dot"></div>Live sync</div>
+          </div>
+        </div>
+        <div class="bd-scroll">
+          <div class="bd-stats">
+            <div class="bd-stat">
+              <div class="bd-stat-lbl">Active Cases</div>
+              <div class="bd-stat-val" contenteditable="true">7</div>
+              <div class="bd-stat-note"><span class="bd-stat-up" contenteditable="true">↑ 3 new today</span></div>
+            </div>
+            <div class="bd-stat">
+              <div class="bd-stat-lbl">Day 1 Ready</div>
+              <div class="bd-stat-val" contenteditable="true">2 / 5</div>
+              <div class="bd-stat-note" contenteditable="true">Joiners this week</div>
+            </div>
+            <div class="bd-stat">
+              <div class="bd-stat-lbl">SLA at Risk</div>
+              <div class="bd-stat-val" contenteditable="true">2</div>
+              <div class="bd-stat-note" contenteditable="true">Priya Nair, Oliver Walsh</div>
+            </div>
+            <div class="bd-stat">
+              <div class="bd-stat-lbl">Avg. Offboard Time</div>
+              <div class="bd-stat-val" contenteditable="true">20m</div>
+              <div class="bd-stat-note"><span class="bd-stat-dn" contenteditable="true">↓ vs 4h SLA target</span></div>
+            </div>
+          </div>
+          <div class="bd-tables">
+            <div class="bd-tcard">
+              <div class="bd-tcard-head">
+                <div>
+                  <div class="bd-tcard-title">Recent Joiners</div>
+                  <div class="bd-tcard-sub">Active provisioning pipeline</div>
+                </div>
+                <button class="bd-view-all">View all →</button>
+              </div>
+              <table class="bd-tbl">
+                <thead><tr><th>Employee</th><th>Status</th><th>Start Date</th></tr></thead>
+                <tbody>
+                  <tr>
+                    <td><div class="bd-emp"><div class="bd-av bd-av-sm">SM</div><div><div class="bd-emp-name" contenteditable="true">Sarah Mitchell</div><div class="bd-emp-role" contenteditable="true">Senior Data Engineer</div></div></div></td>
+                    <td><span class="bd-chip bd-chip-teal">✓ Day 1 Ready</span></td>
+                    <td><span class="bd-date" contenteditable="true">2026-03-10</span></td>
+                  </tr>
+                  <tr>
+                    <td><div class="bd-emp"><div class="bd-av bd-av-jo">JO</div><div><div class="bd-emp-name" contenteditable="true">James Okafor</div><div class="bd-emp-role" contenteditable="true">Cloud Infrastructure Eng</div></div></div></td>
+                    <td><span class="bd-chip bd-chip-amber">↺ In Progress</span></td>
+                    <td><span class="bd-date" contenteditable="true">2026-03-12</span></td>
+                  </tr>
+                  <tr>
+                    <td><div class="bd-emp"><div class="bd-av bd-av-pn">PN</div><div><div class="bd-emp-name" contenteditable="true">Priya Nair</div><div class="bd-emp-role" contenteditable="true">Compliance Analyst</div></div></div></td>
+                    <td><span class="bd-chip bd-chip-red">⚠ Blocked</span></td>
+                    <td><span class="bd-date" contenteditable="true">2026-03-11</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="bd-tcard">
+              <div class="bd-tcard-head">
+                <div>
+                  <div class="bd-tcard-title">Recent Leavers</div>
+                  <div class="bd-tcard-sub">Offboarding pipeline</div>
+                </div>
+                <button class="bd-view-all">View all →</button>
+              </div>
+              <table class="bd-tbl">
+                <thead><tr><th>Employee</th><th>Status</th><th>Priority</th></tr></thead>
+                <tbody>
+                  <tr>
+                    <td><div class="bd-emp"><div class="bd-av bd-av-dp">DP</div><div><div class="bd-emp-name" contenteditable="true">David Park</div><div class="bd-emp-role" contenteditable="true">VP of Operations</div></div></div></td>
+                    <td><span class="bd-chip bd-chip-green">✓ Complete</span></td>
+                    <td><span class="bd-pri bd-pri-std"><span class="bd-pri-dot"></span>standard</span></td>
+                  </tr>
+                  <tr>
+                    <td><div class="bd-emp"><div class="bd-av bd-av-rt">RT</div><div><div class="bd-emp-name" contenteditable="true">Rachel Torres</div><div class="bd-emp-role" contenteditable="true">Security Engineer</div></div></div></td>
+                    <td><span class="bd-chip bd-chip-amber">↺ In Progress</span></td>
+                    <td><span class="bd-pri bd-pri-hi"><span class="bd-pri-dot"></span>high</span></td>
+                  </tr>
+                  <tr>
+                    <td><div class="bd-emp"><div class="bd-av bd-av-bk">BK</div><div><div class="bd-emp-name" contenteditable="true">Brian Kowalski</div><div class="bd-emp-role" contenteditable="true">Platform Engineer</div></div></div></td>
+                    <td><span class="bd-chip bd-chip-amber">↺ In Progress</span></td>
+                    <td><span class="bd-pri bd-pri-std"><span class="bd-pri-dot"></span>standard</span></td>
+                  </tr>
+                  <tr>
+                    <td><div class="bd-emp"><div class="bd-av bd-av-yt">YT</div><div><div class="bd-emp-name" contenteditable="true">Yuki Tanaka</div><div class="bd-emp-role" contenteditable="true">Finance Analyst</div></div></div></td>
+                    <td><span class="bd-chip bd-chip-green">✓ Complete</span></td>
+                    <td><span class="bd-pri bd-pri-std"><span class="bd-pri-dot"></span>standard</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="padding:0 32px 96px;max-width:1280px;margin:0 auto;">
+    <h2 class="h2">One program. Three engines working together.</h2>
+    <p style="font-size:18px;line-height:1.7;color:#64748b;max-width:880px;">Most organisations manage identity, licences, and assets in isolation. The result is delayed onboarding, stale access, over-spend on software, and hardware that disappears when people leave.<br><br>BARI replaces all of that with a single, automated platform. Workday drives every decision. Every lifecycle event triggers the right action across every connected system — instantly, with a full audit trail and no manual steps.</p>
+  </div>
+
+  <div id="bari-challenges" class="pd-section alt">
+    <div class="pd-section-inner">
+      <div class="eyebrow">The problem</div>
+      <h2 class="h2">Manual identity management is a liability.</h2>
+      <p class="lead">When access is managed by hand, security gaps, wasted spend, and compliance risk are inevitable.</p>
+      <div class="challenges-grid">
+        <div class="challenge-card"><h3>New hires wait days for access</h3><p>Without automation, IT must manually provision accounts across every system. New employees spend their first days unable to do their job while waiting for tickets to be resolved.</p></div>
+        <div class="challenge-card"><h3>Leavers stay active after they leave</h3><p>Manual offboarding across 20+ systems is slow and error-prone. Accounts belonging to departed employees remain active for days or weeks, creating serious security exposure.</p></div>
+        <div class="challenge-card"><h3>Role changes accumulate excess access</h3><p>When someone changes role, old entitlements are rarely cleaned up. Over time, users accumulate access far beyond what their current role requires, violating least-privilege principles.</p></div>
+        <div class="challenge-card"><h3>Licence spend is invisible</h3><p>Without a unified inventory, no one knows exactly how many licences are owned, allocated, or wasted. Renewals happen at full cost even when half the seats haven't been used in months.</p></div>
+        <div class="challenge-card"><h3>Compliance relies on spreadsheets</h3><p>Without a tamper-resistant audit trail, responding to an auditor's question about who had access to what — and when — takes days of manual investigation.</p></div>
+        <div class="challenge-card"><h3>Assets disappear when people leave</h3><p>Hardware recovery depends on emails and informal follow-up. When there is no tracked workflow, assets walk out the door or remain unaccounted for at audit time.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="bari-capabilities" class="pd-section">
+    <div class="pd-section-inner">
+      <div class="eyebrow">Capabilities</div>
+      <h2 class="h2">Three workstreams. One connected platform.</h2>
+      <p class="lead">Each engine solves a distinct problem. Together they create a complete identity, licence, and asset management system.</p>
+      <div class="workstream">
+        <div>
+          <div class="workstream-label">Workstream A</div>
+          <h3>Every hire, move, and departure is handled automatically.</h3>
+          <p>The JML Lifecycle Engine connects directly to Workday. The moment a hire, role change, or termination event is detected, the engine orchestrates provisioning or deprovisioning across all connected systems. No manual steps, no delays, no gaps.</p>
+          <ul class="bullet-list">
+            <li>Access delta on every role change; prior entitlements removed, new ones granted automatically</li>
+            <li>Day 1 Ready: new hire accounts confirmed active before the start date</li>
+            <li>Tamper-resistant correlation log; every access change traced back to its Workday event</li>
+            <li>Separation of duties enforcement and break-glass emergency access with full audit trail</li>
+            <li>Same-day leaver deprovisioning across platforms</li>
+          </ul>
+        </div>
+        <div class="workstream-img"><img src="https://www.figma.com/api/mcp/asset/b0608299-553b-4563-b659-9d438f68de19" alt="JML Engine" /></div>
+      </div>
+      <div class="workstream">
+        <div class="workstream-img"><img src="https://www.figma.com/api/mcp/asset/74e7b04f-093f-4d7e-92cc-a482725b6e3c" alt="Licence Management" /></div>
+        <div>
+          <div class="workstream-label">Workstream B</div>
+          <h3>Stop paying for licences no one is using.</h3>
+          <p>The Licence Management engine inventories every software seat across up to 20 platforms, reclaims dormant and orphaned licences automatically, and runs structured recertification campaigns. Savings are tracked and reportable from day one.</p>
+          <ul class="bullet-list">
+            <li>RBAC-driven assignment; licences granted automatically when a role is set in Workday</li>
+            <li>Full licence inventory: entitlements vs. allocations vs. active usage, refreshed nightly</li>
+            <li>Savings pipeline: identified, in-progress, and realised savings separated and reportable</li>
+            <li>Manager-led recertification: Accept or Decline per user, with campaign tracking and deadline alerts</li>
+            <li>Automated reclaim: leaver events and inactivity thresholds trigger instant seat recovery</li>
+          </ul>
+        </div>
+      </div>
+      <div class="workstream">
+        <div>
+          <div class="workstream-label">Workstream C</div>
+          <h3>Every asset tracked, from first assignment to final recovery.</h3>
+          <p>The Asset Management engine maintains a single authoritative registry for all hardware and software assets, linked to identity and licence records. Nothing falls through the gap.</p>
+          <ul class="bullet-list">
+            <li>Joiner fulfilment: Workstream A hire events automatically generate equipment preparation tasks</li>
+            <li>Single asset registry: every in-scope asset with 10+ standard fields, linked to owner identity</li>
+            <li>Orphan asset detection: unowned equipment surfaced automatically for remediation</li>
+            <li>Leaver recovery: termination events create tracked recovery workflows for every assigned asset</li>
+          </ul>
+        </div>
+        <div class="workstream-img"><img src="https://www.figma.com/api/mcp/asset/197f181a-e21f-4fa2-9aff-b04e3cdc8a4a" alt="Asset Management" /></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="bari-implementation" class="pd-section gray">
+    <div class="pd-section-inner">
+      <div class="eyebrow">How it works</div>
+      <h2 class="h2">Up and running in weeks, not years.</h2>
+      <p class="lead">A structured delivery approach that connects your existing systems, configures your policies, and hands over a production-ready platform.</p>
+      <div class="steps">
+        <div class="step"><div class="step-num">01</div><div class="step-content"><h3>Connect Workday</h3><p>Workday is established as the single authoritative source of identity truth. The integration captures hire, mover, and leaver events in real time.</p></div></div>
+        <div class="step"><div class="step-num">02</div><div class="step-content"><h3>Define Access Policies</h3><p>Attribute-based access rules are configured using Workday data — job family, department, location, and worker type — with a least-privilege baseline and exception approval flows.</p></div></div>
+        <div class="step"><div class="step-num">03</div><div class="step-content"><h3>Connect Target Platforms</h3><p>Modular connectors are deployed for Entra ID, Active Directory, and up to 20 SaaS platforms.</p></div></div>
+        <div class="step"><div class="step-num">04</div><div class="step-content"><h3>Baseline Licences and Assets</h3><p>A verified inventory of software licences and hardware assets is established before automation is switched on. Every record is linked to an identity and validated.</p></div></div>
+        <div class="step"><div class="step-num">05</div><div class="step-content"><h3>Go Live and Optimise</h3><p>The JML engine, licence management, and asset workflows go live. Dashboards, alerts, and reporting are available from day one. Savings begin accumulating immediately.</p></div></div>
+        <div class="step"><div class="step-num">06</div><div class="step-content"><h3>Hand Over and Sustain</h3><p>The platform is handed over with documented runbooks, trained operators, and a self-sustaining reporting capability.</p></div></div>
+      </div>
+      <div class="integrations">
+        <h3>Integrates with your entire stack</h3>
+        <div class="integration-tags">
+          <span class="integration-tag">Microsoft Entra ID</span>
+          <span class="integration-tag">Active Directory</span>
+          <span class="integration-tag">Workday</span>
+          <span class="integration-tag">ServiceNow</span>
+          <span class="integration-tag">20 SaaS Platforms</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="bari-faq" class="pd-section">
+    <div class="pd-section-inner">
+      <div class="eyebrow">Frequently asked questions</div>
+      <h2 class="h2">Everything you need to evaluate this program.</h2>
+      <div class="faq-list">
+        <details class="faq-item"><summary><span class="faq-q">How long does implementation take?</span><span class="faq-chevron">+</span></summary><div class="faq-a">Phased across three workstreams: Workstream A (JML) first, then B and C in parallel once the licence baseline is established. Timeline depends on platform count and policy complexity.</div></details>
+        <details class="faq-item"><summary><span class="faq-q">Which platforms and systems are supported?</span><span class="faq-chevron">+</span></summary><div class="faq-a">Up to 20 SaaS platforms with API-based provisioning. Core integrations include Microsoft Entra ID, Active Directory, Workday, and ServiceNow. Additional platforms connect via modular connectors.</div></details>
+        <details class="faq-item"><summary><span class="faq-q">What happens to our existing licence data?</span><span class="faq-chevron">+</span></summary><div class="faq-a">It's validated and brought into the platform as a verified baseline before automation goes live. Nothing is discarded; existing records are linked to identity data and used as the starting point for reclaim and recertification.</div></details>
+        <details class="faq-item"><summary><span class="faq-q">How are contractors and non-standard worker types handled?</span><span class="faq-chevron">+</span></summary><div class="faq-a">Contractors follow distinct workflow paths automatically. Worker type is derived from Workday attributes and drives the appropriate access, entitlements, and offboarding treatment — no manual routing needed.</div></details>
+        <details class="faq-item"><summary><span class="faq-q">What does a recertification campaign look like for a manager?</span><span class="faq-chevron">+</span></summary><div class="faq-a">A structured list of direct reports and their current licences. One decision per combination: Accept or Decline. Decisions are recorded immediately. Progress is tracked in real time with deadline reminders sent automatically.</div></details>
+        <details class="faq-item"><summary><span class="faq-q">How is the program handed over after delivery?</span><span class="faq-chevron">+</span></summary><div class="faq-a">Full documentation, runbooks, and connector configurations are delivered alongside a handover session. The platform is designed to run independently. No ongoing EVOCS involvement required after handoff.</div></details>
+        <details class="faq-item"><summary><span class="faq-q">Is the audit trail truly tamper-resistant?</span><span class="faq-chevron">+</span></summary><div class="faq-a">Yes. No user role (including administrators) can edit or delete audit records. Every change carries a correlation ID traceable to its Workday event. Attempted deletions are themselves logged as security events.</div></details>
+        <details class="faq-item"><summary><span class="faq-q">Does this replace our service desk or ITSM tool?</span><span class="faq-chevron">+</span></summary><div class="faq-a">No. It works alongside ServiceNow. Failed provisioning steps automatically create routed tickets with full context and close them when resolved. Your ITSM processes stay unchanged.</div></details>
+      </div>
+    </div>
+  </div>
+
+  <div class="product-cta">
+    <h2>Ready to eliminate manual identity management?</h2>
+    <button class="btn-demo">Book a demo</button>
+  </div>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand-group"><span class="footer__brand">EVOCS</span><span class="footer__copy">© 2024 EVOCS. All rights reserved.</span></div>
+      <nav class="footer__links"><span class="footer__link">Privacy Policy</span><span class="footer__link">Terms of Service</span><span class="footer__link">Cookies</span><span class="footer__link">LinkedIn</span></nav>
+    </div>
+  </footer>
+</div>
+
+<!-- ════════════════════════════════
+     PAGE: PIRO
+════════════════════════════════ -->
+<div id="page-piro" class="page product-page">
+  <header class="nav">
+    <div class="nav__inner">
+      <div class="nav__logo" onclick="showPage('home')">
+        <img src="https://www.figma.com/api/mcp/asset/c57fee40-cbca-496d-8156-3e13c13c17dc" alt="EVOCS" />
+      </div>
+      <nav class="nav__links">
+        <a href="#piro-overview" onclick="scrollToId('piro-overview', event)">Overview</a>
+        <a href="#piro-challenges" onclick="scrollToId('piro-challenges', event)">Challenges</a>
+        <a href="#piro-capabilities" onclick="scrollToId('piro-capabilities', event)">Capabilities</a>
+        <a href="#piro-implementation" onclick="scrollToId('piro-implementation', event)">Implementation</a>
+      </nav>
+      <button class="btn-primary" onclick="showPage('products')">More Products</button>
+    </div>
+  </header>
+
+  <div id="piro-overview" class="product-hero">
+    <div class="product-eyebrow">INTRODUCING</div>
+    <div class="product-title">PIRO</div>
+    <div class="product-subtitle">Safety Intelligence Platform</div>
+    <p class="product-desc">An integrated machine learning platform that transforms EHS data into explainable risk predictions and ranked corrective actions for data centre operations.</p>
+    <div class="product-highlights">
+      <div><span class="hl-label">30 / 60 / 90-day forecasting</span><span class="hl-sub">Incident forecasting across every campus</span></div>
+      <div><span class="hl-label">Deployed in your Azure tenant</span><span class="hl-sub">No data leaves your environment</span></div>
+      <div><span class="hl-label">Ranked corrective actions</span><span class="hl-sub">From raw incident data to prioritised fixes</span></div>
+    </div>
+  </div>
+  <div class="browser-wrap">
+    <div class="browser-bar">
+      <div class="browser-dots"><div class="browser-dot"></div><div class="browser-dot"></div><div class="browser-dot"></div></div>
+      <div class="browser-url"><span>piro.evocs.io/dashboard</span></div>
+    </div>
+    <img class="browser-img" src="https://www.figma.com/api/mcp/asset/aae451f9-9c98-44af-9040-eaf2818a90b9" alt="Piro Dashboard" />
+  </div>
+  <div style="padding:0 32px 96px;max-width:1280px;margin:0 auto;">
+    <h2 class="h2">From Reactive Reporting to Predictive Safety Intelligence.</h2>
+    <p style="font-size:18px;line-height:1.7;color:#64748b;max-width:880px;">Most data centre EHS teams operate in a reactive cycle: an incident happens, it gets logged, and the investigation begins after the fact. Historical data sits in disconnected systems without a unified way to surface patterns, predict future events, or prioritise where to allocate safety resources.<br><br>PIRO replaces that cycle with a predictive intelligence layer. It ingests incident records, near-miss reports, sensor streams, and workforce data into a unified Azure Data Lake, processes them through eight machine learning models, and delivers ranked corrective actions.</p>
+  </div>
+
+  <div id="piro-challenges" class="pd-section alt">
+    <div class="pd-section-inner">
+      <div class="eyebrow">The problem</div>
+      <h2 class="h2">Safety Data Is Everywhere. Safety Intelligence Is Nowhere.</h2>
+      <p class="lead">The challenges that keep EHS teams stuck in a reactive cycle — and the risks that come with it.</p>
+      <div class="challenges-grid">
+        <div class="challenge-card"><h3>Incidents are investigated, never predicted</h3><p>Your team responds to events after they happen. Historical incident data exists across multiple systems, but there is no mechanism to surface forward-looking risk signals or forecast where the next event is likely to occur.</p></div>
+        <div class="challenge-card"><h3>Risk classification is manual and inconsistent</h3><p>Classifying incidents into severity tiers depends on individual practitioner judgement. Without a standardised, data-driven classification engine, risk scoring varies from site to site and shift to shift.</p></div>
+        <div class="challenge-card"><h3>Sensor anomalies are detected too late</h3><p>Without real-time anomaly detection, unusual vibration patterns, temperature spikes, or equipment degradation signals go unnoticed until they contribute to an incident.</p></div>
+        <div class="challenge-card"><h3>Near-miss narratives go unanalysed</h3><p>Free-text incident descriptions and near-miss reports contain critical intelligence, but extracting structured insights from unstructured text at scale requires NLP capabilities most EHS teams do not have.</p></div>
+        <div class="challenge-card"><h3>Resource allocation is based on intuition</h3><p>Deciding which campus, shift, or team receives priority safety resources is driven by experience rather than optimised, data-driven allocation. High-risk sites may be under-resourced.</p></div>
+        <div class="challenge-card"><h3>Safety data lives in silos</h3><p>No single platform brings EHS sources together, making pattern recognition across systems nearly impossible. Every challenge compounds over time, and the cost is measured in incidents that could have been prevented.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="piro-capabilities" class="pd-section">
+    <div class="pd-section-inner">
+      <div class="eyebrow">Capabilities</div>
+      <h2 class="h2">Eight Models. One Integrated Safety Intelligence Pipeline.</h2>
+      <p class="lead">Each module solves a specific EHS problem. Together, they form a connected pipeline that moves from raw data to ranked corrective actions.</p>
+      <div class="workstream">
+        <div>
+          <div class="workstream-label">NLP Intelligence</div>
+          <h3>Extract Structured Insights from Every Incident Narrative.</h3>
+          <p>Free-text incident descriptions, near-miss reports, and after-action reports are processed to extract severity labels, named entities, and sentiment scores. These structured outputs feed the risk classification and action recommendation models downstream.</p>
+          <ul class="bullet-list">
+            <li>Automated extraction: location, equipment type, affected body part, environmental conditions</li>
+            <li>Sentiment analysis flags critical safety culture signals across shifts and campuses</li>
+            <li>Processes After-Action Reports for post-incident intelligence capture</li>
+          </ul>
+        </div>
+        <div class="workstream-img">
+          <!-- NLP Intelligence: text → structured data pipeline -->
+          <svg viewBox="0 0 480 300" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;display:block;border-radius:12px;background:#0f172a;">
+            <defs>
+              <linearGradient id="nlp-g1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#ff456b" stop-opacity="0.15"/><stop offset="100%" stop-color="#7c3aed" stop-opacity="0.15"/></linearGradient>
+            </defs>
+            <!-- background grid -->
+            <rect width="480" height="300" fill="#0f172a"/>
+            <line x1="0" y1="60" x2="480" y2="60" stroke="#1e293b" stroke-width="1"/>
+            <line x1="0" y1="120" x2="480" y2="120" stroke="#1e293b" stroke-width="1"/>
+            <line x1="0" y1="180" x2="480" y2="180" stroke="#1e293b" stroke-width="1"/>
+            <line x1="0" y1="240" x2="480" y2="240" stroke="#1e293b" stroke-width="1"/>
+            <!-- raw text block -->
+            <rect x="20" y="80" width="120" height="140" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+            <text x="80" y="105" text-anchor="middle" fill="#64748b" font-size="9" font-family="monospace">RAW TEXT</text>
+            <rect x="32" y="115" width="96" height="6" rx="3" fill="#334155"/>
+            <rect x="32" y="127" width="80" height="6" rx="3" fill="#334155"/>
+            <rect x="32" y="139" width="90" height="6" rx="3" fill="#334155"/>
+            <rect x="32" y="151" width="70" height="6" rx="3" fill="#334155"/>
+            <rect x="32" y="163" width="85" height="6" rx="3" fill="#334155"/>
+            <rect x="32" y="175" width="75" height="6" rx="3" fill="#334155"/>
+            <rect x="32" y="187" width="92" height="6" rx="3" fill="#334155"/>
+            <!-- arrow -->
+            <path d="M145 150 L175 150" stroke="#ff456b" stroke-width="2" marker-end="url(#arr1)"/>
+            <defs><marker id="arr1" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6" fill="none" stroke="#ff456b" stroke-width="1.5"/></marker></defs>
+            <!-- NLP engine box -->
+            <rect x="180" y="100" width="120" height="100" rx="8" fill="url(#nlp-g1)" stroke="#ff456b" stroke-width="1.5"/>
+            <text x="240" y="128" text-anchor="middle" fill="#ff456b" font-size="10" font-family="sans-serif" font-weight="700">NLP ENGINE</text>
+            <rect x="196" y="138" width="88" height="4" rx="2" fill="#ff456b" fill-opacity="0.3"/>
+            <text x="240" y="158" text-anchor="middle" fill="#94a3b8" font-size="8" font-family="sans-serif">Tokenize → Tag → Score</text>
+            <text x="240" y="172" text-anchor="middle" fill="#94a3b8" font-size="8" font-family="sans-serif">Entity Extract → Sentiment</text>
+            <text x="240" y="186" text-anchor="middle" fill="#94a3b8" font-size="8" font-family="sans-serif">Severity Label → Output</text>
+            <!-- arrow -->
+            <path d="M305 150 L335 150" stroke="#ff456b" stroke-width="2" marker-end="url(#arr1)"/>
+            <!-- structured output -->
+            <rect x="340" y="70" width="120" height="160" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+            <text x="400" y="93" text-anchor="middle" fill="#64748b" font-size="9" font-family="monospace">STRUCTURED</text>
+            <!-- entity tags -->
+            <rect x="352" y="102" width="55" height="18" rx="9" fill="#7c3aed" fill-opacity="0.2" stroke="#7c3aed" stroke-width="1"/>
+            <text x="379" y="115" text-anchor="middle" fill="#a78bfa" font-size="8" font-family="sans-serif">location</text>
+            <rect x="414" y="102" width="38" height="18" rx="9" fill="#0284c7" fill-opacity="0.2" stroke="#0284c7" stroke-width="1"/>
+            <text x="433" y="115" text-anchor="middle" fill="#7dd3fc" font-size="8" font-family="sans-serif">equip</text>
+            <rect x="352" y="126" width="44" height="18" rx="9" fill="#ff456b" fill-opacity="0.2" stroke="#ff456b" stroke-width="1"/>
+            <text x="374" y="139" text-anchor="middle" fill="#fca5a5" font-size="8" font-family="sans-serif">severity</text>
+            <rect x="402" y="126" width="48" height="18" rx="9" fill="#0f766e" fill-opacity="0.2" stroke="#0f766e" stroke-width="1"/>
+            <text x="426" y="139" text-anchor="middle" fill="#5eead4" font-size="8" font-family="sans-serif">sentiment</text>
+            <!-- score bar -->
+            <text x="352" y="162" fill="#64748b" font-size="8" font-family="sans-serif">Risk score</text>
+            <rect x="352" y="168" width="96" height="6" rx="3" fill="#1e3a5f"/>
+            <rect x="352" y="168" width="72" height="6" rx="3" fill="#ff456b"/>
+            <text x="448" y="174" fill="#ff456b" font-size="8" font-family="sans-serif">75%</text>
+            <text x="352" y="192" fill="#64748b" font-size="8" font-family="sans-serif">Confidence</text>
+            <rect x="352" y="198" width="96" height="6" rx="3" fill="#1e3a5f"/>
+            <rect x="352" y="198" width="84" height="6" rx="3" fill="#0284c7"/>
+            <text x="448" y="204" fill="#7dd3fc" font-size="8" font-family="sans-serif">87%</text>
+          </svg>
+        </div>
+      </div>
+      <div class="workstream">
+        <div class="workstream-img">
+          <!-- Risk Classification: severity tier matrix -->
+          <svg viewBox="0 0 480 300" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;display:block;border-radius:12px;background:#0f172a;">
+            <rect width="480" height="300" fill="#0f172a"/>
+            <line x1="0" y1="60" x2="480" y2="60" stroke="#1e293b" stroke-width="1"/>
+            <line x1="0" y1="240" x2="480" y2="240" stroke="#1e293b" stroke-width="1"/>
+            <!-- title -->
+            <text x="240" y="38" text-anchor="middle" fill="#64748b" font-size="10" font-family="sans-serif" font-weight="700">RISK CLASSIFICATION MATRIX</text>
+            <!-- tier rows -->
+            <!-- Tier 1 Critical -->
+            <rect x="24" y="72" width="432" height="38" rx="6" fill="#ff456b" fill-opacity="0.12" stroke="#ff456b" stroke-opacity="0.4" stroke-width="1"/>
+            <rect x="24" y="72" width="6" height="38" rx="3" fill="#ff456b"/>
+            <text x="44" y="88" fill="#fca5a5" font-size="10" font-family="sans-serif" font-weight="700">CRITICAL</text>
+            <text x="44" y="102" fill="#64748b" font-size="9" font-family="sans-serif">Immediate intervention · SLA: 2h · Auto-escalate to VP Safety</text>
+            <rect x="400" y="81" width="48" height="20" rx="10" fill="#ff456b"/>
+            <text x="424" y="95" text-anchor="middle" fill="#fff" font-size="9" font-family="sans-serif" font-weight="700">T1</text>
+            <!-- Tier 2 High -->
+            <rect x="24" y="118" width="432" height="38" rx="6" fill="#f97316" fill-opacity="0.12" stroke="#f97316" stroke-opacity="0.4" stroke-width="1"/>
+            <rect x="24" y="118" width="6" height="38" rx="3" fill="#f97316"/>
+            <text x="44" y="134" fill="#fdba74" font-size="10" font-family="sans-serif" font-weight="700">HIGH</text>
+            <text x="44" y="148" fill="#64748b" font-size="9" font-family="sans-serif">Priority review · SLA: 24h · Corrective action required</text>
+            <rect x="400" y="127" width="48" height="20" rx="10" fill="#f97316"/>
+            <text x="424" y="141" text-anchor="middle" fill="#fff" font-size="9" font-family="sans-serif" font-weight="700">T2</text>
+            <!-- Tier 3 Medium -->
+            <rect x="24" y="164" width="432" height="38" rx="6" fill="#eab308" fill-opacity="0.12" stroke="#eab308" stroke-opacity="0.4" stroke-width="1"/>
+            <rect x="24" y="164" width="6" height="38" rx="3" fill="#eab308"/>
+            <text x="44" y="180" fill="#fde047" font-size="10" font-family="sans-serif" font-weight="700">MEDIUM</text>
+            <text x="44" y="194" fill="#64748b" font-size="9" font-family="sans-serif">Scheduled review · SLA: 72h · Manager notification</text>
+            <rect x="400" y="173" width="48" height="20" rx="10" fill="#eab308"/>
+            <text x="424" y="187" text-anchor="middle" fill="#fff" font-size="9" font-family="sans-serif" font-weight="700">T3</text>
+            <!-- Tier 4 Low -->
+            <rect x="24" y="210" width="432" height="22" rx="6" fill="#22c55e" fill-opacity="0.1" stroke="#22c55e" stroke-opacity="0.3" stroke-width="1"/>
+            <rect x="24" y="210" width="6" height="22" rx="3" fill="#22c55e"/>
+            <text x="44" y="225" fill="#86efac" font-size="10" font-family="sans-serif" font-weight="700">LOW  ·  Logged &amp; monitored  ·  SLA: 7 days</text>
+            <rect x="400" y="214" width="48" height="14" rx="7" fill="#22c55e" fill-opacity="0.4"/>
+            <text x="424" y="224" text-anchor="middle" fill="#86efac" font-size="9" font-family="sans-serif" font-weight="700">T4</text>
+            <!-- SHAP label -->
+            <rect x="24" y="248" width="120" height="28" rx="6" fill="#7c3aed" fill-opacity="0.15" stroke="#7c3aed" stroke-width="1"/>
+            <text x="84" y="266" text-anchor="middle" fill="#a78bfa" font-size="9" font-family="sans-serif">SHAP explainability ✓</text>
+            <rect x="156" y="248" width="110" height="28" rx="6" fill="#0284c7" fill-opacity="0.15" stroke="#0284c7" stroke-width="1"/>
+            <text x="211" y="266" text-anchor="middle" fill="#7dd3fc" font-size="9" font-family="sans-serif">Audit trail attached ✓</text>
+            <rect x="278" y="248" width="178" height="28" rx="6" fill="#0f766e" fill-opacity="0.15" stroke="#0f766e" stroke-width="1"/>
+            <text x="367" y="266" text-anchor="middle" fill="#5eead4" font-size="9" font-family="sans-serif">LightGBM + Random Forest ensemble ✓</text>
+          </svg>
+        </div>
+        <div>
+          <div class="workstream-label">Risk Classification</div>
+          <h3>Classify Every Event by Severity Automatically.</h3>
+          <p>Each incident and near-miss is classified into severity tiers using multi-label classification. The platform shows practitioners exactly which factors drove each risk score, building trust and providing an auditable decision trail.</p>
+          <ul class="bullet-list">
+            <li>SHAP explainability artifacts attached to every prediction for audit and trust</li>
+            <li>Multi-label classification into four industry-standard severity tiers</li>
+            <li>Benchmarked against LightGBM and Random Forest — best performer selected per dataset</li>
+            <li>Feeds directly into Monte Carlo simulation and the action recommendation engine</li>
+          </ul>
+        </div>
+      </div>
+      <div class="workstream">
+        <div>
+          <div class="workstream-label">Incident Forecasting</div>
+          <h3>Forecast Incident Frequency 30, 60, and 90 Days Ahead.</h3>
+          <p>A two-layer neural network trained on historical incidents, sensor data, training compliance, and external benchmarks produces forecasts with confidence intervals. Walk-forward validation ensures predictions are tested against real future data.</p>
+          <ul class="bullet-list">
+            <li>Lag features at 7, 14, and 30-day windows plus rolling 90-day averages</li>
+            <li>30, 60, and 90-day forecast horizons per campus with confidence intervals</li>
+            <li>Walk-forward validation on 12-month rolling windows</li>
+          </ul>
+        </div>
+        <div class="workstream-img">
+          <!-- Incident Forecasting: time-series chart with 30/60/90d forecast bands -->
+          <svg viewBox="0 0 480 300" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;display:block;border-radius:12px;background:#0f172a;">
+            <defs>
+              <linearGradient id="fc-area" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#ff456b" stop-opacity="0.25"/><stop offset="100%" stop-color="#ff456b" stop-opacity="0"/></linearGradient>
+              <linearGradient id="fc-band" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#7c3aed" stop-opacity="0.18"/><stop offset="100%" stop-color="#7c3aed" stop-opacity="0"/></linearGradient>
+            </defs>
+            <rect width="480" height="300" fill="#0f172a"/>
+            <!-- grid lines -->
+            <line x1="48" y1="40" x2="48" y2="240" stroke="#1e293b" stroke-width="1"/>
+            <line x1="48" y1="240" x2="456" y2="240" stroke="#1e293b" stroke-width="1"/>
+            <line x1="48" y1="190" x2="456" y2="190" stroke="#1e293b" stroke-width="1" stroke-dasharray="4,4"/>
+            <line x1="48" y1="140" x2="456" y2="140" stroke="#1e293b" stroke-width="1" stroke-dasharray="4,4"/>
+            <line x1="48" y1="90" x2="456" y2="90" stroke="#1e293b" stroke-width="1" stroke-dasharray="4,4"/>
+            <!-- y axis labels -->
+            <text x="40" y="244" text-anchor="end" fill="#475569" font-size="9" font-family="sans-serif">0</text>
+            <text x="40" y="194" text-anchor="end" fill="#475569" font-size="9" font-family="sans-serif">5</text>
+            <text x="40" y="144" text-anchor="end" fill="#475569" font-size="9" font-family="sans-serif">10</text>
+            <text x="40" y="94" text-anchor="end" fill="#475569" font-size="9" font-family="sans-serif">15</text>
+            <!-- x axis labels -->
+            <text x="80" y="255" text-anchor="middle" fill="#475569" font-size="8" font-family="sans-serif">Jan</text>
+            <text x="148" y="255" text-anchor="middle" fill="#475569" font-size="8" font-family="sans-serif">Feb</text>
+            <text x="216" y="255" text-anchor="middle" fill="#475569" font-size="8" font-family="sans-serif">Mar</text>
+            <text x="284" y="255" text-anchor="middle" fill="#475569" font-size="8" font-family="sans-serif">Apr</text>
+            <text x="352" y="255" text-anchor="middle" fill="#475569" font-size="8" font-family="sans-serif">May</text>
+            <text x="420" y="255" text-anchor="middle" fill="#475569" font-size="8" font-family="sans-serif">Jun</text>
+            <!-- historical area fill -->
+            <polygon points="56,200 80,185 112,195 148,160 180,170 216,145 248,155 280,130 280,240 56,240" fill="url(#fc-area)"/>
+            <!-- historical line -->
+            <polyline points="56,200 80,185 112,195 148,160 180,170 216,145 248,155 280,130" fill="none" stroke="#ff456b" stroke-width="2.5" stroke-linejoin="round"/>
+            <!-- data points -->
+            <circle cx="56" cy="200" r="3.5" fill="#ff456b"/><circle cx="80" cy="185" r="3.5" fill="#ff456b"/>
+            <circle cx="112" cy="195" r="3.5" fill="#ff456b"/><circle cx="148" cy="160" r="3.5" fill="#ff456b"/>
+            <circle cx="180" cy="170" r="3.5" fill="#ff456b"/><circle cx="216" cy="145" r="3.5" fill="#ff456b"/>
+            <circle cx="248" cy="155" r="3.5" fill="#ff456b"/><circle cx="280" cy="130" r="3.5" fill="#ff456b"/>
+            <!-- forecast divider -->
+            <line x1="280" y1="50" x2="280" y2="240" stroke="#334155" stroke-width="1.5" stroke-dasharray="6,3"/>
+            <text x="282" y="63" fill="#475569" font-size="8" font-family="sans-serif">FORECAST →</text>
+            <!-- confidence band -->
+            <polygon points="280,130 316,118 352,108 388,100 420,95 456,88 456,70 420,72 388,76 352,84 316,93 280,105" fill="url(#fc-band)"/>
+            <!-- forecast line -->
+            <polyline points="280,130 316,118 352,108 388,100 420,95 456,88" fill="none" stroke="#7c3aed" stroke-width="2.5" stroke-dasharray="6,3" stroke-linejoin="round"/>
+            <!-- horizon labels -->
+            <rect x="290" y="268" width="42" height="16" rx="8" fill="#ff456b" fill-opacity="0.15" stroke="#ff456b" stroke-width="1"/>
+            <text x="311" y="280" text-anchor="middle" fill="#fca5a5" font-size="8" font-family="sans-serif">30-day</text>
+            <rect x="340" y="268" width="42" height="16" rx="8" fill="#7c3aed" fill-opacity="0.2" stroke="#7c3aed" stroke-width="1"/>
+            <text x="361" y="280" text-anchor="middle" fill="#a78bfa" font-size="8" font-family="sans-serif">60-day</text>
+            <rect x="390" y="268" width="42" height="16" rx="8" fill="#0284c7" fill-opacity="0.2" stroke="#0284c7" stroke-width="1"/>
+            <text x="411" y="280" text-anchor="middle" fill="#7dd3fc" font-size="8" font-family="sans-serif">90-day</text>
+            <!-- title -->
+            <text x="56" y="28" fill="#64748b" font-size="10" font-family="sans-serif" font-weight="700">INCIDENT FREQUENCY FORECAST · Campus A</text>
+          </svg>
+        </div>
+      </div>
+      <div class="workstream">
+        <div class="workstream-img">
+          <!-- Action Recommendations: ranked action cards -->
+          <svg viewBox="0 0 480 300" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;display:block;border-radius:12px;background:#0f172a;">
+            <rect width="480" height="300" fill="#0f172a"/>
+            <text x="240" y="30" text-anchor="middle" fill="#64748b" font-size="10" font-family="sans-serif" font-weight="700">RANKED CORRECTIVE ACTIONS</text>
+            <!-- action 1 -->
+            <rect x="20" y="42" width="440" height="44" rx="7" fill="#1e293b" stroke="#ff456b" stroke-width="1.5"/>
+            <rect x="20" y="42" width="32" height="44" rx="7" fill="#ff456b"/>
+            <text x="36" y="60" text-anchor="middle" fill="#fff" font-size="11" font-family="sans-serif" font-weight="700">#1</text>
+            <text x="36" y="74" text-anchor="middle" fill="#fff" font-size="8" font-family="sans-serif">98%</text>
+            <text x="62" y="59" fill="#f1f5f9" font-size="10" font-family="sans-serif" font-weight="600">Deploy lockout/tagout enforcement on Line 3 equipment</text>
+            <text x="62" y="74" fill="#64748b" font-size="8.5" font-family="sans-serif">Effectiveness: 98% · Cost: Low · Time: 2 days · Risk ↓ 43%</text>
+            <rect x="408" y="53" width="44" height="16" rx="8" fill="#22c55e" fill-opacity="0.2"/>
+            <text x="430" y="65" text-anchor="middle" fill="#86efac" font-size="8" font-family="sans-serif">ServiceNow ✓</text>
+            <!-- action 2 -->
+            <rect x="20" y="94" width="440" height="44" rx="7" fill="#1e293b" stroke="#f97316" stroke-width="1"/>
+            <rect x="20" y="94" width="32" height="44" rx="7" fill="#f97316"/>
+            <text x="36" y="112" text-anchor="middle" fill="#fff" font-size="11" font-family="sans-serif" font-weight="700">#2</text>
+            <text x="36" y="126" text-anchor="middle" fill="#fff" font-size="8" font-family="sans-serif">91%</text>
+            <text x="62" y="111" fill="#f1f5f9" font-size="10" font-family="sans-serif" font-weight="600">Mandatory refresher training · Night shift supervisors</text>
+            <text x="62" y="126" fill="#64748b" font-size="8.5" font-family="sans-serif">Effectiveness: 91% · Cost: Medium · Time: 5 days · Risk ↓ 29%</text>
+            <!-- action 3 -->
+            <rect x="20" y="146" width="440" height="44" rx="7" fill="#1e293b" stroke="#eab308" stroke-width="1"/>
+            <rect x="20" y="146" width="32" height="44" rx="7" fill="#eab308"/>
+            <text x="36" y="164" text-anchor="middle" fill="#fff" font-size="11" font-family="sans-serif" font-weight="700">#3</text>
+            <text x="36" y="178" text-anchor="middle" fill="#fff" font-size="8" font-family="sans-serif">84%</text>
+            <text x="62" y="163" fill="#f1f5f9" font-size="10" font-family="sans-serif" font-weight="600">Install proximity sensors · Forklift Zone B</text>
+            <text x="62" y="178" fill="#64748b" font-size="8.5" font-family="sans-serif">Effectiveness: 84% · Cost: High · Time: 14 days · Risk ↓ 21%</text>
+            <!-- more actions faded -->
+            <rect x="20" y="198" width="440" height="30" rx="7" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+            <text x="36" y="218" fill="#334155" font-size="10" font-family="sans-serif" font-weight="700">#4</text>
+            <rect x="56" y="207" width="180" height="6" rx="3" fill="#334155"/>
+            <rect x="56" y="219" width="120" height="5" rx="2.5" fill="#293548"/>
+            <rect x="20" y="236" width="440" height="22" rx="7" fill="#1e293b" stroke="#293548" stroke-width="1"/>
+            <text x="36" y="251" fill="#293548" font-size="10" font-family="sans-serif" font-weight="700">#5</text>
+            <rect x="56" y="242" width="140" height="5" rx="2.5" fill="#293548"/>
+            <!-- RAG badge -->
+            <rect x="20" y="266" width="88" height="20" rx="10" fill="#7c3aed" fill-opacity="0.2" stroke="#7c3aed" stroke-width="1"/>
+            <text x="64" y="280" text-anchor="middle" fill="#a78bfa" font-size="8.5" font-family="sans-serif">RAG-grounded</text>
+            <rect x="116" y="266" width="80" height="20" rx="10" fill="#0f766e" fill-opacity="0.2" stroke="#0f766e" stroke-width="1"/>
+            <text x="156" y="280" text-anchor="middle" fill="#5eead4" font-size="8.5" font-family="sans-serif">MCDA scoring</text>
+            <rect x="204" y="266" width="90" height="20" rx="10" fill="#0284c7" fill-opacity="0.2" stroke="#0284c7" stroke-width="1"/>
+            <text x="249" y="280" text-anchor="middle" fill="#7dd3fc" font-size="8.5" font-family="sans-serif">GPT-enhanced</text>
+          </svg>
+        </div>
+        <div>
+          <div class="workstream-label">Action Recommendations</div>
+          <h3>Deliver Ranked Corrective Actions.</h3>
+          <p>The terminal model in the critical path combines GPT generative intelligence with deterministic MCDA scoring to produce 5–10 ranked corrective actions per event.</p>
+          <ul class="bullet-list">
+            <li>RAG retrieval from historical data grounds recommendations in proven past actions</li>
+            <li>5–10 ranked corrective actions per event, scored by effectiveness, feasibility, cost, time, and risk reduction</li>
+            <li>Operational from Week 1: quality improves progressively as real incident data is received</li>
+            <li>Direct ServiceNow integration via REST API</li>
+          </ul>
+        </div>
+      </div>
+      <div class="workstream" style="border-bottom:none;margin-bottom:0;padding-bottom:0;">
+        <div>
+          <div class="workstream-label">Resource Optimisation</div>
+          <h3>Allocate Safety Resources Where They Matter Most.</h3>
+          <p>A linear programming optimizer analyses feature importance rankings, historical allocation outcomes, and current risk profiles to recommend which campuses, shifts, and teams should receive priority safety resources.</p>
+          <ul class="bullet-list">
+            <li>Uses Random Forest feature importance rankings as state input features</li>
+            <li>Optimised resource allocation across campuses, shifts, and teams</li>
+            <li>Progressive ramp: accuracy improves as historical allocation data accumulates</li>
+            <li>50,000 simulation runs using Latin Hypercube Sampling for scenario coverage</li>
+          </ul>
+        </div>
+        <div class="workstream-img">
+          <!-- Resource Optimisation: campus allocation heatmap -->
+          <svg viewBox="0 0 480 300" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;display:block;border-radius:12px;background:#0f172a;">
+            <rect width="480" height="300" fill="#0f172a"/>
+            <text x="240" y="26" text-anchor="middle" fill="#64748b" font-size="10" font-family="sans-serif" font-weight="700">RESOURCE ALLOCATION OPTIMISER</text>
+            <!-- column headers -->
+            <text x="148" y="44" text-anchor="middle" fill="#475569" font-size="8.5" font-family="sans-serif">Campus A</text>
+            <text x="224" y="44" text-anchor="middle" fill="#475569" font-size="8.5" font-family="sans-serif">Campus B</text>
+            <text x="300" y="44" text-anchor="middle" fill="#475569" font-size="8.5" font-family="sans-serif">Campus C</text>
+            <text x="376" y="44" text-anchor="middle" fill="#475569" font-size="8.5" font-family="sans-serif">Campus D</text>
+            <text x="452" y="44" text-anchor="middle" fill="#475569" font-size="8.5" font-family="sans-serif">Campus E</text>
+            <!-- row: Safety Officers -->
+            <text x="96" y="72" text-anchor="end" fill="#64748b" font-size="8.5" font-family="sans-serif">Safety Officers</text>
+            <rect x="110" y="55" width="76" height="26" rx="4" fill="#ff456b" fill-opacity="0.75"/>
+            <text x="148" y="72" text-anchor="middle" fill="#fff" font-size="9" font-family="sans-serif" font-weight="700">HIGH</text>
+            <rect x="186" y="55" width="76" height="26" rx="4" fill="#f97316" fill-opacity="0.55"/>
+            <text x="224" y="72" text-anchor="middle" fill="#fff" font-size="9" font-family="sans-serif">MED</text>
+            <rect x="262" y="55" width="76" height="26" rx="4" fill="#eab308" fill-opacity="0.45"/>
+            <text x="300" y="72" text-anchor="middle" fill="#fff" font-size="9" font-family="sans-serif">MED</text>
+            <rect x="338" y="55" width="76" height="26" rx="4" fill="#22c55e" fill-opacity="0.3"/>
+            <text x="376" y="72" text-anchor="middle" fill="#86efac" font-size="9" font-family="sans-serif">LOW</text>
+            <rect x="414" y="55" width="52" height="26" rx="4" fill="#1e293b"/>
+            <text x="440" y="72" text-anchor="middle" fill="#475569" font-size="9" font-family="sans-serif">—</text>
+            <!-- row: Training Budget -->
+            <text x="96" y="104" text-anchor="end" fill="#64748b" font-size="8.5" font-family="sans-serif">Training Budget</text>
+            <rect x="110" y="87" width="76" height="26" rx="4" fill="#f97316" fill-opacity="0.55"/>
+            <text x="148" y="104" text-anchor="middle" fill="#fff" font-size="9" font-family="sans-serif">MED</text>
+            <rect x="186" y="87" width="76" height="26" rx="4" fill="#ff456b" fill-opacity="0.75"/>
+            <text x="224" y="104" text-anchor="middle" fill="#fff" font-size="9" font-family="sans-serif" font-weight="700">HIGH</text>
+            <rect x="262" y="87" width="76" height="26" rx="4" fill="#22c55e" fill-opacity="0.3"/>
+            <text x="300" y="104" text-anchor="middle" fill="#86efac" font-size="9" font-family="sans-serif">LOW</text>
+            <rect x="338" y="87" width="76" height="26" rx="4" fill="#eab308" fill-opacity="0.45"/>
+            <text x="376" y="104" text-anchor="middle" fill="#fff" font-size="9" font-family="sans-serif">MED</text>
+            <rect x="414" y="87" width="52" height="26" rx="4" fill="#22c55e" fill-opacity="0.3"/>
+            <text x="440" y="104" text-anchor="middle" fill="#86efac" font-size="9" font-family="sans-serif">LOW</text>
+            <!-- row: Inspections -->
+            <text x="96" y="136" text-anchor="end" fill="#64748b" font-size="8.5" font-family="sans-serif">Inspections</text>
+            <rect x="110" y="119" width="76" height="26" rx="4" fill="#eab308" fill-opacity="0.45"/>
+            <text x="148" y="136" text-anchor="middle" fill="#fff" font-size="9" font-family="sans-serif">MED</text>
+            <rect x="186" y="119" width="76" height="26" rx="4" fill="#22c55e" fill-opacity="0.3"/>
+            <text x="224" y="136" text-anchor="middle" fill="#86efac" font-size="9" font-family="sans-serif">LOW</text>
+            <rect x="262" y="119" width="76" height="26" rx="4" fill="#ff456b" fill-opacity="0.75"/>
+            <text x="300" y="136" text-anchor="middle" fill="#fff" font-size="9" font-family="sans-serif" font-weight="700">HIGH</text>
+            <rect x="338" y="119" width="76" height="26" rx="4" fill="#ff456b" fill-opacity="0.55"/>
+            <text x="376" y="136" text-anchor="middle" fill="#fff" font-size="9" font-family="sans-serif">HIGH</text>
+            <rect x="414" y="119" width="52" height="26" rx="4" fill="#f97316" fill-opacity="0.45"/>
+            <text x="440" y="136" text-anchor="middle" fill="#fff" font-size="9" font-family="sans-serif">MED</text>
+            <!-- row: PPE Supply -->
+            <text x="96" y="168" text-anchor="end" fill="#64748b" font-size="8.5" font-family="sans-serif">PPE Supply</text>
+            <rect x="110" y="151" width="76" height="26" rx="4" fill="#22c55e" fill-opacity="0.3"/>
+            <text x="148" y="168" text-anchor="middle" fill="#86efac" font-size="9" font-family="sans-serif">LOW</text>
+            <rect x="186" y="151" width="76" height="26" rx="4" fill="#eab308" fill-opacity="0.45"/>
+            <text x="224" y="168" text-anchor="middle" fill="#fff" font-size="9" font-family="sans-serif">MED</text>
+            <rect x="262" y="151" width="76" height="26" rx="4" fill="#f97316" fill-opacity="0.55"/>
+            <text x="300" y="168" text-anchor="middle" fill="#fff" font-size="9" font-family="sans-serif">HIGH</text>
+            <rect x="338" y="151" width="76" height="26" rx="4" fill="#22c55e" fill-opacity="0.3"/>
+            <text x="376" y="168" text-anchor="middle" fill="#86efac" font-size="9" font-family="sans-serif">LOW</text>
+            <rect x="414" y="151" width="52" height="26" rx="4" fill="#ff456b" fill-opacity="0.75"/>
+            <text x="440" y="168" text-anchor="middle" fill="#fff" font-size="9" font-family="sans-serif" font-weight="700">HIGH</text>
+            <!-- legend -->
+            <rect x="110" y="196" width="60" height="16" rx="8" fill="#ff456b" fill-opacity="0.7"/>
+            <text x="140" y="208" text-anchor="middle" fill="#fff" font-size="8" font-family="sans-serif">HIGH priority</text>
+            <rect x="178" y="196" width="60" height="16" rx="8" fill="#eab308" fill-opacity="0.5"/>
+            <text x="208" y="208" text-anchor="middle" fill="#fff" font-size="8" font-family="sans-serif">MEDIUM</text>
+            <rect x="246" y="196" width="60" height="16" rx="8" fill="#22c55e" fill-opacity="0.4"/>
+            <text x="276" y="208" text-anchor="middle" fill="#86efac" font-size="8" font-family="sans-serif">LOW priority</text>
+            <!-- optimization stats -->
+            <rect x="110" y="222" width="356" height="48" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+            <text x="134" y="241" fill="#64748b" font-size="8.5" font-family="sans-serif">Simulation runs</text>
+            <text x="134" y="258" fill="#f1f5f9" font-size="12" font-family="sans-serif" font-weight="700">50,000</text>
+            <line x1="220" y1="228" x2="220" y2="264" stroke="#334155" stroke-width="1"/>
+            <text x="240" y="241" fill="#64748b" font-size="8.5" font-family="sans-serif">Sampling method</text>
+            <text x="240" y="258" fill="#f1f5f9" font-size="10" font-family="sans-serif" font-weight="700">Latin Hypercube</text>
+            <line x1="348" y1="228" x2="348" y2="264" stroke="#334155" stroke-width="1"/>
+            <text x="368" y="241" fill="#64748b" font-size="8.5" font-family="sans-serif">Risk reduction</text>
+            <text x="368" y="258" fill="#22c55e" font-size="12" font-family="sans-serif" font-weight="700">↓ 31%</text>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="piro-implementation" class="pd-section gray">
+    <div class="pd-section-inner">
+      <div class="eyebrow">How it works</div>
+      <h2 class="h2">From Architecture Review to Predictive Operations in Phases.</h2>
+      <p class="lead">A phased delivery model that proves value early and scales with your data maturity.</p>
+      <div class="steps">
+        <div class="step"><div class="step-num">01</div><div class="step-content"><h3>Data Readiness Assessment</h3><p>Existing EHS data sources are catalogued, quality-assessed, and mapped to the ingestion schema. Gaps are identified and a data remediation plan is produced before any modelling begins.</p></div></div>
+        <div class="step"><div class="step-num">02</div><div class="step-content"><h3>Architecture Alignment &amp; Azure Configuration</h3><p>The Azure Data Lake, event ingestion pipeline, and compute environment are configured within your tenant. All components remain inside your security boundary — no data leaves your environment.</p></div></div>
+        <div class="step"><div class="step-num">03</div><div class="step-content"><h3>Model Training &amp; Validation</h3><p>As real incident data flows through the ingestion pipeline, models are trained and validated. Walk-forward validation confirms forecast accuracy, and anomaly detection is calibrated against live IoT sensor streams.</p></div></div>
+        <div class="step"><div class="step-num">04</div><div class="step-content"><h3>Dashboard &amp; Integration Activation</h3><p>The EHS Dashboard, ServiceNow integration, and alert routing are activated. Safety leaders gain immediate visibility into risk scores, forecasts, and ranked corrective actions from day one.</p></div></div>
+        <div class="step"><div class="step-num">05</div><div class="step-content"><h3>Hand Over and Sustain</h3><p>The platform is handed over with full documentation, model refresh schedules, and trained operators. Accuracy improves progressively as more real incident data accumulates.</p></div></div>
+      </div>
+      <div class="integrations">
+        <h3>Integrates with your entire stack</h3>
+        <div class="integration-tags">
+          <span class="integration-tag">Microsoft Azure</span>
+          <span class="integration-tag">ServiceNow</span>
+          <span class="integration-tag">IoT Sensor Streams</span>
+          <span class="integration-tag">Workday</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="product-cta">
+    <h2>Ready to move from reactive to predictive safety?</h2>
+    <button class="btn-demo">Book a demo</button>
+  </div>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand-group"><span class="footer__brand">EVOCS</span><span class="footer__copy">© 2024 EVOCS. All rights reserved.</span></div>
+      <nav class="footer__links"><span class="footer__link">Privacy Policy</span><span class="footer__link">Terms of Service</span><span class="footer__link">Cookies</span><span class="footer__link">LinkedIn</span></nav>
+    </div>
+  </footer>
+</div>
+
+<!-- ════════════════════════════════
+     PAGE: OSIMO
+════════════════════════════════ -->
+<div id="page-osimo" class="page product-page">
+  <header class="nav">
+    <div class="nav__inner">
+      <div class="nav__logo" onclick="showPage('home')">
+        <img src="https://www.figma.com/api/mcp/asset/d2b6a678-984a-4713-9377-c0e338c4ab72" alt="EVOCS" />
+      </div>
+      <nav class="nav__links">
+        <a href="#osimo-overview" onclick="scrollToId('osimo-overview', event)">Overview</a>
+        <a href="#osimo-challenges" onclick="scrollToId('osimo-challenges', event)">Challenges</a>
+        <a href="#osimo-capabilities" onclick="scrollToId('osimo-capabilities', event)">Capabilities</a>
+        <a href="#osimo-implementation" onclick="scrollToId('osimo-implementation', event)">Implementation</a>
+        <a href="#osimo-faq" onclick="scrollToId('osimo-faq', event)">FAQ</a>
+      </nav>
+      <button class="btn-primary" onclick="showPage('products')">More Products</button>
+    </div>
+  </header>
+
+  <div id="osimo-overview" class="product-hero">
+    <div class="product-eyebrow">INTRODUCING</div>
+    <div class="product-title">OSIMO</div>
+    <div class="product-subtitle">Automated User Access Review Platform</div>
+    <p class="product-desc">A centralized platform that automates periodic user access reviews across your enterprise systems, replacing spreadsheets with real-time compliance visibility.</p>
+    <div class="product-highlights">
+      <div><span class="hl-label">Centralise up to 100 systems</span><span class="hl-sub">Reduce manual review effort dramatically</span></div>
+      <div><span class="hl-label">Real-time compliance visibility</span><span class="hl-sub">Review statuses, anomalies, and audit readiness</span></div>
+      <div><span class="hl-label">Automated review workflows</span><span class="hl-sub">Configurable notification protocols</span></div>
+    </div>
+  </div>
+  <div class="browser-wrap">
+    <div class="browser-bar">
+      <div class="browser-dots"><div class="browser-dot"></div><div class="browser-dot"></div><div class="browser-dot"></div></div>
+      <div class="browser-url"><span>osimo.evocs.io/dashboard</span></div>
+    </div>
+    <img class="browser-img" src="https://www.figma.com/api/mcp/asset/ab7bd305-e5bd-4f64-b8aa-c25759111e95" alt="Osimo Dashboard" />
+  </div>
+  <div style="padding:0 32px 96px;max-width:1280px;margin:0 auto;">
+    <h2 class="h2">One program. Three engines working together.</h2>
+    <p style="font-size:18px;line-height:1.7;color:#64748b;max-width:880px;">Most organisations manage identity, licences, and assets in isolation. The result is delayed onboarding, stale access, over-spend on software, and hardware that disappears when people leave.<br><br>OSIMO replaces manual access review processes with a single, automated platform. Every lifecycle event triggers the right review workflow across every connected system — instantly, with a full audit trail and no manual steps.</p>
+  </div>
+
+  <div id="osimo-challenges" class="pd-section alt">
+    <div class="pd-section-inner">
+      <div class="eyebrow">The problem</div>
+      <h2 class="h2">Manual identity management is a liability.</h2>
+      <p class="lead">When access reviews are managed by hand, security gaps, wasted spend, and compliance risk are inevitable.</p>
+      <div class="challenges-grid">
+        <div class="challenge-card"><h3>New hires wait days for access</h3><p>Without automation, IT must manually provision accounts across every system. New employees spend their first days unable to do their job while waiting for tickets to be resolved.</p></div>
+        <div class="challenge-card"><h3>Leavers stay active after they leave</h3><p>Manual offboarding across 20+ systems is slow and error-prone. Accounts belonging to departed employees remain active for days or weeks, creating serious security exposure.</p></div>
+        <div class="challenge-card"><h3>Role changes accumulate excess access</h3><p>When someone changes role, old entitlements are rarely cleaned up. Over time, users accumulate access far beyond what their current role requires, violating least-privilege principles.</p></div>
+        <div class="challenge-card"><h3>Licence spend is invisible</h3><p>Without a unified inventory, no one knows exactly how many licences are owned, allocated, or wasted. Renewals happen at full cost even when half the seats haven't been used in months.</p></div>
+        <div class="challenge-card"><h3>Compliance relies on spreadsheets</h3><p>Without a tamper-resistant audit trail, responding to an auditor's question about who had access to what — and when — takes days of manual investigation.</p></div>
+        <div class="challenge-card"><h3>Assets disappear when people leave</h3><p>Hardware recovery depends on emails and informal follow-up. When there is no tracked workflow, assets walk out the door or remain unaccounted for at audit time.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="osimo-capabilities" class="pd-section">
+    <div class="pd-section-inner">
+      <div class="eyebrow">Capabilities</div>
+      <h2 class="h2">Three workstreams. One connected platform.</h2>
+      <p class="lead">Each engine solves a distinct problem. Together they create a complete identity, licence, and asset management system.</p>
+      <div class="workstream">
+        <div>
+          <div class="workstream-label">Workstream A</div>
+          <h3>Every hire, move, and departure is handled automatically.</h3>
+          <p>The JML Lifecycle Engine connects directly to Workday. The moment a hire, role change, or termination event is detected, the engine orchestrates provisioning or deprovisioning across all connected systems. No manual steps, no delays, no gaps.</p>
+          <ul class="bullet-list">
+            <li>Access delta on every role change; prior entitlements removed, new ones granted automatically</li>
+            <li>Day 1 Ready: new hire accounts confirmed active before the start date</li>
+            <li>Tamper-resistant correlation log; every access change traced back to its Workday event</li>
+            <li>Separation of duties enforcement and break-glass emergency access with full audit trail</li>
+            <li>Same-day leaver deprovisioning across platforms</li>
+          </ul>
+        </div>
+        <div class="workstream-img"><img src="https://www.figma.com/api/mcp/asset/a38e5dcd-3613-4a41-a983-2af343f04b76" alt="JML Engine" /></div>
+      </div>
+      <div class="workstream">
+        <div class="workstream-img"><img src="https://www.figma.com/api/mcp/asset/3dcb336c-07e6-40c5-bbab-c8d4563bb9c1" alt="Licence Management" /></div>
+        <div>
+          <div class="workstream-label">Workstream B</div>
+          <h3>Stop paying for licences no one is using.</h3>
+          <p>The Licence Management engine inventories every software seat across up to 20 platforms, reclaims dormant and orphaned licences automatically, and runs structured recertification campaigns. Savings are tracked and reportable from day one.</p>
+          <ul class="bullet-list">
+            <li>RBAC-driven assignment; licences granted automatically when a role is set in Workday</li>
+            <li>Full licence inventory: entitlements vs. allocations vs. active usage, refreshed nightly</li>
+            <li>Savings pipeline: identified, in-progress, and realised savings separated and reportable</li>
+            <li>Manager-led recertification: Accept or Decline per user, with campaign tracking and deadline alerts</li>
+            <li>Automated reclaim: leaver events and inactivity thresholds trigger instant seat recovery</li>
+          </ul>
+        </div>
+      </div>
+      <div class="workstream" style="border-bottom:none;margin-bottom:0;padding-bottom:0;">
+        <div>
+          <div class="workstream-label">Workstream C</div>
+          <h3>Every asset tracked, from first assignment to final recovery.</h3>
+          <p>The Asset Management engine maintains a single authoritative registry for all hardware and software assets, linked to identity and licence records. Nothing falls through the gap.</p>
+          <ul class="bullet-list">
+            <li>Joiner fulfilment: Workstream A hire events automatically generate equipment preparation tasks</li>
+            <li>Single asset registry: every in-scope asset with 10+ standard fields, linked to owner identity</li>
+            <li>Orphan asset detection: unowned equipment surfaced automatically for remediation</li>
+            <li>Leaver recovery: termination events create tracked recovery workflows for every assigned asset</li>
+          </ul>
+        </div>
+        <div class="workstream-img"><img src="https://www.figma.com/api/mcp/asset/98cadbc1-d6e7-4959-9259-68c3f2cf3bea" alt="Asset Management" /></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="osimo-implementation" class="pd-section gray">
+    <div class="pd-section-inner">
+      <div class="eyebrow">How it works</div>
+      <h2 class="h2">Up and running in weeks, not years.</h2>
+      <p class="lead">A structured delivery approach that connects your existing systems, configures your policies, and hands over a production-ready platform.</p>
+      <div class="steps">
+        <div class="step"><div class="step-num">01</div><div class="step-content"><h3>Connect Workday</h3><p>Workday is established as the single authoritative source of identity truth. The integration captures hire, mover, and leaver events in real time.</p></div></div>
+        <div class="step"><div class="step-num">02</div><div class="step-content"><h3>Define Access Policies</h3><p>Attribute-based access rules are configured using Workday data — job family, department, location, and worker type — with a least-privilege baseline and exception approval flows.</p></div></div>
+        <div class="step"><div class="step-num">03</div><div class="step-content"><h3>Connect Target Platforms</h3><p>Modular connectors are deployed for Entra ID, Active Directory, and up to 20 SaaS platforms.</p></div></div>
+        <div class="step"><div class="step-num">04</div><div class="step-content"><h3>Baseline Licences and Assets</h3><p>A verified inventory of software licences and hardware assets is established before automation is switched on. Every record is linked to an identity and validated.</p></div></div>
+        <div class="step"><div class="step-num">05</div><div class="step-content"><h3>Go Live and Optimise</h3><p>The JML engine, licence management, and asset workflows go live. Dashboards, alerts, and reporting are available from day one. Savings begin accumulating immediately.</p></div></div>
+        <div class="step"><div class="step-num">06</div><div class="step-content"><h3>Hand Over and Sustain</h3><p>The platform is handed over with documented runbooks, trained operators, and a self-sustaining reporting capability.</p></div></div>
+      </div>
+      <div class="integrations">
+        <h3>Integrates with your entire stack</h3>
+        <div class="integration-tags">
+          <span class="integration-tag">Microsoft Entra ID</span>
+          <span class="integration-tag">Active Directory</span>
+          <span class="integration-tag">Workday</span>
+          <span class="integration-tag">ServiceNow</span>
+          <span class="integration-tag">20 SaaS Platforms</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="osimo-faq" class="pd-section">
+    <div class="pd-section-inner">
+      <div class="eyebrow">Frequently asked questions</div>
+      <h2 class="h2">Everything you need to evaluate this program.</h2>
+      <div class="faq-list">
+        <details class="faq-item"><summary><span class="faq-q">How long does implementation take?</span><span class="faq-chevron">+</span></summary><div class="faq-a">Phased across three workstreams: Workstream A (JML) first, then B and C in parallel once the licence baseline is established. Timeline depends on platform count and policy complexity.</div></details>
+        <details class="faq-item"><summary><span class="faq-q">Which platforms and systems are supported?</span><span class="faq-chevron">+</span></summary><div class="faq-a">Up to 20 SaaS platforms with API-based provisioning. Core integrations include Microsoft Entra ID, Active Directory, Workday, and ServiceNow. Additional platforms connect via modular connectors.</div></details>
+        <details class="faq-item"><summary><span class="faq-q">What happens to our existing licence data?</span><span class="faq-chevron">+</span></summary><div class="faq-a">It's validated and brought into the platform as a verified baseline before automation goes live. Nothing is discarded; existing records are linked to identity data and used as the starting point for reclaim and recertification.</div></details>
+        <details class="faq-item"><summary><span class="faq-q">How are contractors and non-standard worker types handled?</span><span class="faq-chevron">+</span></summary><div class="faq-a">Contractors follow distinct workflow paths automatically. Worker type is derived from Workday attributes and drives the appropriate access, entitlements, and offboarding treatment — no manual routing needed.</div></details>
+        <details class="faq-item"><summary><span class="faq-q">What does a recertification campaign look like for a manager?</span><span class="faq-chevron">+</span></summary><div class="faq-a">A structured list of direct reports and their current licences. One decision per combination: Accept or Decline. Decisions are recorded immediately. Progress is tracked in real time with deadline reminders sent automatically.</div></details>
+        <details class="faq-item"><summary><span class="faq-q">Is the audit trail truly tamper-resistant?</span><span class="faq-chevron">+</span></summary><div class="faq-a">Yes. No user role (including administrators) can edit or delete audit records. Every change carries a correlation ID traceable to its Workday event. Attempted deletions are themselves logged as security events.</div></details>
+        <details class="faq-item"><summary><span class="faq-q">How is the program handed over after delivery?</span><span class="faq-chevron">+</span></summary><div class="faq-a">Full documentation, runbooks, and connector configurations are delivered alongside a handover session. The platform is designed to run independently. No ongoing EVOCS involvement required after handoff.</div></details>
+        <details class="faq-item"><summary><span class="faq-q">Does this replace our service desk or ITSM tool?</span><span class="faq-chevron">+</span></summary><div class="faq-a">No. It works alongside ServiceNow. Failed provisioning steps automatically create routed tickets with full context and close them when resolved. Your ITSM processes stay unchanged.</div></details>
+      </div>
+    </div>
+  </div>
+
+  <div class="product-cta">
+    <h2>Ready to eliminate manual identity management?</h2>
+    <button class="btn-demo">Book a demo</button>
+  </div>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand-group"><span class="footer__brand">EVOCS</span><span class="footer__copy">© 2024 EVOCS. All rights reserved.</span></div>
+      <nav class="footer__links"><span class="footer__link">Privacy Policy</span><span class="footer__link">Terms of Service</span><span class="footer__link">Cookies</span><span class="footer__link">LinkedIn</span></nav>
+    </div>
+  </footer>
+</div>
+
+<!-- ════════════════════════════════
+     PAGE: HALO
+════════════════════════════════ -->
+<div id="page-halo" class="page product-page">
+  <header class="nav">
+    <div class="nav__inner">
+      <div class="nav__logo" onclick="showPage('home')">
+        <img src="https://www.figma.com/api/mcp/asset/c57fee40-cbca-496d-8156-3e13c13c17dc" alt="EVOCS" />
+      </div>
+      <nav class="nav__links">
+        <a href="#halo-overview" onclick="scrollToId('halo-overview', event)">Overview</a>
+        <a href="#halo-problem" onclick="scrollToId('halo-problem', event)">Problem</a>
+        <a href="#halo-platform" onclick="scrollToId('halo-platform', event)">Platform</a>
+        <a href="#halo-benefits" onclick="scrollToId('halo-benefits', event)">Benefits</a>
+      </nav>
+      <button class="btn-primary" onclick="showPage('products')">More Products</button>
+    </div>
+  </header>
+
+  <div id="halo-overview" class="product-hero">
+    <div class="product-eyebrow">INTRODUCING</div>
+    <div class="product-title">HALO</div>
+    <div class="product-subtitle">The AI platform your enterprise owns.</div>
+    <p class="product-desc">Running AI everywhere — governing it nowhere. Halo is the sovereign infrastructure layer that puts every model, interaction, and cost under your control.</p>
+    <div class="product-highlights">
+      <div><span class="hl-label">11k+ Models accessible</span><span class="hl-sub">Frontier, open, and fine-tuned models</span></div>
+      <div><span class="hl-label">7-yr Audit retention</span><span class="hl-sub">Tamper-resistant interaction logs</span></div>
+      <div><span class="hl-label">99.9% Uptime SLA</span><span class="hl-sub">Enterprise-grade reliability</span></div>
+      <div><span class="hl-label">&lt;50ms Gateway latency</span><span class="hl-sub">Every AI interaction routed instantly</span></div>
+    </div>
+  </div>
+
+  <div class="browser-wrap">
+    <div class="browser-bar">
+      <div class="browser-dots"><div class="browser-dot"></div><div class="browser-dot"></div><div class="browser-dot"></div></div>
+      <div class="browser-url"><span>halo.evocs.io/platform</span></div>
+    </div>
+    <div style="background:#f6f6f7;padding:48px 32px;display:flex;justify-content:center;">
+      <svg viewBox="0 0 340 300" style="width:480px;max-width:100%;" aria-label="Halo overview diagram">
+        <defs>
+          <filter id="halo-glow"><feGaussianBlur stdDeviation="6" result="coloredBlur"/><feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+        </defs>
+        <line x1="56" y1="70" x2="170" y2="148" stroke="rgba(255,69,107,.35)" stroke-width="1.5" stroke-dasharray="6 4"/>
+        <line x1="135" y1="48" x2="170" y2="148" stroke="rgba(255,69,107,.35)" stroke-width="1.5" stroke-dasharray="6 4"/>
+        <line x1="215" y1="48" x2="170" y2="148" stroke="rgba(255,69,107,.35)" stroke-width="1.5" stroke-dasharray="6 4"/>
+        <line x1="294" y1="70" x2="170" y2="148" stroke="rgba(255,69,107,.35)" stroke-width="1.5" stroke-dasharray="6 4"/>
+        <line x1="170" y1="148" x2="78" y2="258" stroke="rgba(17,24,39,.18)" stroke-width="1.5" stroke-dasharray="6 4"/>
+        <line x1="170" y1="148" x2="175" y2="266" stroke="rgba(17,24,39,.18)" stroke-width="1.5" stroke-dasharray="6 4"/>
+        <line x1="170" y1="148" x2="272" y2="258" stroke="rgba(17,24,39,.18)" stroke-width="1.5" stroke-dasharray="6 4"/>
+        <g transform="translate(56,70)"><circle r="26" fill="white" stroke="rgba(17,24,39,.12)" stroke-width="1.5"/><circle r="18" fill="rgba(255,69,107,.10)"/><text x="0" y="5" text-anchor="middle" font-size="14">🗂️</text><text x="0" y="42" text-anchor="middle" font-size="9" font-weight="700" fill="#6b7280">Enterprise Data</text></g>
+        <g transform="translate(135,48)"><circle r="26" fill="white" stroke="rgba(17,24,39,.12)" stroke-width="1.5"/><circle r="18" fill="rgba(255,69,107,.10)"/><text x="0" y="5" text-anchor="middle" font-size="14">📄</text><text x="0" y="42" text-anchor="middle" font-size="9" font-weight="700" fill="#6b7280">Documents</text></g>
+        <g transform="translate(215,48)"><circle r="26" fill="white" stroke="rgba(17,24,39,.12)" stroke-width="1.5"/><circle r="18" fill="rgba(255,69,107,.10)"/><text x="0" y="5" text-anchor="middle" font-size="14">🔌</text><text x="0" y="42" text-anchor="middle" font-size="9" font-weight="700" fill="#6b7280">Systems</text></g>
+        <g transform="translate(294,70)"><circle r="26" fill="white" stroke="rgba(17,24,39,.12)" stroke-width="1.5"/><circle r="18" fill="rgba(255,69,107,.10)"/><text x="0" y="5" text-anchor="middle" font-size="14">📡</text><text x="0" y="42" text-anchor="middle" font-size="9" font-weight="700" fill="#6b7280">Telemetry</text></g>
+        <g transform="translate(170,148)"><circle r="44" fill="#FF456B" opacity="0.15" filter="url(#halo-glow)"/><circle r="38" fill="white" stroke="rgba(255,69,107,.35)" stroke-width="1.5"/><text x="0" y="5" text-anchor="middle" font-size="12" font-weight="800" fill="#0f0f10">HALO</text><text x="0" y="18" text-anchor="middle" font-size="7" font-weight="600" fill="#FF456B" letter-spacing=".06em">SOVEREIGN AI</text></g>
+        <g transform="translate(78,258)"><circle r="28" fill="white" stroke="rgba(17,24,39,.12)" stroke-width="1.5"/><circle r="19" fill="rgba(255,69,107,.10)"/><text x="0" y="5" text-anchor="middle" font-size="15">💬</text><text x="0" y="44" text-anchor="middle" font-size="9" font-weight="700" fill="#6b7280">Applications</text></g>
+        <g transform="translate(175,266)"><circle r="28" fill="white" stroke="rgba(17,24,39,.12)" stroke-width="1.5"/><circle r="19" fill="rgba(255,69,107,.10)"/><text x="0" y="5" text-anchor="middle" font-size="15">📊</text><text x="0" y="44" text-anchor="middle" font-size="9" font-weight="700" fill="#6b7280">Workflows</text></g>
+        <g transform="translate(272,258)"><circle r="28" fill="white" stroke="rgba(17,24,39,.12)" stroke-width="1.5"/><circle r="19" fill="rgba(255,69,107,.10)"/><text x="0" y="5" text-anchor="middle" font-size="15">⚡</text><text x="0" y="44" text-anchor="middle" font-size="9" font-weight="700" fill="#6b7280">Experiences</text></g>
+      </svg>
+    </div>
+  </div>
+
+  <div id="halo-problem" class="pd-section alt">
+    <div class="pd-section-inner">
+      <div class="eyebrow">The Problem</div>
+      <h2 class="h2">Your AI is ungoverned.</h2>
+      <p class="lead">Enterprise AI doesn't have to be fragmented, risky, or hard to scale.</p>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;">
+        <svg viewBox="0 0 560 320" aria-label="Many disconnected AI initiatives converge into one governed central layer" style="width:100%;height:auto;">
+          <defs><filter id="problemGlow"><feGaussianBlur stdDeviation="10" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+          <g transform="translate(70,70)"><rect x="-40" y="-18" width="80" height="36" rx="18" fill="white" stroke="rgba(17,24,39,.10)"/><text x="0" y="5" text-anchor="middle" font-size="12" font-weight="700" fill="#6b7280">Teams</text></g>
+          <g transform="translate(70,160)"><rect x="-40" y="-18" width="80" height="36" rx="18" fill="white" stroke="rgba(17,24,39,.10)"/><text x="0" y="5" text-anchor="middle" font-size="12" font-weight="700" fill="#6b7280">Tools</text></g>
+          <g transform="translate(70,250)"><rect x="-40" y="-18" width="80" height="36" rx="18" fill="white" stroke="rgba(17,24,39,.10)"/><text x="0" y="5" text-anchor="middle" font-size="12" font-weight="700" fill="#6b7280">Data</text></g>
+          <g transform="translate(210,55)"><rect x="-40" y="-18" width="80" height="36" rx="18" fill="white" stroke="rgba(17,24,39,.10)"/><text x="0" y="5" text-anchor="middle" font-size="12" font-weight="700" fill="#6b7280">Models</text></g>
+          <g transform="translate(210,265)"><rect x="-40" y="-18" width="80" height="36" rx="18" fill="white" stroke="rgba(17,24,39,.10)"/><text x="0" y="5" text-anchor="middle" font-size="12" font-weight="700" fill="#6b7280">Apps</text></g>
+          <line x1="110" y1="70" x2="390" y2="160" stroke="rgba(255,69,107,.28)" stroke-width="1.5" stroke-dasharray="6 6"/>
+          <line x1="110" y1="160" x2="390" y2="160" stroke="rgba(255,69,107,.28)" stroke-width="1.5" stroke-dasharray="6 6"/>
+          <line x1="110" y1="250" x2="390" y2="160" stroke="rgba(255,69,107,.28)" stroke-width="1.5" stroke-dasharray="6 6"/>
+          <line x1="250" y1="55" x2="390" y2="160" stroke="rgba(255,69,107,.28)" stroke-width="1.5" stroke-dasharray="6 6"/>
+          <line x1="250" y1="265" x2="390" y2="160" stroke="rgba(255,69,107,.28)" stroke-width="1.5" stroke-dasharray="6 6"/>
+          <g transform="translate(430,160)"><circle r="68" fill="#FF456B" opacity="0.10" filter="url(#problemGlow)"/><circle r="56" fill="white" stroke="rgba(255,69,107,.28)" stroke-width="1.5"/><text x="0" y="-4" text-anchor="middle" font-size="16" font-weight="800" fill="#0f0f10">Governance</text><text x="0" y="16" text-anchor="middle" font-size="11" font-weight="600" fill="#FF456B">One controlled layer</text></g>
+        </svg>
+        <div style="max-width:480px;">
+          <p style="font-size:18px;line-height:1.7;color:#64748b;">Enterprise AI doesn't have to be fragmented, risky, or hard to scale. Halo is the sovereign infrastructure layer that puts every model, interaction, and cost under your control.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="halo-platform" class="pd-section">
+    <div class="pd-section-inner">
+      <div class="eyebrow">The Platform</div>
+      <h2 class="h2">One foundation.<br>Every AI capability.</h2>
+      <p class="lead">Not a SaaS subscription. EVOCS builds and deploys Halo inside your Azure environment — owned by you, governed by your policies.</p>
+      <div style="margin-top:40px;">
+        <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px;">
+          <button class="halo-tab-btn active" data-tab="develop" onclick="haloSetTab('develop')">Develop</button>
+          <button class="halo-tab-btn" data-tab="analyze" onclick="haloSetTab('analyze')">Analyze</button>
+          <button class="halo-tab-btn" data-tab="monitor" onclick="haloSetTab('monitor')">Monitor</button>
+        </div>
+        <div style="border-radius:12px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,.08);">
+          <img id="halo-tab-image" style="display:block;width:100%;" alt="Platform preview" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="halo-benefits" class="pd-section alt">
+    <div class="pd-section-inner">
+      <div class="eyebrow">Benefits</div>
+      <h2 class="h2">Why enterprises build on Halo.</h2>
+      <div class="halo-benefit-grid">
+        <div class="halo-benefit">
+          <img alt="AI governance and security" src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22480%22%20height%3D%22260%22%20viewBox%3D%220%200%20480%20260%22%3E%3Crect%20x%3D%2282%22%20y%3D%2276%22%20width%3D%2296%22%20height%3D%2256%22%20rx%3D%2212%22%20fill%3D%22%23fff5f7%22%20stroke%3D%22%23ffd2dc%22/%3E%3Crect%20x%3D%22192%22%20y%3D%2276%22%20width%3D%2296%22%20height%3D%2256%22%20rx%3D%2212%22%20fill%3D%22%23fff5f7%22%20stroke%3D%22%23ffd2dc%22/%3E%3Crect%20x%3D%22302%22%20y%3D%2276%22%20width%3D%2296%22%20height%3D%2256%22%20rx%3D%2212%22%20fill%3D%22%23fff5f7%22%20stroke%3D%22%23ffd2dc%22/%3E%3Crect%20x%3D%22140%22%20y%3D%22154%22%20width%3D%22200%22%20height%3D%2234%22%20rx%3D%2217%22%20fill%3D%22%23ff456b%22%20opacity%3D%220.12%22%20stroke%3D%22%23ff456b%22/%3E%3Cline%20x1%3D%22130%22%20y1%3D%22132%22%20x2%3D%22196%22%20y2%3D%22154%22%20stroke%3D%22%23ff456b%22%20stroke-width%3D%222%22%20stroke-dasharray%3D%224%204%22/%3E%3Cline%20x1%3D%22240%22%20y1%3D%22132%22%20x2%3D%22240%22%20y2%3D%22154%22%20stroke%3D%22%23ff456b%22%20stroke-width%3D%222%22%20stroke-dasharray%3D%224%204%22/%3E%3Cline%20x1%3D%22350%22%20y1%3D%22132%22%20x2%3D%22284%22%20y2%3D%22154%22%20stroke%3D%22%23ff456b%22%20stroke-width%3D%222%22%20stroke-dasharray%3D%224%204%22/%3E%3Ctext%20x%3D%22130%22%20y%3D%22108%22%20font-family%3D%22Arial%2C%20sans-serif%22%20font-size%3D%2212%22%20text-anchor%3D%22middle%22%20fill%3D%22%236b7280%22%3EApps%3C/text%3E%3Ctext%20x%3D%22240%22%20y%3D%22108%22%20font-family%3D%22Arial%2C%20sans-serif%22%20font-size%3D%2212%22%20text-anchor%3D%22middle%22%20fill%3D%22%236b7280%22%3EData%3C/text%3E%3Ctext%20x%3D%22350%22%20y%3D%22108%22%20font-family%3D%22Arial%2C%20sans-serif%22%20font-size%3D%2212%22%20text-anchor%3D%22middle%22%20fill%3D%22%236b7280%22%3EModels%3C/text%3E%3Ctext%20x%3D%22240%22%20y%3D%22176%22%20font-family%3D%22Arial%2C%20sans-serif%22%20font-size%3D%2213%22%20font-weight%3D%22700%22%20text-anchor%3D%22middle%22%20fill%3D%22%23ff456b%22%3EGoverned%20Control%20Layer%3C/text%3E%3C/svg%3E" />
+          <div class="halo-benefit-label">AI governance and security</div>
+          <h3>Build and Scale AI with Confidence</h3>
+          <p>Centralize guardrails, policy enforcement, auditability, and security controls so teams can adopt AI without creating unmanaged risk.</p>
+        </div>
+        <div class="halo-benefit">
+          <img alt="Compound costs" src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22480%22%20height%3D%22260%22%20viewBox%3D%220%200%20480%20260%22%3E%3Cg%20transform%3D%22translate(140%2C20)%20scale(1.8)%22%3E%3Cpolygon%20points%3D%2255%2C0%20110%2C28%2055%2C56%200%2C28%22%20fill%3D%22none%22/%3E%3Cpolygon%20points%3D%22110%2C28%20110%2C83%2055%2C111%2055%2C56%22%20fill%3D%22none%22/%3E%3Cpolygon%20points%3D%220%2C28%2055%2C56%2055%2C111%200%2C83%22%20fill%3D%22none%22/%3E%3Cpolyline%20points%3D%2255%2C0%20110%2C28%2055%2C56%200%2C28%2055%2C0%22%20fill%3D%22none%22%20stroke%3D%22%23b91c1c%22%20stroke-width%3D%221.2%22%20stroke-dasharray%3D%223%2C2.8%22/%3E%3Cline%20x1%3D%22110%22%20y1%3D%2228%22%20x2%3D%22110%22%20y2%3D%2283%22%20stroke%3D%22%23b91c1c%22%20stroke-width%3D%221.2%22%20stroke-dasharray%3D%223%2C2.8%22/%3E%3Cline%20x1%3D%2255%22%20y1%3D%2256%22%20x2%3D%2255%22%20y2%3D%22111%22%20stroke%3D%22%23b91c1c%22%20stroke-width%3D%221.2%22%20stroke-dasharray%3D%223%2C2.8%22/%3E%3Cline%20x1%3D%220%22%20y1%3D%2228%22%20x2%3D%220%22%20y2%3D%2283%22%20stroke%3D%22%23b91c1c%22%20stroke-width%3D%221.2%22%20stroke-dasharray%3D%223%2C2.8%22/%3E%3Cpolyline%20points%3D%22110%2C83%2055%2C111%200%2C83%22%20fill%3D%22none%22%20stroke%3D%22%23b91c1c%22%20stroke-width%3D%221.2%22%20stroke-dasharray%3D%223%2C2.8%22/%3E%3Cline%20x1%3D%2282.5%22%20y1%3D%2214%22%20x2%3D%2227.5%22%20y2%3D%2242%22%20stroke%3D%22%23b91c1c%22%20stroke-width%3D%221.2%22%20stroke-dasharray%3D%223%2C2.8%22/%3E%3Cline%20x1%3D%2227.5%22%20y1%3D%2214%22%20x2%3D%2282.5%22%20y2%3D%2242%22%20stroke%3D%22%23b91c1c%22%20stroke-width%3D%221.2%22%20stroke-dasharray%3D%223%2C2.8%22/%3E%3Cline%20x1%3D%2282.5%22%20y1%3D%2242%22%20x2%3D%2282.5%22%20y2%3D%2297%22%20stroke%3D%22%23b91c1c%22%20stroke-width%3D%221.2%22%20stroke-dasharray%3D%223%2C2.8%22/%3E%3Cline%20x1%3D%22110%22%20y1%3D%2255.5%22%20x2%3D%2255%22%20y2%3D%2283.5%22%20stroke%3D%22%23b91c1c%22%20stroke-width%3D%221.2%22%20stroke-dasharray%3D%223%2C2.8%22/%3E%3Cline%20x1%3D%220%22%20y1%3D%2255.5%22%20x2%3D%2255%22%20y2%3D%2283.5%22%20stroke%3D%22%23b91c1c%22%20stroke-width%3D%221.2%22%20stroke-dasharray%3D%223%2C2.8%22/%3E%3Cline%20x1%3D%2227.5%22%20y1%3D%2242%22%20x2%3D%2227.5%22%20y2%3D%2297%22%20stroke%3D%22%23b91c1c%22%20stroke-width%3D%221.2%22%20stroke-dasharray%3D%223%2C2.8%22/%3E%3C/g%3E%3C/svg%3E" />
+          <div class="halo-benefit-label">Compound costs</div>
+          <h3>Every new capability costs less</h3>
+          <p>Reuse the same governed foundation across use cases so each application benefits from the modules, workflows, and infrastructure already in place.</p>
+        </div>
+        <div class="halo-benefit">
+          <img alt="Flexibility" src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22480%22%20height%3D%22260%22%20viewBox%3D%220%200%20480%20260%22%3E%3Crect%20width%3D%22480%22%20height%3D%22260%22%20rx%3D%2216%22%20fill%3D%22%23fff8f7%22/%3E%3Crect%20x%3D%2266%22%20y%3D%2260%22%20width%3D%2282%22%20height%3D%2240%22%20rx%3D%2210%22%20fill%3D%22%23fafafa%22%20stroke%3D%22%23d1d5db%22/%3E%3Crect%20x%3D%2266%22%20y%3D%22160%22%20width%3D%2282%22%20height%3D%2240%22%20rx%3D%2210%22%20fill%3D%22%23fafafa%22%20stroke%3D%22%23d1d5db%22/%3E%3Crect%20x%3D%22198%22%20y%3D%22110%22%20width%3D%2284%22%20height%3D%2240%22%20rx%3D%2210%22%20fill%3D%22%23fff5f7%22%20stroke%3D%22%23ffb6c5%22/%3E%3Crect%20x%3D%22332%22%20y%3D%22110%22%20width%3D%2284%22%20height%3D%2240%22%20rx%3D%2210%22%20fill%3D%22%23fafafa%22%20stroke%3D%22%23d1d5db%22/%3E%3Cline%20x1%3D%22148%22%20y1%3D%2280%22%20x2%3D%22198%22%20y2%3D%22130%22%20stroke%3D%22%23ff456b%22%20stroke-width%3D%222%22/%3E%3Cline%20x1%3D%22148%22%20y1%3D%22180%22%20x2%3D%22198%22%20y2%3D%22130%22%20stroke%3D%22%23ff456b%22%20stroke-width%3D%222%22/%3E%3Cline%20x1%3D%22282%22%20y1%3D%22130%22%20x2%3D%22332%22%20y2%3D%22130%22%20stroke%3D%22%23ff456b%22%20stroke-width%3D%222%22/%3E%3Ctext%20x%3D%22107%22%20y%3D%2284%22%20font-family%3D%22Arial%2C%20sans-serif%22%20font-size%3D%2211%22%20text-anchor%3D%22middle%22%20fill%3D%22%236b7280%22%3EModel%20A%3C/text%3E%3Ctext%20x%3D%22107%22%20y%3D%22184%22%20font-family%3D%22Arial%2C%20sans-serif%22%20font-size%3D%2211%22%20text-anchor%3D%22middle%22%20fill%3D%22%236b7280%22%3EModel%20B%3C/text%3E%3Ctext%20x%3D%22240%22%20y%3D%22134%22%20font-family%3D%22Arial%2C%20sans-serif%22%20font-size%3D%2212%22%20font-weight%3D%22700%22%20text-anchor%3D%22middle%22%20fill%3D%22%23ff456b%22%3ERouter%3C/text%3E%3Ctext%20x%3D%22374%22%20y%3D%22134%22%20font-family%3D%22Arial%2C%20sans-serif%22%20font-size%3D%2211%22%20text-anchor%3D%22middle%22%20fill%3D%22%236b7280%22%3EApp%20Layer%3C/text%3E%3C/svg%3E" />
+          <div class="halo-benefit-label">Flexibility</div>
+          <h3>All the models you want</h3>
+          <p>Route across frontier, open, and small language models based on cost, latency, and task fit instead of locking the enterprise into a single option.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="product-cta">
+    <h2>Your enterprise deserves AI it actually controls.</h2>
+    <button class="btn-demo">Book a discovery call</button>
+  </div>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand-group"><span class="footer__brand">EVOCS</span><span class="footer__copy">© 2024 EVOCS. All rights reserved.</span></div>
+      <nav class="footer__links"><span class="footer__link">Privacy Policy</span><span class="footer__link">Terms of Service</span><span class="footer__link">Cookies</span><span class="footer__link">LinkedIn</span></nav>
+    </div>
+  </footer>
+
+  
+</div>
+
+<!-- ════════════════════════════════
+     ROUTER SCRIPT
+════════════════════════════════ -->
+
+  <script src="js/halo.js"></script>
+  <script src="js/router.js"></script>
+  <script src="js/quiz.js"></script>
+</body>
+</html>
