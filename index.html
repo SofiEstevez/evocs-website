@@ -47,6 +47,19 @@
       </div>
 
       <div class="agari-shell">
+        <div id="agariCompanyStep" class="agari-company-step">
+          <div class="question">
+            <div class="question-title">Before we start: what is your company name?</div>
+            <div style="margin-top:14px;">
+              <input type="text" id="agariCompanyName" placeholder="Your company name" autocomplete="organization" style="width:100%;padding:14px 16px;border:1.5px solid #e2e8f0;border-radius:10px;font-size:16px;color:#111827;outline:none;box-sizing:border-box;" />
+            </div>
+            <div style="margin-top:16px;display:flex;justify-content:flex-end;">
+              <button type="button" class="btn btn-primary" id="agariCompanyNextBtn">Start Assessment</button>
+            </div>
+          </div>
+        </div>
+
+        <div id="agariQuizWrapper" style="display:none;">
         <div class="agari-topbar">
           <div class="agari-status">
             <div class="agari-step">Question <span id="agariCurrentStep">1</span> of 6</div>
@@ -144,6 +157,7 @@
             </div>
           </div>
         </form>
+        </div><!-- /#agariQuizWrapper -->
 
         <div id="agariResults" class="agari-results">
           <div class="agari-result-card">
@@ -203,6 +217,12 @@
             <div class="agari-actions" style="margin-top:22px;">
               <div class="left">
                 <button type="button" class="btn btn-ghost" id="agariRestartBtn">Take test again</button>
+              </div>
+              <div class="right">
+                <button type="button" class="btn btn-primary" id="agariDownloadBtn" style="display:flex;align-items:center;gap:8px;">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                  Download results
+                </button>
               </div>
             </div>
           </div>
@@ -2136,5 +2156,7 @@
   <script src="js/halo.js?v=2"></script>
   <script src="js/router.js"></script>
   <script src="js/quiz.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/pptxgenjs@3.12.0/dist/pptxgen.bundle.js"></script>
+  <script src="js/quiz-pptx.js"></script>
 </body>
 </html>

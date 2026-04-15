@@ -167,6 +167,22 @@
       display: grid;
       gap: 18px;
     }
+    .agari-company-step {
+      background: #fff;
+      border: 1.5px solid #e2e8f0;
+      border-radius: 16px;
+      padding: 32px 28px;
+    }
+    .agari-company-step .question-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: #111827;
+      margin-bottom: 4px;
+    }
+    #agariCompanyName:focus {
+      border-color: #FF456B;
+      box-shadow: 0 0 0 3px rgba(255,69,107,0.12);
+    }
     .agari-shell .grid {
       display: grid;
     }

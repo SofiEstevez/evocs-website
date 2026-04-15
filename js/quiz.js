@@ -35,7 +35,27 @@ const agariPhaseIcons = {
   function agariRenderResult(level) { const data = agariPhaseData[level]; agariById('agariPhaseTitle').textContent = data.branded; agariById('agariPhaseIcon').src = agariPhaseIcons[level]; agariById('agariPhaseSummary').textContent = data.summary; agariById('agariPhaseExplanation').textContent = data.explanation; agariById('agariSolutionCategory').textContent = data.categoryText; agariById('agariSoftProductLink').textContent = data.productHtml; agariById('agariSolutionsBtn').textContent = data.solutionsLabel; agariRenderRadar(agariLastScores, level); agariQuizForm.style.display = 'none'; agariResults.classList.add('show'); agariResults.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
   agariPrevBtn.addEventListener('click', () => { if (agariCurrentStep > 1) { agariCurrentStep -= 1; agariUpdateStepUI(); } });
   agariCalculateBtn.addEventListener('click', () => { if (!agariValidateCurrentStep()) return; agariLastScores = ['q1','q2','q3','q4','q5','q6'].map(agariGetSelectedValue); agariRenderResult(agariDominantPhase(agariLastScores)); });
+  // Company name step
+  const agariCompanyStep = document.getElementById('agariCompanyStep');
+  const agariQuizWrapper = document.getElementById('agariQuizWrapper');
+  const agariCompanyNextBtn = document.getElementById('agariCompanyNextBtn');
+  agariCompanyNextBtn.addEventListener('click', () => {
+    agariCompanyStep.style.display = 'none';
+    agariQuizWrapper.style.display = '';
+  });
+
   agariById('agariResetBtn').addEventListener('click', () => { setTimeout(() => { agariCurrentStep = 1; agariQuizForm.style.display = ''; agariResults.classList.remove('show'); document.querySelectorAll('.agari-option').forEach(el => el.classList.remove('selected')); agariUpdateStepUI(); }, 0); });
-  agariById('agariRestartBtn').addEventListener('click', () => { agariCurrentStep = 1; agariQuizForm.style.display = ''; agariResults.classList.remove('show'); document.querySelectorAll('.agari-option').forEach(el => el.classList.remove('selected')); document.querySelectorAll('#agariQuizForm input[type="radio"]').forEach(input => { input.checked = false; }); agariUpdateStepUI(); });
+  agariById('agariRestartBtn').addEventListener('click', () => {
+    agariCurrentStep = 1;
+    agariQuizForm.style.display = '';
+    agariResults.classList.remove('show');
+    document.querySelectorAll('.agari-option').forEach(el => el.classList.remove('selected'));
+    document.querySelectorAll('#agariQuizForm input[type="radio"]').forEach(input => { input.checked = false; });
+    agariUpdateStepUI();
+    // Return to company name step
+    agariCompanyStep.style.display = '';
+    agariQuizWrapper.style.display = 'none';
+    document.getElementById('agariCompanyName').value = '';
+  });
   document.querySelectorAll('.agari-option input').forEach(input => { input.addEventListener('change', () => { document.querySelectorAll(`#agariQuizForm input[name="${input.name}"]`).forEach(peer => peer.closest('.agari-option').classList.remove('selected')); input.closest('.agari-option').classList.add('selected'); if (agariCurrentStep < agariTotalSteps) { setTimeout(() => { agariCurrentStep += 1; agariUpdateStepUI(); }, 180); } else { setTimeout(() => { const values = ['q1','q2','q3','q4','q5','q6'].map(agariGetSelectedValue); if (values.every(v => v !== null)) { agariLastScores = values; agariRenderResult(agariDominantPhase(values)); } }, 180); } }); });
   agariUpdateStepUI();
